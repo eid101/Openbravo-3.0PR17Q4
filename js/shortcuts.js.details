@@ -1,0 +1,2 @@
+FUNCTION: keyArrayItem [ key evalfunc field auxKey propagateKey event ]
+FUNCTION: getShortcuts [ type ]

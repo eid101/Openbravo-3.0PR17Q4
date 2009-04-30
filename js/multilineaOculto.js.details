@@ -1,0 +1,2 @@
+FUNCTION: submitArray [ parameters frmForm strAction strTarget form hiddenInput total i ]
+FUNCTION: devolverResultados [ frm target ]

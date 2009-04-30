@@ -1,0 +1,71 @@
+VAR: gId
+VAR: gBoton
+VAR: gFila
+VAR: frmFormulario
+VAR: gTargetFrame
+VAR: gHiddenFrame
+VAR: gColorSeleccionado
+VAR: gColorNormal
+VAR: gValorCampo
+VAR: gFilaActual
+VAR: gUltimoCampo
+VAR: fila
+VAR: parametros
+VAR: gBolEnviandoFila
+VAR: gBolBloqueado
+VAR: gBolEvtActivarLinea
+VAR: gBolEvtEnviarLinea
+VAR: gBolEvtCambiarLinea
+VAR: gBolEvtAntesDeFiltrarRespuesta
+VAR: gBolEvtAntesDeBorrar
+VAR: gBolEvtAntesDeActualizar
+VAR: gBolEvtAntesDeNuevo
+VAR: gBolEvtErrorEnRespuesta
+VAR: gBolEvtDespuesDeNuevo
+VAR: gBolEvtCambiarCampo
+VAR: gIsAutoInsertRows
+VAR: gIsDeleteableRows
+VAR: gActivateTabJump
+VAR: gBuscarPorBusqueda
+VAR: gValorBusqueda
+VAR: gNodoBusqueda
+FUNCTION: esCampo [ campo ]
+FUNCTION: seleccionarCampo [ nodo ]
+FUNCTION: esCampoInput [ nodo valor ]
+FUNCTION: valorCampo [ nodo valor ]
+FUNCTION: comprobarCambios [ campoDelFoco nd bolEnviado ]
+FUNCTION: seleccionarFila [ campoDelFoco noEnviarFila nd bolEnviado ]
+FUNCTION: deseleccionarFila [ noEnviarFila nd1 ]
+FUNCTION: borrarOptions [ combo ]
+FUNCTION: marcarFila [ campoCambiado nd ]
+FUNCTION: buscarPadre [ nodo id valor v ]
+FUNCTION: buscarSiguiente [ nodo id valor v ]
+FUNCTION: buscarAnterior [ nodo id valor v ]
+FUNCTION: buscarHijo [ nodo id valor resultado v child ]
+FUNCTION: esModelo [ nodo ndModelo ]
+FUNCTION: rellenarValorCombo [ nodo datos total i ]
+FUNCTION: eliminarFila [ _parametros borrarCombo nodo tipo i ndObjetos total ]
+FUNCTION: borrarFila [ campo nodo ]
+FUNCTION: buscarPrimerElementoFila [ fila ]
+FUNCTION: buscarPrimerElemento [ nodo child ]
+FUNCTION: buscarUltimoElementoFila [ fila ]
+FUNCTION: buscarUltimoElemento [ nodo ultimo_nodo child ]
+FUNCTION: borrarValores [ nodo child ]
+FUNCTION: cargarArray [ nodo n child ]
+FUNCTION: enviarFila [ strAccion frame ]
+FUNCTION: obtenerTexto [ nodo ]
+FUNCTION: ponerTexto [ nodo strTexto i total ]
+FUNCTION: buscarTexto [ f strIdBusqueda strBuscar Busqueda ]
+FUNCTION: buscarFila [ ndForm campo texto nodoFila ]
+FUNCTION: realizarBusqueda [ form strIdBusqueda strCampo strBuscar primerElemento f ]
+FUNCTION: inicializarCampo [ nodo i total ]
+FUNCTION: limpiarNodo [ nodo child ]
+FUNCTION: agregarFila [ fila _parametros borrarCombo ndFilaNueva ndRaiz ]
+FUNCTION: restaurarValores [ arrayValores nodo strValor child ]
+FUNCTION: obtenerValor [ arrayValores strKey nullable total i ]
+FUNCTION: borrarPruebas [ ndFila1 ]
+FUNCTION: filtrarRespuesta [ respuesta respuestaNew objFila strCommand strForm frmForm ndFila1 ndLast strMensaje ]
+FUNCTION: restoreFilaSelected [ evt target nd ]
+FUNCTION: esTeclaInterna [ evt tecla target esInterna ]
+FUNCTION: controlarTecla [ evt total fieldName tecla target ndFila ndFila1 ndLast ]
+FUNCTION: controlExitLines [ evt ]

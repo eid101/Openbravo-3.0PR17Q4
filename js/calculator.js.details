@@ -1,0 +1,8 @@
+VAR: TCR
+FUNCTION: Tcalculator [ a_img i j _deprPreload ]
+FUNCTION: TCRisPoint [ tmp n flag tmp2 i ]
+FUNCTION: TCRisNumber [ data numStr thischar counter len i ]
+FUNCTION: TCRrezult [ slag_1 slag_2 oper ]
+FUNCTION: TCRPopup [ obj_control w h ua v n ]
+FUNCTION: TCRmntr [ num flag ]
+FUNCTION: calculator [ item value debug ]
