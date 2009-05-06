@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER C_BANKCOUNTRY_TRG">
+    <trigger name="C_BANKCOUNTRY_TRG" table="C_BANK" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+  /*************************************************************************
+  * The contents of this file are subject to the Openbravo  Public  License
+  * Version  1.0  (the  "License"),  being   the  Mozilla   Public  License
+  * Version 1.1  with a permitted attribution clause; you may not  use this
+  * file except in compliance with the License. You  may  obtain  a copy of
+  * the License at http://www.openbravo.com/legal/license.html
+  * Software distributed under the License  is  distributed  on  an "AS IS"
+  * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  * License for the specific  language  governing  rights  and  limitations
+  * under the License.
+  * The Original Code is Openbravo ERP.
+  * The Initial Developer of the Original Code is Openbravo SL
+  * All portions are Copyright (C) 2001-2008 Openbravo SL
+  * All Rights Reserved.
+  * Contributor(s):  ______________________________________.
+  ************************************************************************/
+
+  v_Count NUMBER;
+
+    
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+  --  Default Accounts for all AcctSchema
+  IF(UPDATING) THEN
+    IF (:NEW.C_COUNTRY_ID <> :OLD.C_COUNTRY_ID OR :NEW.C_COUNTRY_ID IS NULL) THEN
+      SELECT COUNT(IBAN)
+      INTO v_Count
+      FROM C_BANKACCOUNT
+      WHERE C_BANK_ID=:NEW.C_BANK_ID;
+      IF (v_Count <> 0) THEN
+        RAISE_APPLICATION_ERROR(-20259, 'An IBAN account is defined for this bank. Country must not be changed.') ;
+      END IF;
+    END IF;
+    IF ((:NEW.CODEBANK IS NULL) OR (:NEW.CODEBRANCH IS NULL) OR (:NEW.DIGITCONTROL IS NULL)) THEN
+      SELECT COUNT(CODEACCOUNT)
+      INTO v_Count
+      FROM C_BANKACCOUNT
+      WHERE C_BANK_ID=:NEW.C_BANK_ID;
+      IF (v_Count <> 0) THEN
+        RAISE_APPLICATION_ERROR(-20265, 'An Spanish account is defined for this bank. Bank Code, Branch Code and Control Digit must be defined') ;
+      END IF;
+    END IF;
+  END IF;
+EXCEPTION
+ WHEN NO_DATA_FOUND THEN
+  RAISE_APPLICATION_ERROR(-20259, 'An IBAN account is defined for this bank. Country must not be changed.') ;
+END C_BANKCOUNTRY_TRG
+]]></body>
+    </trigger>
+  </database>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER C_BANKACCOUNTIBAN_TRG">
+    <trigger name="C_BANKACCOUNTIBAN_TRG" table="C_BANKACCOUNT" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+  /*************************************************************************
+  * The contents of this file are subject to the Openbravo  Public  License
+  * Version  1.0  (the  "License"),  being   the  Mozilla   Public  License
+  * Version 1.1  with a permitted attribution clause; you may not  use this
+  * file except in compliance with the License. You  may  obtain  a copy of
+  * the License at http://www.openbravo.com/legal/license.html
+  * Software distributed under the License  is  distributed  on  an "AS IS"
+  * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  * License for the specific  language  governing  rights  and  limitations
+  * under the License.
+  * The Original Code is Openbravo ERP.
+  * The Initial Developer of the Original Code is Openbravo SL
+  * All portions are Copyright (C) 2001-2008 Openbravo SL
+  * All Rights Reserved.
+  * Contributor(s):  ______________________________________.
+  ************************************************************************/
+
+  v_IBAN_check NUMBER;
+  v_Bank NVARCHAR2(4);
+  v_Branch NVARCHAR2(4);
+  v_DigitBank NVARCHAR2(1);
+  v_Location NVARCHAR2(32);
+  v_CountryId NVARCHAR2(2);
+  v_BankName NVARCHAR2(60);
+  v_Length NUMBER;
+    
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+  --  Default Accounts for all AcctSchema
+  IF(INSERTING OR UPDATING) THEN
+    SELECT NAME
+    INTO v_BankName
+    FROM C_BANK
+    WHERE C_BANK_ID=:NEW.C_BANK_ID;
+    IF (:NEW.CODEACCOUNT IS NOT NULL OR :NEW.DIGITCONTROL IS NOT NULL) THEN
+      SELECT CODEBANK, CODEBRANCH, DIGITCONTROL
+      INTO v_Bank, v_Branch, v_DigitBank
+      FROM C_BANK
+      WHERE C_BANK_ID=:NEW.C_BANK_ID;
+      IF (v_Bank IS NULL OR v_Branch IS NULL OR v_DigitBank IS NULL) THEN
+        RAISE_APPLICATION_ERROR(-20258, 'Bank information is missing.');
+      END IF;
+    END IF;
+    IF (:NEW.IBAN IS NOT NULL) THEN
+        SELECT MOD(TO_NUMBER(SUBSTR(:NEW.IBAN, 5, LENGTH(:NEW.IBAN)-4)||
+           ASCII(SUBSTR(UPPER(:NEW.IBAN),1,1))-55
+           ||ASCII(SUBSTR(UPPER(:NEW.IBAN),2,1))-55||
+           SUBSTR(:NEW.IBAN,3,2)),97) AS DC
+           INTO v_IBAN_check
+        FROM DUAL;        
+         IF (v_IBAN_check <> 1) THEN
+          RAISE_APPLICATION_ERROR(-20257, 'Incorrect IBAN Code.');
+        END IF;
+        SELECT C_LOCATION_ID
+        INTO v_Location
+        FROM C_BANK
+        WHERE C_BANK_ID=:NEW.C_BANK_ID;
+        IF (v_Location IS NULL) THEN
+          RAISE_APPLICATION_ERROR(-20260, 'Bank does not have country defined.');
+        END IF;
+        SELECT IBANCOUNTRY, IBANNODIGITS
+        INTO v_CountryId, v_Length
+        FROM C_COUNTRY
+        WHERE C_COUNTRY_ID=(
+          SELECT C_COUNTRY_ID
+          FROM C_LOCATION
+          WHERE C_LOCATION_ID=v_Location
+          );
+        IF ((v_CountryId IS NULL OR v_Length IS NULL) OR (v_CountryId <> SUBSTR(UPPER(:NEW.IBAN),1,2) OR v_Length <> LENGTH(:NEW.IBAN))) THEN
+          RAISE_APPLICATION_ERROR(-20259, 'The IBAN number defined in the bank account tab, must fit the IBAN data of the country defined in the bank tab.');
+        END IF;
+      END IF;
+    IF (:NEW.SHOWSPANISH='Y') THEN
+      SELECT CODEBANK, CODEBRANCH, DIGITCONTROL
+      INTO v_Bank, v_Branch, v_DigitBank
+      FROM C_BANK
+      WHERE C_BANK_ID=:NEW.C_BANK_ID;
+      :NEW.DISPLAYEDACCOUNT:=v_BankName || '. ' || v_Bank || '-' || v_Branch || '-' || v_DigitBank || :NEW.DIGITCONTROL || '-' || :NEW.CODEACCOUNT;
+    ELSIF (:NEW.SHOWIBAN='Y') THEN
+      :NEW.DISPLAYEDACCOUNT:=v_BankName || '. ' || SUBSTR(UPPER(:NEW.IBAN),1,4) || '-' || SUBSTR(:NEW.IBAN, 5, LENGTH(:NEW.IBAN)-4);
+    ELSE
+      :NEW.DISPLAYEDACCOUNT:=v_BankName || '. ' || :NEW.GENERICACCOUNT;
+    END IF;
+  END IF;
+EXCEPTION
+ WHEN NO_DATA_FOUND THEN
+  RAISE_APPLICATION_ERROR(-20257, 'Incorrect IBAN Code.') ;
+END C_BANKACCOUNTIBAN_TRG
+]]></body>
+    </trigger>
+  </database>
