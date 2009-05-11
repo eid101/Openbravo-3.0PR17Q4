@@ -62,6 +62,7 @@
     v_QtyOrder NUMBER;
     p_Warehouse VARCHAR2(32);
     p_User VARCHAR2(32);
+    v_Product_Name VARCHAR2(2000):='';
     -- ProductionPlan
     CUR_PP RECORD;
     -- BOM Lines
@@ -215,7 +216,7 @@
           -- For every Production Plan
           FOR CUR_PP IN
             (SELECT M_PRODUCTIONPLAN.*,
-              M_PRODUCT.C_UOM_ID
+              M_PRODUCT.C_UOM_ID,  M_PRODUCT.M_AttributeSetInstance_ID 
             FROM M_PRODUCTIONPLAN,
               M_PRODUCT
             WHERE M_PRODUCTIONPLAN.M_Product_ID=M_PRODUCT.M_Product_ID
@@ -238,14 +239,16 @@
                 M_ProductionLine_ID, M_ProductionPlan_ID, Line, AD_Client_ID,
                 AD_Org_ID, IsActive, Created, CreatedBy,
                 Updated, UpdatedBy, M_Product_ID, MovementQty,
-                M_Locator_ID, Description, C_UOM_ID
+                M_Locator_ID, Description, C_UOM_ID,
+                M_AttributeSetInstance_ID
               )
               VALUES
               (
                 NextNo, CUR_PP.M_ProductionPlan_ID, v_Line, CUR_PP.AD_Client_ID,
                 CUR_PP.AD_Org_ID, 'Y', now(), '0',
                 now(), '0', CUR_PP.M_Product_ID, CUR_PP.ProductionQty,
-                CUR_PP.M_Locator_ID, CUR_PP.Description, CUR_PP.C_UOM_ID
+                CUR_PP.M_Locator_ID, CUR_PP.Description, CUR_PP.C_UOM_ID,
+                CUR_PP.M_AttributeSetInstance_ID
               )
               ;
           END LOOP;
@@ -479,7 +482,16 @@
             AND PL.M_ProductionPlan_ID=pp.M_ProductionPlan_ID
             AND pp.M_Production_ID=v_Record_ID;
           IF v_Count<>0 THEN
-            v_Message:='@LinesWithoutAttributeSet@';
+          SELECT max(P.name) INTO v_Product_Name          
+          FROM M_PRODUCTIONPLAN PP,
+            M_PRODUCTIONLINE PL,
+            M_PRODUCT P
+          WHERE PL.M_PRODUCT_ID=P.M_PRODUCT_ID
+            AND P.M_ATTRIBUTESET_ID IS NOT NULL
+            AND COALESCE(PL.M_ATTRIBUTESETINSTANCE_ID, '0') = '0'
+            AND PL.M_ProductionPlan_ID=pp.M_ProductionPlan_ID
+            AND pp.M_Production_ID=v_Record_ID;
+            v_Message:='@Product@'||' "' ||v_Product_Name ||'" ' || '@ProductWithoutAttributeSet@';
             RAISE_APPLICATION_ERROR(-20000, v_Message);
             FINISH_PROCESS:=true;
           END IF;
