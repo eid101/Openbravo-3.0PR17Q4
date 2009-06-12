@@ -31,7 +31,7 @@ FUNCTION: submitForm [ field value form bolOneFormSubmission isCallOut frameName
 FUNCTION: reloadFunction [ text ]
 FUNCTION: setChangedField [ field form ]
 FUNCTION: logClick [ hiddenInput autosave ]
-FUNCTION: checkForChanges [ f form autosave promptConfirmation hasUserChanges autoSave ]
+FUNCTION: checkForChanges [ f form autosave promptConfirmation hasUserChanges autoSaveFlag ]
 FUNCTION: continueUserAction [ requestURL continueAction ]
 FUNCTION: sendDirectLink [ form columnName parentKey url keyId tableId newTarget bolCheckChanges frmDebug action autosave strFunction ]
 FUNCTION: dispatchEventChange [ target ]
