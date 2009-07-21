@@ -1,0 +1,9 @@
+VAR: xmlreq
+VAR: paramXMLRequest
+FUNCTION: getXMLHttpRequest [ XMLHttpRequestObj ]
+FUNCTION: getReadyStateHandler [ req responseXmlHandler notifyError ]
+FUNCTION: submitXmlHttpRequestUrl [ callbackFunction url debug paramXMLReq XMLHttpRequestObj paramXMLParticular ]
+FUNCTION: submitXmlHttpRequestWithParams [ callbackFunction formObject Command Action debug extraParams paramXMLReq XMLHttpRequestObj sendText length i text paramXMLParticular ]
+FUNCTION: submitXmlHttpRequest [ callbackFunction formObject Command Action debug extraParams paramXMLReq ]
+FUNCTION: lockField [ inputField ]
+FUNCTION: unlockField [ inputField ]
