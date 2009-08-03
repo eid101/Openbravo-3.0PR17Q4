@@ -1186,7 +1186,11 @@ SELECT * FROM drop_view('USER_TAB_COLUMNS')
 /-- END
 
 CREATE OR REPLACE VIEW user_tab_columns AS
- SELECT upper(pg_class.relname::text) AS table_name, upper(pg_attribute.attname::text) AS column_name, upper(pg_type.typname::text) AS data_type,
+ SELECT upper(pg_class.relname::text) AS table_name, upper(pg_attribute.attname::text) AS column_name, 
+        (CASE WHEN upper(pg_type.typname::text)='NUMERIC' 
+             THEN 'NUMBER'
+             ELSE upper(pg_type.typname::text)
+          END) AS data_type,
         CASE pg_type.typname
             WHEN 'varchar'::name THEN pg_attribute.atttypmod - 4
             WHEN 'bpchar'::name THEN pg_attribute.atttypmod - 4
@@ -1271,9 +1275,9 @@ DROP FUNCTION drop_view (varchar)
 /-- END
 
 
-CREATE OR REPLACE FUNCTION uuid_generate_v1()
+CREATE OR REPLACE FUNCTION uuid_generate_v4()
 RETURNS uuid
-AS '$libdir/uuid-ossp', 'uuid_generate_v1'
+AS '$libdir/uuid-ossp', 'uuid_generate_v4'
 VOLATILE STRICT LANGUAGE C;
 
 CREATE OR REPLACE FUNCTION get_uuid()
@@ -1291,15 +1295,15 @@ $BODY$ DECLARE
 * under the License.
 * The Original Code is Openbravo ERP.
 * The Initial Developer of the Original Code is Openbravo SL
-* All portions are Copyright (C) 2008 Openbravo SL
+* All portions are Copyright (C) 2008-2009 Openbravo SL
 * All Rights Reserved.
 * Contributor(s):  ______________________________________.
 ************************************************************************/
-var VARCHAR:=uuid_generate_v1();
+var VARCHAR:=uuid_generate_v4();
 BEGIN
- WHILE var=uuid_generate_v1()::varchar LOOP
+ WHILE var=uuid_generate_v4()::varchar LOOP
 END LOOP; 
-  return replace(upper(uuid_generate_v1()::varchar),'-','');
+  return replace(upper(uuid_generate_v4()::varchar),'-','');
 END;   $BODY$
   LANGUAGE 'plpgsql' VOLATILE
 /-- END
