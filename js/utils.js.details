@@ -22,6 +22,8 @@ VAR: isButtonClick
 VAR: calloutProcessedObj
 FUNCTION: getCurrentRevision [ number ]
 FUNCTION: revisionControl [ number current ]
+FUNCTION: getObjAttribute [ obj attribute attribute_text ]
+FUNCTION: setObjAttribute [ obj attribute attribute_text ]
 FUNCTION: setFocusFirstControl [ form field found total i ]
 FUNCTION: clearForm [ form total i ]
 FUNCTION: confirmAction [ action ]
