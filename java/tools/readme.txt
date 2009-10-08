@@ -23,6 +23,7 @@ command: ant -f <japitools-dir>/japitools.xml export.api -Djapifile=test -Dopenb
 parameters:
 - japifile: output filename to write the extracted api into
 - openbravo.base path to openbravo working copy
+  NOTE: This needs to be a absolute path, a relative path will not work
 
 
 
