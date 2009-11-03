@@ -4,6 +4,7 @@ VAR: gWhiteColor
 VAR: arrGeneralChange
 VAR: dateFormat
 VAR: defaultDateFormat
+VAR: daysOfMonth
 VAR: gByDefaultAction
 VAR: gSubmitted
 VAR: keyArray
@@ -20,6 +21,8 @@ VAR: isUserChanges
 VAR: isTabClick
 VAR: isButtonClick
 VAR: calloutProcessedObj
+VAR: debugMode
+FUNCTION: isDebugEnabled [ ]
 FUNCTION: getCurrentRevision [ number ]
 FUNCTION: revisionControl [ number current ]
 FUNCTION: getObjAttribute [ obj attribute attribute_text ]
@@ -33,8 +36,9 @@ FUNCTION: submitForm [ field value form bolOneFormSubmission isCallOut frameName
 FUNCTION: reloadFunction [ text ]
 FUNCTION: setChangedField [ field form ]
 FUNCTION: logClick [ hiddenInput autosave ]
-FUNCTION: reloadOpener [ f buttonRefresh commandType ]
+FUNCTION: reloadOpener [ f buttonRefresh ]
 FUNCTION: removeOnUnload [ ]
+FUNCTION: removeOnUnloadHandler [ form f ]
 FUNCTION: checkForChanges [ f form autosave promptConfirmation hasUserChanges autoSaveFlag ]
 FUNCTION: continueUserAction [ requestURL continueAction ]
 FUNCTION: sendDirectLink [ form columnName parentKey url keyId tableId newTarget bolCheckChanges frmDebug action autosave strFunction ]
@@ -64,7 +68,9 @@ FUNCTION: openLink [ url _name height width ]
 FUNCTION: editHelp [ url type id value height width parameters ]
 FUNCTION: keyPress [ keyCode tecla ]
 FUNCTION: byDefaultAction [ action ]
+VAR: previousOnKeyPress
 FUNCTION: stopKeyPressEvent [ evt ]
+FUNCTION: stopKeyPressPropagation [ evt ]
 FUNCTION: startKeyPressEvent [ evt ]
 FUNCTION: keyArrayItem [ key evalfunc field auxKey propagateKey event ]
 FUNCTION: obtainKeyCode [ code ]

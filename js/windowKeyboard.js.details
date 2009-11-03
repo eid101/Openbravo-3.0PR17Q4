@@ -15,6 +15,7 @@ VAR: isClickOnGenericTree
 VAR: defaultActionElement
 VAR: defaultActionType
 VAR: isTabPressed
+VAR: isOBTabBehavior
 VAR: isFirstTime
 VAR: isReadOnlyWindow
 VAR: isGoingDown
@@ -61,6 +62,7 @@ FUNCTION: getCurrentWindowTableFirstElement [ obj ]
 FUNCTION: getCurrentWindowTableLastElement [ obj ]
 FUNCTION: getFirstWindowElement [ obj ]
 FUNCTION: getLastWindowElement [ obj ]
+FUNCTION: setOBTabBehavior [ state ]
 FUNCTION: windowTabKey [ state obj ]
 FUNCTION: windowShiftTabKey [ state obj ]
 FUNCTION: windowEnterKey [ ]
