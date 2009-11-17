@@ -7,36 +7,36 @@ VAR: isGoingDown
 VAR: isGoingUp
 VAR: isTabPressed
 VAR: isMenuFocused
-FUNCTION: getReference [ id ]
-FUNCTION: getStyle [ id isId ref ]
-FUNCTION: changeState [ evt element index child total actualclass selectedClass obj ]
-FUNCTION: checkSelected [ id ]
-FUNCTION: onFocusMenu [ ]
-FUNCTION: onBlurMenu [ ]
-FUNCTION: setMouseOver [ obj actualclass ]
-FUNCTION: setMouseOut [ obj actualclass ]
-FUNCTION: setMouseDown [ obj actualclass ]
-FUNCTION: setMouseUp [ obj actualclass ]
-FUNCTION: activateElement [ obj jump ]
-FUNCTION: desactivateElement [ obj ]
-FUNCTION: getFirstMenuElement [ firstElement ]
-FUNCTION: getLastMenuElement [ lastElement ]
-FUNCTION: getNextMenuElement [ obj error firstElementObj nextElementTmp nextElement ]
-FUNCTION: getPreviousMenuElement [ obj error lastElementObj previousElementTmp previousElement ]
-FUNCTION: getMenuElementParent [ obj parentElement ]
-FUNCTION: putMenuElementFocus [ obj actualclass ]
-FUNCTION: removeMenuElementFocus [ obj actualclass ]
-FUNCTION: getMenuElementOffsetTop [ obj menuTopHeight ]
-FUNCTION: setMenuElementFocus [ obj menuScrollTop menuScrollHeight menuHeight elementOffsetTop_top elementOffsetTop_bottom ]
-FUNCTION: menuUpKey [ state ]
-FUNCTION: menuUpKeyDelay [ firstGoingUp ]
-FUNCTION: menuDownKey [ state ]
-FUNCTION: menuDownKeyDelay [ firstGoingDown ]
-FUNCTION: menuLeftKey [ ]
-FUNCTION: menuRightKey [ ]
-FUNCTION: menuHomeKey [ obj ]
-FUNCTION: menuEndKey [ obj ]
-FUNCTION: menuHomeKey [ obj ]
-FUNCTION: menuEnterKey [ ]
-FUNCTION: menuTabKey [ state ]
-FUNCTION: menuShiftTabKey [ state ]
+FUNCTION: getReference
+FUNCTION: getStyle
+FUNCTION: changeState
+FUNCTION: checkSelected
+FUNCTION: onFocusMenu
+FUNCTION: onBlurMenu
+FUNCTION: setMouseOver
+FUNCTION: setMouseOut
+FUNCTION: setMouseDown
+FUNCTION: setMouseUp
+FUNCTION: activateElement
+FUNCTION: desactivateElement
+FUNCTION: getFirstMenuElement
+FUNCTION: getLastMenuElement
+FUNCTION: getNextMenuElement
+FUNCTION: getPreviousMenuElement
+FUNCTION: getMenuElementParent
+FUNCTION: putMenuElementFocus
+FUNCTION: removeMenuElementFocus
+FUNCTION: getMenuElementOffsetTop
+FUNCTION: setMenuElementFocus
+FUNCTION: menuUpKey
+FUNCTION: menuUpKeyDelay
+FUNCTION: menuDownKey
+FUNCTION: menuDownKeyDelay
+FUNCTION: menuLeftKey
+FUNCTION: menuRightKey
+FUNCTION: menuHomeKey
+FUNCTION: menuEndKey
+FUNCTION: menuHomeKey
+FUNCTION: menuEnterKey
+FUNCTION: menuTabKey
+FUNCTION: menuShiftTabKey

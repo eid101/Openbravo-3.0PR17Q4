@@ -1,17 +1,17 @@
-FUNCTION: disableToolBarButton [ id link img ]
-FUNCTION: enableToolBarButton [ id link img ]
-FUNCTION: disableAttributeWithFunction [ element type attribute obj attribute_text ]
-FUNCTION: enableAttributeWithFunction [ element type attribute obj attribute_text ]
-FUNCTION: disableButton [ id link img ]
-FUNCTION: enableButton [ id link img ]
-FUNCTION: setWindowEditing [ value isNewWindow Buttons alwaysDisableButtons i ]
-FUNCTION: setCalloutProcessing [ value icon ]
-FUNCTION: setGridRefreshing [ value ]
-FUNCTION: setMenuLoading [ value frame frameset ]
-FUNCTION: processingModeCode [ target display string ]
-FUNCTION: setProcessingMode [ target value logo popup_code frame_menu frame_window menu_code window_code ]
-FUNCTION: setAlertIcon [ value ]
-FUNCTION: setAttachmentIcon [ value ]
-FUNCTION: callbackAttachmentIcon [ paramXMLParticular XMLHttpRequestObj strText ]
-FUNCTION: checkAttachmentIcon [ paramXMLReq ]
-FUNCTION: checkAttachmentIconRelation [ value ]
+FUNCTION: disableToolBarButton
+FUNCTION: enableToolBarButton
+FUNCTION: disableAttributeWithFunction
+FUNCTION: enableAttributeWithFunction
+FUNCTION: disableButton
+FUNCTION: enableButton
+FUNCTION: setWindowEditing
+FUNCTION: setCalloutProcessing
+FUNCTION: setGridRefreshing
+FUNCTION: setMenuLoading
+FUNCTION: processingModeCode
+FUNCTION: setProcessingMode
+FUNCTION: setAlertIcon
+FUNCTION: setAttachmentIcon
+FUNCTION: callbackAttachmentIcon
+FUNCTION: checkAttachmentIcon
+FUNCTION: checkAttachmentIconRelation

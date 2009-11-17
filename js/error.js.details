@@ -1,2 +1,2 @@
 VAR: showErrors
-FUNCTION: HandleErrors [ aMessage aURL aLine evt ]
+FUNCTION: HandleErrors
