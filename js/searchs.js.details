@@ -5,32 +5,32 @@ VAR: gFieldText
 VAR: gValidate
 VAR: gIsMultiLineSearch
 VAR: baseImage
-FUNCTION: selGetRef [ id ]
-FUNCTION: SearchElements [ campo esRef valor ]
-FUNCTION: valorCombo [ combo ]
-FUNCTION: textoCombo [ combo ]
-FUNCTION: windowSearch [ strPage strHeight strWidth strTop strLeft strWindow parameters strValueID complementsNS4 auxField hidden total i complements ]
-FUNCTION: closeWindowSearch [ ]
-FUNCTION: openSearch [ strTop strLeft strSelectorName strWindowName validate strForm strItem strSpanId strValueID parameters i ]
-FUNCTION: openMultiSearch [ strTop strLeft strSelectorName strWindowName validate strForm strItem parameters i ]
-FUNCTION: openPAttribute [ strTop strLeft strSelectorName strWindowName validate strForm strItem strSpanId strValueID parameters i ]
-FUNCTION: getField [ fieldName ]
-FUNCTION: closeSearch [ action strKey strText parameters wait key text total i obj ]
-FUNCTION: closeMultiSearch [ action data parameters key total i obj ]
-FUNCTION: toLayer [ strHtml strLayer ref ]
-FUNCTION: enableEvents [ ]
-FUNCTION: disableEvents [ ]
-FUNCTION: infoSelectFilters [ params ]
-FUNCTION: updateHeader [ liveGrid offset ]
-FUNCTION: depurarSelector_validateSelector_wrapper [ action ]
-FUNCTION: onRowDblClick [ cell value ]
-FUNCTION: getSelectedValues [ value ]
-FUNCTION: getSelectdText [ value ]
-FUNCTION: getSelectedPos [ value ]
-FUNCTION: isMultipleSelected [ value ]
-FUNCTION: onGridLoadDo [ params ]
-FUNCTION: setGridFilters [ newparams params total i ]
-FUNCTION: updateGridData [ ]
-FUNCTION: updateGridDataAfterFilter [ ]
-FUNCTION: setFilters [ frm paramsData count tags i selects ]
-FUNCTION: calculateNumRows [ grid_header_height grid_row_height messagebox_cont related_info_cont client_height numRows ]
+FUNCTION: selGetRef
+FUNCTION: SearchElements
+FUNCTION: valorCombo
+FUNCTION: textoCombo
+FUNCTION: windowSearch
+FUNCTION: closeWindowSearch
+FUNCTION: openSearch
+FUNCTION: openMultiSearch
+FUNCTION: openPAttribute
+FUNCTION: getField
+FUNCTION: closeSearch
+FUNCTION: closeMultiSearch
+FUNCTION: toLayer
+FUNCTION: enableEvents
+FUNCTION: disableEvents
+FUNCTION: infoSelectFilters
+FUNCTION: updateHeader
+FUNCTION: depurarSelector_validateSelector_wrapper
+FUNCTION: onRowDblClick
+FUNCTION: getSelectedValues
+FUNCTION: getSelectdText
+FUNCTION: getSelectedPos
+FUNCTION: isMultipleSelected
+FUNCTION: onGridLoadDo
+FUNCTION: setGridFilters
+FUNCTION: updateGridData
+FUNCTION: updateGridDataAfterFilter
+FUNCTION: setFilters
+FUNCTION: calculateNumRows

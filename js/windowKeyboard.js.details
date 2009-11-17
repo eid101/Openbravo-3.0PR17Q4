@@ -25,90 +25,90 @@ VAR: isSelectedComboOpened
 VAR: hasCloseWindowSearch
 VAR: propagateEnter
 VAR: isContextMenuOpened
-FUNCTION: windowKeyboardCaptureEvents [ ]
-FUNCTION: activateDefaultAction [ ]
-FUNCTION: disableDefaultAction [ ]
-FUNCTION: comboDefaultAction [ ]
-FUNCTION: defaultActionLogic [ obj i ]
-FUNCTION: enableDefaultAction [ ]
-FUNCTION: activeElementFocus [ ]
-FUNCTION: setSelectedArea [ area ]
-FUNCTION: swichSelectedArea [ ]
-FUNCTION: windowTableId [ tableId defaultActionButtonId ]
-FUNCTION: setWindowTableParentElement [ ]
+FUNCTION: windowKeyboardCaptureEvents
+FUNCTION: activateDefaultAction
+FUNCTION: disableDefaultAction
+FUNCTION: comboDefaultAction
+FUNCTION: defaultActionLogic
+FUNCTION: enableDefaultAction
+FUNCTION: activeElementFocus
+FUNCTION: setSelectedArea
+FUNCTION: swichSelectedArea
+FUNCTION: windowTableId
+FUNCTION: setWindowTableParentElement
 VAR: isOnMouseDown
-FUNCTION: mouseDownLogic [ evt obj ]
-FUNCTION: mouseClickLogic [ evt obj ]
-FUNCTION: cursorFocus [ obj event ]
-FUNCTION: checkGenericTree [ obj ]
-FUNCTION: comboKeyBehaviour [ obj event ]
-FUNCTION: isInsideWindowTable [ obj i ]
-FUNCTION: setWindowElementFocus [ obj type event ]
-FUNCTION: drawWindowElementDefaultAction [ obj ]
-FUNCTION: eraseWindowElementDefaultAction [ obj ]
-FUNCTION: drawWindowElementFocus [ obj obj_tmp ]
-FUNCTION: putWindowElementFocus [ obj event ]
-FUNCTION: eraseWindowElementFocus [ obj obj_tmp ]
-FUNCTION: removeWindowElementFocus [ obj ]
-FUNCTION: mustBeJumped [ obj ]
-FUNCTION: mustBeIgnored [ obj ]
-FUNCTION: canHaveFocus [ obj ]
-FUNCTION: couldHaveFocus [ obj ]
-FUNCTION: getNextWindowElement [ success nextElementTmp nextElement ]
-FUNCTION: getPreviousWindowElement [ success previousElementTmp previousElement ]
-FUNCTION: goToNextWindowTable [ ]
-FUNCTION: goToPreviousWindowTable [ ]
-FUNCTION: getCurrentWindowTableFirstElement [ obj ]
-FUNCTION: getCurrentWindowTableLastElement [ obj ]
-FUNCTION: getFirstWindowElement [ obj ]
-FUNCTION: getLastWindowElement [ obj ]
-FUNCTION: setOBTabBehavior [ state ]
-FUNCTION: windowTabKey [ state obj ]
-FUNCTION: windowShiftTabKey [ state obj ]
-FUNCTION: windowEnterKey [ ]
-FUNCTION: windowCtrlShiftEnterKey [ ]
-FUNCTION: windowCtrlEnterKey [ ]
-FUNCTION: setFirstWindowElementFocus [ obj ]
-FUNCTION: setLastWindowElementFocus [ obj ]
-FUNCTION: setCurrentWindowTableFirstElementFocus [ obj ]
-FUNCTION: setCurrentWindowTableLastElementFocus [ obj ]
-FUNCTION: getAssociatedLink [ link success ]
-FUNCTION: executeAssociatedLink [ link ]
-FUNCTION: getAssociatedFieldButton [ type fieldButton success ]
-FUNCTION: executeAssociatedFieldButton [ fieldButton ]
+FUNCTION: mouseDownLogic
+FUNCTION: mouseClickLogic
+FUNCTION: cursorFocus
+FUNCTION: checkGenericTree
+FUNCTION: comboKeyBehaviour
+FUNCTION: isInsideWindowTable
+FUNCTION: setWindowElementFocus
+FUNCTION: drawWindowElementDefaultAction
+FUNCTION: eraseWindowElementDefaultAction
+FUNCTION: drawWindowElementFocus
+FUNCTION: putWindowElementFocus
+FUNCTION: eraseWindowElementFocus
+FUNCTION: removeWindowElementFocus
+FUNCTION: mustBeJumped
+FUNCTION: mustBeIgnored
+FUNCTION: canHaveFocus
+FUNCTION: couldHaveFocus
+FUNCTION: getNextWindowElement
+FUNCTION: getPreviousWindowElement
+FUNCTION: goToNextWindowTable
+FUNCTION: goToPreviousWindowTable
+FUNCTION: getCurrentWindowTableFirstElement
+FUNCTION: getCurrentWindowTableLastElement
+FUNCTION: getFirstWindowElement
+FUNCTION: getLastWindowElement
+FUNCTION: setOBTabBehavior
+FUNCTION: windowTabKey
+FUNCTION: windowShiftTabKey
+FUNCTION: windowEnterKey
+FUNCTION: windowCtrlShiftEnterKey
+FUNCTION: windowCtrlEnterKey
+FUNCTION: setFirstWindowElementFocus
+FUNCTION: setLastWindowElementFocus
+FUNCTION: setCurrentWindowTableFirstElementFocus
+FUNCTION: setCurrentWindowTableLastElementFocus
+FUNCTION: getAssociatedLink
+FUNCTION: executeAssociatedLink
+FUNCTION: getAssociatedFieldButton
+FUNCTION: executeAssociatedFieldButton
 VAR: focusedTab
 VAR: focusedTab_tmp
 VAR: tabTableParentElement
 VAR: focusedTabTable
-FUNCTION: tabTableId [ tabTableId ]
-FUNCTION: isTabActive [ obj ]
-FUNCTION: drawTabFocus [ obj obj_tmp ]
-FUNCTION: putTabFocus [ obj ]
-FUNCTION: eraseTabFocus [ obj obj_tmp ]
-FUNCTION: removeTabFocus [ obj ]
-FUNCTION: getFirstTab [ obj ]
-FUNCTION: getLastTab [ obj ]
-FUNCTION: getNextTab [ success nextElementTmp nextElement ]
-FUNCTION: getPreviousTab [ success previousElementTmp previousElement ]
-FUNCTION: setTabFocus [ obj type ]
-FUNCTION: setFirstTabFocus [ obj ]
-FUNCTION: setLastTabFocus [ obj ]
-FUNCTION: goToNextTabs [ ]
-FUNCTION: goToPreviousTabs [ ]
-FUNCTION: setActiveTab [ obj ]
-FUNCTION: setTabTableParentElement [ ]
-FUNCTION: getActiveTab [ obj focusedTab_tmp ]
-FUNCTION: getActiveTabContainer [ success nextElementTmp nextElement ]
-FUNCTION: focusGrid [ ]
-FUNCTION: blurGrid [ ]
-FUNCTION: focusGenericTree [ ]
-FUNCTION: blurGenericTree [ ]
-FUNCTION: windowUpKey [ ]
-FUNCTION: windowDownKey [ ]
-FUNCTION: windowLeftKey [ ]
-FUNCTION: windowRightKey [ ]
-FUNCTION: windowSpaceKey [ ]
-FUNCTION: windowHomeKey [ ]
-FUNCTION: windowEndKey [ ]
-FUNCTION: windowAvpageKey [ ]
-FUNCTION: windowRepageKey [ ]
+FUNCTION: tabTableId
+FUNCTION: isTabActive
+FUNCTION: drawTabFocus
+FUNCTION: putTabFocus
+FUNCTION: eraseTabFocus
+FUNCTION: removeTabFocus
+FUNCTION: getFirstTab
+FUNCTION: getLastTab
+FUNCTION: getNextTab
+FUNCTION: getPreviousTab
+FUNCTION: setTabFocus
+FUNCTION: setFirstTabFocus
+FUNCTION: setLastTabFocus
+FUNCTION: goToNextTabs
+FUNCTION: goToPreviousTabs
+FUNCTION: setActiveTab
+FUNCTION: setTabTableParentElement
+FUNCTION: getActiveTab
+FUNCTION: getActiveTabContainer
+FUNCTION: focusGrid
+FUNCTION: blurGrid
+FUNCTION: focusGenericTree
+FUNCTION: blurGenericTree
+FUNCTION: windowUpKey
+FUNCTION: windowDownKey
+FUNCTION: windowLeftKey
+FUNCTION: windowRightKey
+FUNCTION: windowSpaceKey
+FUNCTION: windowHomeKey
+FUNCTION: windowEndKey
+FUNCTION: windowAvpageKey
+FUNCTION: windowRepageKey

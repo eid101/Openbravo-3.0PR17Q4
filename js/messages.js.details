@@ -1,14 +1,14 @@
 VAR: gDefaultType
-FUNCTION: messageType [ _messageID _messageType ]
-FUNCTION: messagesTexts [ _language _message _text _defaultText ]
-FUNCTION: getMessage [ index _language total i ]
-FUNCTION: getDefaultText [ index _language total i ]
-FUNCTION: getType [ index total i ]
-FUNCTION: showMessage [ _text _type _defaultValue ]
-FUNCTION: mensaje [ index _language ]
-FUNCTION: showJSMessage [ index _language clean clearMsgBox strMessage strDefault type ]
-FUNCTION: renderMessageBox [ type title text ]
-FUNCTION: getUrl [ url pos pos2 ]
-FUNCTION: getDataBaseMessage [ value responseFunction paramXMLReq ]
-FUNCTION: getDataBaseStandardMessage [ value responseFunction paramXMLReq ]
-FUNCTION: messageResponse [ paramArray XMLHttpRequestObj obj status type title description ]
+FUNCTION: messageType
+FUNCTION: messagesTexts
+FUNCTION: getMessage
+FUNCTION: getDefaultText
+FUNCTION: getType
+FUNCTION: showMessage
+FUNCTION: mensaje
+FUNCTION: showJSMessage
+FUNCTION: renderMessageBox
+FUNCTION: getUrl
+FUNCTION: getDataBaseMessage
+FUNCTION: getDataBaseStandardMessage
+FUNCTION: messageResponse
