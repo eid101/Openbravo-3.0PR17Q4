@@ -12,3 +12,4 @@ FUNCTION: getUrl
 FUNCTION: getDataBaseMessage
 FUNCTION: getDataBaseStandardMessage
 FUNCTION: messageResponse
+FUNCTION: setValidationMessages
