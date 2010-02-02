@@ -4,6 +4,8 @@ FUNCTION: disableAttributeWithFunction
 FUNCTION: enableAttributeWithFunction
 FUNCTION: disableButton
 FUNCTION: enableButton
+FUNCTION: disableFieldButton
+FUNCTION: enableFieldButton
 FUNCTION: setWindowEditing
 FUNCTION: setCalloutProcessing
 FUNCTION: setGridRefreshing
