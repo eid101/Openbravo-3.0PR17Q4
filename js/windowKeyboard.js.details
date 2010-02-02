@@ -18,6 +18,7 @@ VAR: isTabPressed
 VAR: isOBTabBehavior
 VAR: isFirstTime
 VAR: isReadOnlyWindow
+VAR: selectInputTextOnTab
 VAR: isGoingDown
 VAR: isGoingUp
 VAR: selectedCombo
