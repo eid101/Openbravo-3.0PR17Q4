@@ -16,6 +16,8 @@ VAR: isAltPressed
 VAR: isTabBlocked
 VAR: pressedKeyCode
 VAR: isInputFile
+VAR: ExternalKeyDownFunction
+VAR: ExternalKeyUpFunction
 VAR: isPageLoading
 VAR: isUserChanges
 VAR: isTabClick
@@ -25,8 +27,11 @@ VAR: debugMode
 FUNCTION: isDebugEnabled
 FUNCTION: getCurrentRevision
 FUNCTION: revisionControl
+FUNCTION: getBrowserInfo
+FUNCTION: checkBrowserCompatibility
 FUNCTION: getObjAttribute
 FUNCTION: setObjAttribute
+FUNCTION: getElementsByName
 FUNCTION: setFocusFirstControl
 FUNCTION: clearForm
 FUNCTION: confirmAction
@@ -35,6 +40,7 @@ FUNCTION: getParamsScript
 FUNCTION: submitForm
 FUNCTION: reloadFunction
 FUNCTION: setChangedField
+FUNCTION: isAutosaveEnabled
 FUNCTION: logClick
 FUNCTION: reloadOpener
 FUNCTION: removeOnUnload
@@ -78,6 +84,10 @@ FUNCTION: keyControl
 FUNCTION: putFocusOnMenu
 FUNCTION: putFocusOnWindow
 FUNCTION: enableShortcuts
+FUNCTION: keyDownManagement
+FUNCTION: keyDownExecution
+FUNCTION: keyUpManagement
+FUNCTION: keyUpExecution
 FUNCTION: lockKeyboard
 FUNCTION: unlockKeyboard
 FUNCTION: setBrowserAutoComplete
@@ -152,6 +162,7 @@ FUNCTION: setInputValue
 FUNCTION: displayLogicElement
 FUNCTION: readOnlyLogicElement
 FUNCTION: autoCompleteNumber
+FUNCTION: getObjFeatures
 FUNCTION: setPageLoading
 FUNCTION: logChanges
 FUNCTION: changeToEditingMode

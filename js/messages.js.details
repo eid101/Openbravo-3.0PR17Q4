@@ -4,6 +4,7 @@ FUNCTION: messagesTexts
 FUNCTION: getMessage
 FUNCTION: getDefaultText
 FUNCTION: getType
+FUNCTION: showStdMessage
 FUNCTION: showMessage
 FUNCTION: mensaje
 FUNCTION: showJSMessage
