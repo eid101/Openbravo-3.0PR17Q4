@@ -45,6 +45,10 @@
         <default/>
         <onCreateDefault/>
       </column>
+      <column name="ISTAXUNDEDUCTABLE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA['N']]></onCreateDefault>
+      </column>
       <column name="LOGO" primaryKey="false" required="false" type="NVARCHAR" size="200" autoIncrement="false">
         <default/>
         <onCreateDefault/>
@@ -73,5 +77,6 @@
         <reference local="C_LOCATION_ID" foreign="C_LOCATION_ID"/>
       </foreign-key>
       <check name="AD_ORGINFO_ISACTIVE_CHECK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
+      <check name="AD_ORGINFO_ISTAXUNDEDUCTABLE"><![CDATA[ISTAXUNDEDUCTABLE IN ('Y', 'N')]]></check>
     </table>
   </database>
