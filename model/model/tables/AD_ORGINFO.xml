@@ -49,6 +49,10 @@
         <default><![CDATA[N]]></default>
         <onCreateDefault><![CDATA['N']]></onCreateDefault>
       </column>
+      <column name="C_TAX_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
       <column name="LOGO" primaryKey="false" required="false" type="NVARCHAR" size="200" autoIncrement="false">
         <default/>
         <onCreateDefault/>
@@ -69,6 +73,9 @@
       </foreign-key>
       <foreign-key foreignTable="C_BPARTNER" name="AD_ORGINFO_C_BPARTNER">
         <reference local="C_BPARTNER_ID" foreign="C_BPARTNER_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_TAX" name="AD_ORGINFO_C_TAX">
+        <reference local="C_TAX_ID" foreign="C_TAX_ID"/>
       </foreign-key>
       <foreign-key foreignTable="AD_IMAGE" name="AD_ORGINFO_IMAGEDOCUM">
         <reference local="YOUR_COMPANY_DOCUMENT_IMAGE" foreign="AD_IMAGE_ID"/>
