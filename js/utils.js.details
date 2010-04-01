@@ -4,6 +4,7 @@ VAR: gWhiteColor
 VAR: arrGeneralChange
 VAR: dateFormat
 VAR: defaultDateFormat
+VAR: mainFrame_windowObj
 VAR: daysOfMonth
 VAR: gByDefaultAction
 VAR: gSubmitted
@@ -97,6 +98,7 @@ FUNCTION: layer
 FUNCTION: readLayer
 FUNCTION: getChildText
 FUNCTION: getObjChild
+FUNCTION: getObjParent
 FUNCTION: fillCombo
 FUNCTION: selectDefaultValueFromArray
 FUNCTION: changeOrderBy
@@ -115,6 +117,8 @@ FUNCTION: addElementsToList
 FUNCTION: markCheckedAllElements
 FUNCTION: handleFieldMaxLength
 FUNCTION: selectCombo
+FUNCTION: hideMenuIcon
+FUNCTION: showMenuIcon
 FUNCTION: updateMenuIcon
 FUNCTION: menuShowHide
 FUNCTION: menuShow
