@@ -132,6 +132,7 @@
       <check name="FIN_PAYMENTMETH_PAYOUTDEF_CHK"><![CDATA[PAYOUT_DEFERRED IN ('Y', 'N')]]></check>
       <check name="FIN_PAYMENTMETH_RECEIPT_CHK"><![CDATA[AUTOMATIC_RECEIPT IN ('Y', 'N')]]></check>
       <check name="FIN_PAYMENTMETH_WITHDRAW_CHK"><![CDATA[AUTOMATIC_WITHDRAWN IN ('Y', 'N')]]></check>
+      <check name="FIN_PAYMENTMETHOD_ACTIVE_CHK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
       <check name="FIN_PAYMENTMETHOD_PAYINDEF_CHK"><![CDATA[PAYIN_DEFERRED IN ('Y', 'N')]]></check>
     </table>
   </database>
