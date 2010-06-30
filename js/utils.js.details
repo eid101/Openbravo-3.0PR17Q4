@@ -235,6 +235,7 @@ FUNCTION: replaceAt
 VAR: isWindowInMDITab
 VAR: isWindowInMDIContext
 FUNCTION: LayoutMDICheck
+VAR: isMDIEnvironmentSet
 FUNCTION: setMDIEnvironment
 FUNCTION: checkWindowInMDITab
 FUNCTION: checkWindowInMDIContext
