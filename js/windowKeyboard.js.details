@@ -36,6 +36,7 @@ FUNCTION: activeElementFocus
 FUNCTION: setSelectedArea
 FUNCTION: swichSelectedArea
 FUNCTION: windowTableId
+VAR: isMDIEnvironmentSet
 FUNCTION: setWindowTableParentElement
 VAR: isOnMouseDown
 FUNCTION: mouseDownLogic

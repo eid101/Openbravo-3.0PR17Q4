@@ -232,6 +232,13 @@ FUNCTION: setCaretToBegin
 FUNCTION: setCaretToPos
 FUNCTION: manageDecPoint
 FUNCTION: replaceAt
+VAR: isWindowInMDITab
+VAR: isWindowInMDIContext
+FUNCTION: LayoutMDICheck
+FUNCTION: setMDIEnvironment
+FUNCTION: checkWindowInMDITab
+FUNCTION: checkWindowInMDIContext
+FUNCTION: sendWindowInfoToMDI
 VAR: arrTeclas
 FUNCTION: Teclas
 FUNCTION: controlTecla
