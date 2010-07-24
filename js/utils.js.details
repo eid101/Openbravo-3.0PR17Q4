@@ -1,3 +1,7 @@
+FUNCTION: utilsJSDirectExecution
+VAR: isWindowInMDITab
+VAR: isWindowInMDIContext
+VAR: isMDIEnvironmentSet
 VAR: baseFrameServlet
 VAR: gColorSelected
 VAR: gWhiteColor
@@ -153,6 +157,11 @@ FUNCTION: selectRadioButton
 FUNCTION: selectCheckbox
 FUNCTION: formElementValue
 FUNCTION: getFrame
+FUNCTION: getOpenbravoERPStyleSheet
+FUNCTION: addStyleRule
+FUNCTION: removeStyleRule
+FUNCTION: getStyleRulePosition
+FUNCTION: adaptSkinToMDIEnvironment
 FUNCTION: setClass
 FUNCTION: getObjectClass
 FUNCTION: formElementEvent
@@ -232,10 +241,7 @@ FUNCTION: setCaretToBegin
 FUNCTION: setCaretToPos
 FUNCTION: manageDecPoint
 FUNCTION: replaceAt
-VAR: isWindowInMDITab
-VAR: isWindowInMDIContext
 FUNCTION: LayoutMDICheck
-VAR: isMDIEnvironmentSet
 FUNCTION: setMDIEnvironment
 FUNCTION: checkWindowInMDITab
 FUNCTION: checkWindowInMDIContext

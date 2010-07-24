@@ -102,6 +102,8 @@
     Cur_TaxDiscount RECORD;
     v_OrderLine VARCHAR2(32);
     v_Discount NUMBER;
+    v_precision NUMBER;
+    Cur_OrderLine RECORD;
   BEGIN
     IF(p_PInstance_ID IS NOT NULL) THEN
       --  Update AD_PInstance
@@ -350,7 +352,9 @@
                 v_QtyPO:=0;
                 v_QtyOrderPO:=NULL;
               END IF;
-              M_UPDATE_STORAGE_PENDING(v_Client_ID, v_Org_ID, v_UpdatedBy, Cur_ResLine.M_Product_ID, Cur_ResLine.M_Warehouse_ID, Cur_ResLine.M_AttributeSetInstance_ID, Cur_ResLine.C_UOM_ID, Cur_ResLine.M_PRODUCT_UOM_ID, v_QtySO, v_QtyOrderSO, v_QtyPO, v_QtyOrderPO) ;
+              IF(v_DocStatus<>'IP' OR v_DocAction<>'CO') THEN
+               M_UPDATE_STORAGE_PENDING(v_Client_ID, v_Org_ID, v_UpdatedBy, Cur_ResLine.M_Product_ID, Cur_ResLine.M_Warehouse_ID, Cur_ResLine.M_AttributeSetInstance_ID, Cur_ResLine.C_UOM_ID, Cur_ResLine.M_PRODUCT_UOM_ID, v_QtySO, v_QtyOrderSO, v_QtyPO, v_QtyOrderPO) ;
+              END IF;
             END LOOP;
           -- Set reserved quantity to 0
           UPDATE C_ORDERLINE
@@ -515,6 +519,17 @@
       END IF;
     END IF;--FINISH_PROCESS
     IF(NOT FINISH_PROCESS) THEN
+    /**
+    *Update Product purchasing Plan Table
+    */
+    IF(v_isSoTrx ='N') THEN
+      FOR Cur_OrderLine IN (SELECT * FROM C_ORDERLINE WHERE C_Order_Id =  v_Record_ID)
+      LOOP
+          UPDATE M_PRODUCT_PO SET PriceLastPO=Cur_OrderLine.PriceActual 
+          Where C_BPARTNER_ID = v_CBPartner_ID AND M_PRODUCT_ID = Cur_OrderLine.M_PRODUCT_ID
+          AND Ad_Isorgincluded(Cur_OrderLine.AD_ORG_ID,AD_ORG_ID, Cur_OrderLine.AD_Client_ID) <> -1;
+      END LOOP;
+    END IF;
       /**
       * Void Order - prepare
       */
@@ -607,10 +622,12 @@
         v_CumDiscount:=0;
         v_OldCumDiscount:=0;
         v_Line:=10;
+        v_precision:=0;
         SELECT MAX(LINE) +10
         INTO v_OrderLineSeqNo
         FROM C_ORDERLINE
-        WHERE C_ORDER_ID=v_Record_ID;            
+        WHERE C_ORDER_ID=v_Record_ID;
+        SELECT PricePrecision INTO v_precision FROM C_ORDER o,C_CURRENCY c WHERE o.C_ORDER_ID = v_Record_ID AND  o.C_CURRENCY_ID = c.C_CURRENCY_ID;            
         FOR Cur_COrderDiscount IN
           (SELECT C_ORDER_DISCOUNT.C_ORDER_DISCOUNT_ID,
             C_DISCOUNT.DISCOUNT,
@@ -669,10 +686,10 @@
                 now(), now(), now(), now(), Cur_COrderDiscount.NAME, 
                 Cur_COrderDiscount.M_PRODUCT_ID, v_M_Warehouse_ID, 'N', Cur_COrderDiscount.C_UOM_ID, 1, 
                 0, 0, 0, NULL, v_c_currency_id, 
-                v_Discount, v_Discount, v_Discount, v_Discount, 0, 0, 
+                ROUND(v_Discount,v_precision), ROUND(v_Discount,v_precision), ROUND(v_Discount,v_precision), ROUND(v_Discount,v_precision), 0, 0, 
                 NULL, NULL, Cur_TaxDiscount.C_TAX_ID, NULL, NULL, 
                 NULL, 'N', NULL, NULL, 
-                NULL, v_Discount, NULL
+                NULL, ROUND(v_Discount,v_precision), NULL
               );
            
             UPDATE C_ORDERLINE
@@ -969,8 +986,10 @@ IF(NOT END_PROCESSING AND NOT FINISH_PROCESS) THEN
        v_QtyOrderPO := C_Uom_Convert(v_QtyPO, Cur_ResLine.C_UOM_ID, Cur_ResLine.M_Product_UOM_ID, 'Y');
     END IF;
    END IF;
-   M_UPDATE_STORAGE_PENDING(v_Client_ID, v_Org_ID, v_UpdatedBy, Cur_ResLine.M_Product_ID, Cur_ResLine.M_Warehouse_ID, Cur_ResLine.M_AttributeSetInstance_ID,
+   IF(v_DocStatus<>'IP' OR v_DocAction<>'CO') THEN
+   	 M_UPDATE_STORAGE_PENDING(v_Client_ID, v_Org_ID, v_UpdatedBy, Cur_ResLine.M_Product_ID, Cur_ResLine.M_Warehouse_ID, Cur_ResLine.M_AttributeSetInstance_ID,
           Cur_ResLine.C_UOM_ID, Cur_ResLine.M_PRODUCT_UOM_ID, v_QtySO, v_QtyOrderSO, v_QtyPO, v_QtyOrderPO);
+    END IF;
    DBMS_OUTPUT.PUT_LINE('Reserved Warehouse=' || Cur_ResLine.M_Warehouse_ID || ', Product=' || Cur_ResLine.M_Product_ID || ', Attrib=' || Cur_ResLine.M_AttributeSetInstance_ID || ', Qty=' || v_QtySO || '/' || v_QtyPO);
 
    -- Update Order Line
