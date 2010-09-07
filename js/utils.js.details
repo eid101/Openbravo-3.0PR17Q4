@@ -18,6 +18,7 @@ VAR: isKeyboardLocked
 VAR: isPopupLoadingWindowLoaded
 VAR: isCtrlPressed
 VAR: isAltPressed
+VAR: isShiftPressed
 VAR: isTabBlocked
 VAR: pressedKeyCode
 VAR: isInputFile
