@@ -1,7 +1,10 @@
 FUNCTION: utilsJSDirectExecution
+VAR: isWindowInMDIPopup
 VAR: isWindowInMDITab
+VAR: isWindowInMDIPage
 VAR: isWindowInMDIContext
 VAR: isMDIEnvironmentSet
+VAR: MDIPopupId
 VAR: baseFrameServlet
 VAR: gColorSelected
 VAR: gWhiteColor
@@ -9,6 +12,7 @@ VAR: arrGeneralChange
 VAR: dateFormat
 VAR: defaultDateFormat
 VAR: mainFrame_windowObj
+VAR: LayoutMDI_windowObj
 VAR: daysOfMonth
 VAR: gByDefaultAction
 VAR: gSubmitted
@@ -63,6 +67,7 @@ FUNCTION: validateNumberField
 FUNCTION: getArrayValue
 FUNCTION: addArrayValue
 FUNCTION: addUrlParameters
+VAR: openPopUpMDICheck
 FUNCTION: openPopUp
 FUNCTION: synchronizedSubmitCommandForm
 FUNCTION: setPopupLoadingWindowLoaded
@@ -242,9 +247,12 @@ FUNCTION: setCaretToBegin
 FUNCTION: setCaretToPos
 FUNCTION: manageDecPoint
 FUNCTION: replaceAt
+FUNCTION: closePage
 FUNCTION: LayoutMDICheck
 FUNCTION: setMDIEnvironment
+FUNCTION: checkWindowInMDIPopup
 FUNCTION: checkWindowInMDITab
+FUNCTION: checkWindowInMDIPage
 FUNCTION: checkWindowInMDIContext
 FUNCTION: sendWindowInfoToMDI
 VAR: arrTeclas
