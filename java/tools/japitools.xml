@@ -21,6 +21,9 @@
     <fileset dir="${openbravo.base}/src-db/database/lib">
       <include name="**/*.jar"/>
     </fileset>
+    <fileset dir="${openbravo.base}/modules">
+      <include name="*/lib/**/*.jar"/>
+    </fileset>
   </path>
 
   <target name="export.api" depends="init" description="Export the public api in japitools format">
