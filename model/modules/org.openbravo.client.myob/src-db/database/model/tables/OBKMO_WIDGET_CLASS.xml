@@ -41,7 +41,7 @@
         <default/>
         <onCreateDefault/>
       </column>
-      <column name="JAVACLASS" primaryKey="false" required="true" type="VARCHAR" size="255" autoIncrement="false">
+      <column name="JAVACLASS" primaryKey="false" required="false" type="VARCHAR" size="255" autoIncrement="false">
         <default/>
         <onCreateDefault/>
       </column>
@@ -61,6 +61,10 @@
         <default><![CDATA[N]]></default>
         <onCreateDefault><![CDATA['N']]></onCreateDefault>
       </column>
+      <column name="WIDGET_SUPERCLASS_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
       <column name="CAN_MAXIMIZE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
         <default><![CDATA[N]]></default>
         <onCreateDefault><![CDATA['N']]></onCreateDefault>
@@ -74,12 +78,16 @@
       <foreign-key foreignTable="AD_ORG" name="OBKMO_WIDGET_ORG">
         <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
       </foreign-key>
+      <foreign-key foreignTable="OBKMO_WIDGET_CLASS" name="OBKMO_WIDGETCLASS_SUPERCLASS">
+        <reference local="WIDGET_SUPERCLASS_ID" foreign="OBKMO_WIDGET_CLASS_ID"/>
+      </foreign-key>
       <unique name="OBKMO_WIDGETCLASS_MOD_TITLE_UN">
         <unique-column name="AD_MODULE_ID"/>
         <unique-column name="TITLE"/>
       </unique>
       <check name="OBKMO_WIDGETCLASS_ALLOWANONACC"><![CDATA[ALLOW_ANONYMOUS_ACCESS IN ('Y', 'N')]]></check>
       <check name="OBKMO_WIDGETCLASS_CAN_MAX_CHK"><![CDATA[CAN_MAXIMIZE IN ('Y', 'N')]]></check>
+      <check name="OBKMO_WIDGETCLASS_CLASNAME"><![CDATA[(WIDGET_SUPERCLASS_ID IS NOT NULL) OR (JAVACLASS IS NOT NULL)]]></check>
       <check name="OBKMO_WIDGETCLASS_ISACTIVE_CHK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
       <check name="OBKMO_WIDGETCLASS_ISSUPERCLASS"><![CDATA[ISSUPERCLASS IN ('Y', 'N')]]></check>
     </table>
