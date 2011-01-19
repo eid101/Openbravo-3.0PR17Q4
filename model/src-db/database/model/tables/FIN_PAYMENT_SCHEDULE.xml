@@ -83,5 +83,6 @@
       <foreign-key foreignTable="FIN_PAYMENTMETHOD" name="FIN_PAYMENTMETHOD_PAYMENT_SCH">
         <reference local="FIN_PAYMENTMETHOD_ID" foreign="FIN_PAYMENTMETHOD_ID"/>
       </foreign-key>
+      <check name="FIN_PAYSCHED_UPP_CHK"><![CDATA[UPDATE_PAYMENT_PLAN IN ('Y', 'N')]]></check>
     </table>
   </database>
