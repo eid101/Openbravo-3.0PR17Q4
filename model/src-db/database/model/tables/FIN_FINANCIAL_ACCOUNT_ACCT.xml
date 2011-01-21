@@ -93,11 +93,26 @@
         <default/>
         <onCreateDefault/>
       </column>
+      <column name="FIN_ASSET_ACCT" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="FIN_TRANSITORY_ACCT" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ENABLEBANKSTATEMENT" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
       <foreign-key foreignTable="AD_CLIENT" name="FIN_FINACC_ACCT_AD_CLIENT">
         <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
       </foreign-key>
       <foreign-key foreignTable="AD_ORG" name="FIN_FINACC_ACCT_AD_ORG">
         <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_VALIDCOMBINATION" name="FIN_FINACC_ACCT_ASSET">
+        <reference local="FIN_ASSET_ACCT" foreign="C_VALIDCOMBINATION_ID"/>
       </foreign-key>
       <foreign-key foreignTable="C_VALIDCOMBINATION" name="FIN_FINACC_ACCT_BANKFEE">
         <reference local="FIN_BANKFEE_ACCT" foreign="C_VALIDCOMBINATION_ID"/>
@@ -141,6 +156,9 @@
       <foreign-key foreignTable="C_VALIDCOMBINATION" name="FIN_FINACC_ACCT_REVALLOSS">
         <reference local="FIN_BANKREVALUATIONLOSS_ACCT" foreign="C_VALIDCOMBINATION_ID"/>
       </foreign-key>
+      <foreign-key foreignTable="C_VALIDCOMBINATION" name="FIN_FINACC_ACCT_TRANSITORY">
+        <reference local="FIN_TRANSITORY_ACCT" foreign="C_VALIDCOMBINATION_ID"/>
+      </foreign-key>
       <foreign-key foreignTable="C_VALIDCOMBINATION" name="FIN_FINACC_ACCT_WITHDRAWAL">
         <reference local="FIN_WITHDRAWAL_ACCT" foreign="C_VALIDCOMBINATION_ID"/>
       </foreign-key>
@@ -148,6 +166,8 @@
         <unique-column name="FIN_FINANCIAL_ACCOUNT_ID"/>
         <unique-column name="C_ACCTSCHEMA_ID"/>
       </unique>
+      <check name="FIN_FINACC_ACCT_BSCONFIG_CHECK"><![CDATA[(((ENABLEBANKSTATEMENT = 'Y') AND (FIN_TRANSITORY_ACCT IS NOT NULL)) AND (FIN_ASSET_ACCT IS NOT NULL)) OR (ENABLEBANKSTATEMENT <> 'Y')]]></check>
+      <check name="FIN_FINACC_ACCT_ENABLEBS_CHECK"><![CDATA[ENABLEBANKSTATEMENT IN ('Y', 'N')]]></check>
       <check name="FIN_FINACC_ACCT_ISACTIVE_CHECK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
     </table>
   </database>
