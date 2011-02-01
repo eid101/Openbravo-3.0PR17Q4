@@ -38,7 +38,7 @@ FUNCTION: isDebugEnabled
 FUNCTION: getCurrentRevision
 FUNCTION: revisionControl
 FUNCTION: getBrowserInfo
-FUNCTION: checkBrowserCompatibility
+FUNCTION: checkBrowserCompatibility250
 FUNCTION: getObjAttribute
 FUNCTION: setObjAttribute
 FUNCTION: getElementsByName
