@@ -248,6 +248,7 @@ FUNCTION: setCaretToPos
 FUNCTION: manageDecPoint
 FUNCTION: replaceAt
 FUNCTION: closePage
+FUNCTION: popupResizeTo
 FUNCTION: LayoutMDICheck
 FUNCTION: setMDIEnvironment
 FUNCTION: checkWindowInMDIPopup
