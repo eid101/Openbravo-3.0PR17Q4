@@ -32,9 +32,12 @@ v_GrandTotal NUMBER:=0;
 v_OrderDate DATE;
 v_Currency_ID VARCHAR2(32);
 v_Org_ID VARCHAR2(32);
+v_C_Doctype_ID VARCHAR2(32);
 v_client_ID VARCHAR2(32);
 v_paymentmethod_id c_order.fin_paymentmethod_id%TYPE;
 v_bpartner_id c_order.c_bpartner_id%TYPE;
+v_docSubType c_doctype.docsubtypeso%TYPE;
+v_PaymentPriority VARCHAR(32);
 
 TYPE RECORD IS REF CURSOR;
 Cur_Params RECORD;
@@ -63,14 +66,22 @@ BEGIN
   v_ResultStr:='ReadingOrder';
   SELECT ad_client_id, ad_org_id, 
          grandtotal, dateordered, c_currency_id,
-         fin_paymentmethod_id, c_bpartner_id
+         fin_paymentmethod_id, c_bpartner_id, c_doctype_id,
+         fin_payment_priority_id
     INTO v_client_id, v_org_id,
          v_grandtotal, v_orderdate, v_currency_id,
-         v_paymentmethod_id, v_bpartner_id
+         v_paymentmethod_id, v_bpartner_id, v_C_Doctype_ID,
+         v_PaymentPriority
   FROM c_order
   WHERE c_order_id = p_record_id;
 
-  IF (p_docaction = 'CO') THEN
+  SELECT docsubtypeso
+  INTO v_docSubType
+  FROM c_doctype
+  WHERE c_doctype_id = v_C_Doctype_ID;
+  
+  IF(v_docSubType is null or v_docSubType not in ('OB', 'ON')) THEN
+    IF (p_docaction = 'CO') THEN
     -- Checking Payment Method ID is available
     IF(v_paymentmethod_id IS NULL) THEN
       RAISE_APPLICATION_ERROR(-20000, '@APRM_PAYMENTMETHOD_MISSING@');
@@ -89,7 +100,6 @@ BEGIN
       IF (v_count > 0) THEN
         RAISE_APPLICATION_ERROR(-20000, '@APRM_ORDER_MAN_PAYMENTS@');
       END IF;
-
       v_payment_schedule_order := get_uuid();
       INSERT INTO fin_payment_schedule
       (
@@ -97,7 +107,7 @@ BEGIN
         created, createdby, updated, updatedby,
         c_invoice_id, c_currency_id, c_order_id,
         fin_paymentmethod_id, amount, duedate,
-        outstandingamt
+        outstandingamt, fin_payment_priority_id
        )
       VALUES
       (
@@ -105,7 +115,7 @@ BEGIN
         now(), p_user, now(), p_user,
         null, v_currency_id, p_record_id,
         v_paymentmethod_id, v_grandtotal, v_orderdate,
-        v_grandtotal
+        v_grandtotal, v_PaymentPriority
       );
 
       v_pendingamount := v_grandtotal;
@@ -204,6 +214,7 @@ BEGIN
           AND outstandingamt > v_difference;
       END IF;
     END;
+  END IF;
   END IF;
 EXCEPTION
 WHEN OTHERS THEN

@@ -58,7 +58,7 @@
 <!--102-->  <AD_WINDOW_ID><![CDATA[101]]></AD_WINDOW_ID>
 <!--102-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--102-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--102-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--102-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--102-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--102-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--102-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -183,6 +183,7 @@
 <!--107-->  <FILTERCLAUSE><![CDATA[AD_Field.isDisplayed = 'Y']]></FILTERCLAUSE>
 <!--107-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--107-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--107-->  <HQLFILTERCLAUSE><![CDATA[e.displayed=true]]></HQLFILTERCLAUSE>
 <!--107--></AD_TAB>
 
 <!--108--><AD_TAB>
@@ -379,7 +380,7 @@
 <!--117-->  <HELP><![CDATA[Edit your window translations for the predefined languages of your choice.]]></HELP>
 <!--117-->  <AD_TABLE_ID><![CDATA[132]]></AD_TABLE_ID>
 <!--117-->  <AD_WINDOW_ID><![CDATA[102]]></AD_WINDOW_ID>
-<!--117-->  <SEQNO><![CDATA[20]]></SEQNO>
+<!--117-->  <SEQNO><![CDATA[120]]></SEQNO>
 <!--117-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--117-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
 <!--117-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -415,6 +416,7 @@
 OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--118-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--118-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--118-->  <HQLFILTERCLAUSE><![CDATA[e.businessPartner.id in (select id from BusinessPartner bp where bp.employee='Y' or bp.salesRepresentative='Y') or e.businessPartner is null]]></HQLFILTERCLAUSE>
 <!--118--></AD_TAB>
 
 <!--119--><AD_TAB>
@@ -613,7 +615,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--127-->  <AD_WINDOW_ID><![CDATA[115]]></AD_WINDOW_ID>
 <!--127-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--127-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--127-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--127-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--127-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--127-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--127-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -624,6 +626,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--127-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--127-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--127-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--127-->  <HQLWHERECLAUSE><![CDATA[1=1]]></HQLWHERECLAUSE>
 <!--127--></AD_TAB>
 
 <!--128--><AD_TAB>
@@ -638,7 +641,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--128-->  <AD_WINDOW_ID><![CDATA[117]]></AD_WINDOW_ID>
 <!--128-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--128-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--128-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--128-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--128-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--128-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--128-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -730,7 +733,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--132-->  <AD_WINDOW_ID><![CDATA[118]]></AD_WINDOW_ID>
 <!--132-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--132-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--132-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--132-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--132-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--132-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--132-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -753,7 +756,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--133-->  <AD_WINDOW_ID><![CDATA[120]]></AD_WINDOW_ID>
 <!--133-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--133-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--133-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--133-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--133-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--133-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--133-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -776,7 +779,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--134-->  <AD_WINDOW_ID><![CDATA[120]]></AD_WINDOW_ID>
 <!--134-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--134-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--134-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--134-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--134-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--134-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--134-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -800,7 +803,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--135-->  <AD_WINDOW_ID><![CDATA[122]]></AD_WINDOW_ID>
 <!--135-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--135-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--135-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--135-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--135-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--135-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--135-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -823,7 +826,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--136-->  <AD_WINDOW_ID><![CDATA[122]]></AD_WINDOW_ID>
 <!--136-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--136-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--136-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--136-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--136-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--136-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--136-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -846,7 +849,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--143-->  <AD_WINDOW_ID><![CDATA[110]]></AD_WINDOW_ID>
 <!--143-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--143-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--143-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--143-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--143-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--143-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--143-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -880,6 +883,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--145-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--145-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--145-->  <UIPATTERN><![CDATA[SR]]></UIPATTERN>
+<!--145-->  <HQLWHERECLAUSE><![CDATA[e.id=@client@ or e.id='0']]></HQLWHERECLAUSE>
 <!--145--></AD_TAB>
 
 <!--146--><AD_TAB>
@@ -894,7 +898,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--146-->  <AD_WINDOW_ID><![CDATA[112]]></AD_WINDOW_ID>
 <!--146-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--146-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--146-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--146-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--146-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--146-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--146-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -986,7 +990,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--151-->  <AD_WINDOW_ID><![CDATA[115]]></AD_WINDOW_ID>
 <!--151-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--151-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--151-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--151-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--151-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--151-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--151-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1032,7 +1036,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--153-->  <AD_WINDOW_ID><![CDATA[118]]></AD_WINDOW_ID>
 <!--153-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--153-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--153-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--153-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--153-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--153-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--153-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1111,6 +1115,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--157-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--157-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--157-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--157-->  <HQLWHERECLAUSE><![CDATA[e.projectCategory='S']]></HQLWHERECLAUSE>
 <!--157--></AD_TAB>
 
 <!--158--><AD_TAB>
@@ -1148,7 +1153,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--159-->  <AD_WINDOW_ID><![CDATA[132]]></AD_WINDOW_ID>
 <!--159-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--159-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--159-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--159-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--159-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--159-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--159-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1171,7 +1176,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--160-->  <AD_WINDOW_ID><![CDATA[132]]></AD_WINDOW_ID>
 <!--160-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--160-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--160-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--160-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--160-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--160-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--160-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1194,7 +1199,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--161-->  <AD_WINDOW_ID><![CDATA[132]]></AD_WINDOW_ID>
 <!--161-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--161-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
-<!--161-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--161-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--161-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--161-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--161-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1217,15 +1222,17 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--167-->  <AD_WINDOW_ID><![CDATA[135]]></AD_WINDOW_ID>
 <!--167-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--167-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--167-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--167-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--167-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--167-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--167-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
 <!--167-->  <HASTREE><![CDATA[N]]></HASTREE>
 <!--167-->  <PROCESSING><![CDATA[N]]></PROCESSING>
 <!--167-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--167-->  <FILTERCLAUSE><![CDATA[C_DocType.IsActive='Y']]></FILTERCLAUSE>
 <!--167-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--167-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--167-->  <HQLFILTERCLAUSE><![CDATA[e.active='Y']]></HQLFILTERCLAUSE>
 <!--167--></AD_TAB>
 
 <!--169--><AD_TAB>
@@ -1263,7 +1270,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--170-->  <AD_WINDOW_ID><![CDATA[110]]></AD_WINDOW_ID>
 <!--170-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--170-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--170-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--170-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--170-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--170-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--170-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1355,7 +1362,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--174-->  <AD_WINDOW_ID><![CDATA[137]]></AD_WINDOW_ID>
 <!--174-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--174-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--174-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--174-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--174-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--174-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--174-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1378,7 +1385,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--176-->  <AD_WINDOW_ID><![CDATA[138]]></AD_WINDOW_ID>
 <!--176-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--176-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--176-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--176-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--176-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--176-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--176-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1401,7 +1408,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--177-->  <AD_WINDOW_ID><![CDATA[139]]></AD_WINDOW_ID>
 <!--177-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--177-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--177-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--177-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--177-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--177-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--177-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1424,7 +1431,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--178-->  <AD_WINDOW_ID><![CDATA[139]]></AD_WINDOW_ID>
 <!--178-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--178-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--178-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--178-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--178-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--178-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--178-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1457,6 +1464,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--179-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--179-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--179-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--179-->  <HQLWHERECLAUSE><![CDATA[e.quantityOnHand<>0 AND e.storageBin.id=@Locator.id@]]></HQLWHERECLAUSE>
 <!--179--></AD_TAB>
 
 <!--180--><AD_TAB>
@@ -1471,7 +1479,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--180-->  <AD_WINDOW_ID><![CDATA[140]]></AD_WINDOW_ID>
 <!--180-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--180-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--180-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--180-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--180-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--180-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--180-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1494,7 +1502,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--181-->  <AD_WINDOW_ID><![CDATA[140]]></AD_WINDOW_ID>
 <!--181-->  <SEQNO><![CDATA[40]]></SEQNO>
 <!--181-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--181-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--181-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--181-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--181-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--181-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1517,7 +1525,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--182-->  <AD_WINDOW_ID><![CDATA[140]]></AD_WINDOW_ID>
 <!--182-->  <SEQNO><![CDATA[50]]></SEQNO>
 <!--182-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--182-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--182-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--182-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--182-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--182-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1540,7 +1548,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--183-->  <AD_WINDOW_ID><![CDATA[140]]></AD_WINDOW_ID>
 <!--183-->  <SEQNO><![CDATA[80]]></SEQNO>
 <!--183-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--183-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--183-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--183-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--183-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--183-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1564,7 +1572,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--184-->  <AD_WINDOW_ID><![CDATA[141]]></AD_WINDOW_ID>
 <!--184-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--184-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--184-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--184-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--184-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--184-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--184-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1610,7 +1618,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--186-->  <AD_WINDOW_ID><![CDATA[143]]></AD_WINDOW_ID>
 <!--186-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--186-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--186-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--186-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--186-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--186-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--186-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1621,7 +1629,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--186-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--186-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--186-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
-<!--186-->  <HQLWHERECLAUSE><![CDATA[salesTransaction=true]]></HQLWHERECLAUSE>
+<!--186-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=true]]></HQLWHERECLAUSE>
 <!--186--></AD_TAB>
 
 <!--187--><AD_TAB>
@@ -1636,7 +1644,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--187-->  <AD_WINDOW_ID><![CDATA[143]]></AD_WINDOW_ID>
 <!--187-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--187-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--187-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--187-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--187-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--187-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--187-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1659,7 +1667,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--189-->  <AD_WINDOW_ID><![CDATA[144]]></AD_WINDOW_ID>
 <!--189-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--189-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--189-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--189-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--189-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--189-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--189-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1716,6 +1724,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--192-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--192-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--192-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--192-->  <HQLWHERECLAUSE><![CDATA[e.product in (select p from Product as p where p.active=true)]]></HQLWHERECLAUSE>
 <!--192--></AD_TAB>
 
 <!--193--><AD_TAB>
@@ -1730,7 +1739,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--193-->  <AD_WINDOW_ID><![CDATA[147]]></AD_WINDOW_ID>
 <!--193-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--193-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--193-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--193-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--193-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--193-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--193-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1753,7 +1762,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--198-->  <AD_WINDOW_ID><![CDATA[116]]></AD_WINDOW_ID>
 <!--198-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--198-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--198-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--198-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--198-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--198-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--198-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1776,7 +1785,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--199-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--199-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--199-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--199-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--199-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--199-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--199-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--199-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1800,7 +1809,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--200-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--200-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--200-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--200-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--200-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--200-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--200-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--200-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -1986,7 +1995,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--209-->  <AD_WINDOW_ID><![CDATA[139]]></AD_WINDOW_ID>
 <!--209-->  <SEQNO><![CDATA[40]]></SEQNO>
 <!--209-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--209-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--209-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--209-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--209-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--209-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2009,7 +2018,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--210-->  <AD_WINDOW_ID><![CDATA[140]]></AD_WINDOW_ID>
 <!--210-->  <SEQNO><![CDATA[100]]></SEQNO>
 <!--210-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--210-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--210-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--210-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--210-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--210-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2055,7 +2064,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--212-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--212-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--212-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
-<!--212-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--212-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--212-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--212-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--212-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2079,7 +2088,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--213-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--213-->  <SEQNO><![CDATA[50]]></SEQNO>
 <!--213-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
-<!--213-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--213-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--213-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--213-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--213-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2103,7 +2112,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--214-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--214-->  <SEQNO><![CDATA[70]]></SEQNO>
 <!--214-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
-<!--214-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--214-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--214-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--214-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--214-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2126,7 +2135,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--215-->  <AD_WINDOW_ID><![CDATA[122]]></AD_WINDOW_ID>
 <!--215-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--215-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
-<!--215-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--215-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--215-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--215-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--215-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2149,7 +2158,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--217-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--217-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--217-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--217-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--217-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--217-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--217-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--217-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2174,7 +2183,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--220-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--220-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--220-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--220-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--220-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--220-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--220-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--220-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2198,7 +2207,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--222-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--222-->  <SEQNO><![CDATA[90]]></SEQNO>
 <!--222-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--222-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--222-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--222-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--222-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--222-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2269,7 +2278,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--225-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--225-->  <SEQNO><![CDATA[60]]></SEQNO>
 <!--225-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--225-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--225-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--225-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--225-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--225-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2293,7 +2302,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--226-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--226-->  <SEQNO><![CDATA[80]]></SEQNO>
 <!--226-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--226-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--226-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--226-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--226-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--226-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2316,7 +2325,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--227-->  <AD_WINDOW_ID><![CDATA[158]]></AD_WINDOW_ID>
 <!--227-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--227-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--227-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--227-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--227-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--227-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--227-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2339,7 +2348,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--228-->  <AD_WINDOW_ID><![CDATA[158]]></AD_WINDOW_ID>
 <!--228-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--228-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--228-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--228-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--228-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--228-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--228-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2354,7 +2363,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--229-->  <AD_TAB_ID><![CDATA[229]]></AD_TAB_ID>
 <!--229-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--229-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--229-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--229-->  <ISACTIVE><![CDATA[N]]></ISACTIVE>
 <!--229-->  <NAME><![CDATA[Withholding]]></NAME>
 <!--229-->  <DESCRIPTION><![CDATA[Define Withholding]]></DESCRIPTION>
 <!--229-->  <HELP><![CDATA[The Withholding Tab defines any withholding information for this business partner.]]></HELP>
@@ -2362,7 +2371,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--229-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--229-->  <SEQNO><![CDATA[120]]></SEQNO>
 <!--229-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--229-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--229-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--229-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--229-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--229-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2386,7 +2395,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--230-->  <AD_WINDOW_ID><![CDATA[135]]></AD_WINDOW_ID>
 <!--230-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--230-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--230-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--230-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--230-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--230-->  <ISTRANSLATIONTAB><![CDATA[Y]]></ISTRANSLATIONTAB>
 <!--230-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2432,7 +2441,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--233-->  <AD_WINDOW_ID><![CDATA[141]]></AD_WINDOW_ID>
 <!--233-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--233-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--233-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--233-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--233-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--233-->  <ISTRANSLATIONTAB><![CDATA[Y]]></ISTRANSLATIONTAB>
 <!--233-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2455,7 +2464,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--235-->  <AD_WINDOW_ID><![CDATA[140]]></AD_WINDOW_ID>
 <!--235-->  <SEQNO><![CDATA[120]]></SEQNO>
 <!--235-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--235-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--235-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--235-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--235-->  <ISTRANSLATIONTAB><![CDATA[Y]]></ISTRANSLATIONTAB>
 <!--235-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2526,7 +2535,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--238-->  <AD_WINDOW_ID><![CDATA[146]]></AD_WINDOW_ID>
 <!--238-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--238-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--238-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--238-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--238-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--238-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--238-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2549,7 +2558,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--239-->  <AD_WINDOW_ID><![CDATA[140]]></AD_WINDOW_ID>
 <!--239-->  <SEQNO><![CDATA[60]]></SEQNO>
 <!--239-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--239-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--239-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--239-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--239-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--239-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2756,7 +2765,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--252-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--252-->  <SEQNO><![CDATA[40]]></SEQNO>
 <!--252-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--252-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--252-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--252-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--252-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--252-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2780,7 +2789,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--255-->  <AD_WINDOW_ID><![CDATA[168]]></AD_WINDOW_ID>
 <!--255-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--255-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--255-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--255-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--255-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--255-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--255-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2837,6 +2846,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--257-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--257-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--257-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--257-->  <HQLWHERECLAUSE><![CDATA[e.movementType IN ('C-', 'C+') and e.logistic = 'N']]></HQLWHERECLAUSE>
 <!--257--></AD_TAB>
 
 <!--258--><AD_TAB>
@@ -2874,7 +2884,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--259-->  <AD_WINDOW_ID><![CDATA[170]]></AD_WINDOW_ID>
 <!--259-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--259-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--259-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--259-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--259-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--259-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--259-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2907,6 +2917,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--260-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--260-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--260-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--260-->  <HQLORDERBYCLAUSE><![CDATA[line]]></HQLORDERBYCLAUSE>
 <!--260--></AD_TAB>
 
 <!--262--><AD_TAB>
@@ -2932,6 +2943,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--262-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--262-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--262-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--262-->  <HQLWHERECLAUSE><![CDATA[e.storageBin.id=@Locator.id@]]></HQLWHERECLAUSE>
 <!--262--></AD_TAB>
 
 <!--263--><AD_TAB>
@@ -2946,7 +2958,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--263-->  <AD_WINDOW_ID><![CDATA[167]]></AD_WINDOW_ID>
 <!--263-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--263-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--263-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--263-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--263-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--263-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--263-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2957,6 +2969,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--263-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--263-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--263-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--263-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=true]]></HQLWHERECLAUSE>
 <!--263--></AD_TAB>
 
 <!--270--><AD_TAB>
@@ -2971,7 +2984,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--270-->  <AD_WINDOW_ID><![CDATA[167]]></AD_WINDOW_ID>
 <!--270-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--270-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--270-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--270-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--270-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--270-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--270-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -2992,7 +3005,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--271-->  <HELP><![CDATA[Edit taxes applied to your invoice.]]></HELP>
 <!--271-->  <AD_TABLE_ID><![CDATA[334]]></AD_TABLE_ID>
 <!--271-->  <AD_WINDOW_ID><![CDATA[167]]></AD_WINDOW_ID>
-<!--271-->  <SEQNO><![CDATA[40]]></SEQNO>
+<!--271-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--271-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--271-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--271-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -3004,6 +3017,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--271-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--271-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--271-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--271-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--271--></AD_TAB>
 
 <!--272--><AD_TAB>
@@ -3041,7 +3055,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--273-->  <AD_WINDOW_ID><![CDATA[120]]></AD_WINDOW_ID>
 <!--273-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--273-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--273-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--273-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--273-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--273-->  <ISTRANSLATIONTAB><![CDATA[Y]]></ISTRANSLATIONTAB>
 <!--273-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3095,6 +3109,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--276-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--276-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--276-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--276-->  <HQLWHERECLAUSE><![CDATA[e.id in (select businessPartner.id from ApprovedVendor)]]></HQLWHERECLAUSE>
 <!--276--></AD_TAB>
 
 <!--278--><AD_TAB>
@@ -3177,7 +3192,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--284-->  <AD_WINDOW_ID><![CDATA[138]]></AD_WINDOW_ID>
 <!--284-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--284-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--284-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--284-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--284-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--284-->  <ISTRANSLATIONTAB><![CDATA[Y]]></ISTRANSLATIONTAB>
 <!--284-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3210,6 +3225,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--289-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--289-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--289-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--289-->  <HQLWHERECLAUSE><![CDATA[e.product.id=@Product.id@]]></HQLWHERECLAUSE>
 <!--289--></AD_TAB>
 
 <!--290--><AD_TAB>
@@ -3224,7 +3240,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--290-->  <AD_WINDOW_ID><![CDATA[183]]></AD_WINDOW_ID>
 <!--290-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--290-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--290-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--290-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--290-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--290-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--290-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3235,6 +3251,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--290-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--290-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--290-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--290-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=false]]></HQLWHERECLAUSE>
 <!--290--></AD_TAB>
 
 <!--291--><AD_TAB>
@@ -3249,7 +3266,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--291-->  <AD_WINDOW_ID><![CDATA[183]]></AD_WINDOW_ID>
 <!--291-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--291-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--291-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--291-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--291-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--291-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--291-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3282,6 +3299,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--292-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--292-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--292-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--292-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--292--></AD_TAB>
 
 <!--293--><AD_TAB>
@@ -3296,7 +3314,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--293-->  <AD_WINDOW_ID><![CDATA[181]]></AD_WINDOW_ID>
 <!--293-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--293-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--293-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--293-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--293-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--293-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--293-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3319,7 +3337,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--294-->  <AD_WINDOW_ID><![CDATA[181]]></AD_WINDOW_ID>
 <!--294-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--294-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--294-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--294-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--294-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--294-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--294-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3330,7 +3348,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--294-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--294-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--294-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
-<!--294-->  <HQLWHERECLAUSE><![CDATA[salesTransaction=false]]></HQLWHERECLAUSE>
+<!--294-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=false]]></HQLWHERECLAUSE>
 <!--294--></AD_TAB>
 
 <!--295--><AD_TAB>
@@ -3370,7 +3388,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--296-->  <AD_WINDOW_ID><![CDATA[184]]></AD_WINDOW_ID>
 <!--296-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--296-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--296-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--296-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--296-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--296-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--296-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3381,6 +3399,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--296-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--296-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--296-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--296-->  <HQLWHERECLAUSE><![CDATA[e.movementType IN ('V-', 'V+') and e.logistic = 'N']]></HQLWHERECLAUSE>
 <!--296--></AD_TAB>
 
 <!--297--><AD_TAB>
@@ -3395,7 +3414,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--297-->  <AD_WINDOW_ID><![CDATA[184]]></AD_WINDOW_ID>
 <!--297-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--297-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--297-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--297-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--297-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--297-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--297-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3630,7 +3649,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--311-->  <HELP><![CDATA[Edit role access to a window.]]></HELP>
 <!--311-->  <AD_TABLE_ID><![CDATA[201]]></AD_TABLE_ID>
 <!--311-->  <AD_WINDOW_ID><![CDATA[102]]></AD_WINDOW_ID>
-<!--311-->  <SEQNO><![CDATA[30]]></SEQNO>
+<!--311-->  <SEQNO><![CDATA[130]]></SEQNO>
 <!--311-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--311-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--311-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -3783,6 +3802,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--319-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--319-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--319-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--319-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=true]]></HQLWHERECLAUSE>
 <!--319--></AD_TAB>
 
 <!--320--><AD_TAB>
@@ -3843,7 +3863,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--322-->  <AD_WINDOW_ID><![CDATA[192]]></AD_WINDOW_ID>
 <!--322-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--322-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--322-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--322-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--322-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--322-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--322-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3866,7 +3886,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--323-->  <AD_WINDOW_ID><![CDATA[192]]></AD_WINDOW_ID>
 <!--323-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--323-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--323-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--323-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--323-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--323-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--323-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3890,7 +3910,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--324-->  <AD_WINDOW_ID><![CDATA[144]]></AD_WINDOW_ID>
 <!--324-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--324-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--324-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--324-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--324-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--324-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--324-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3923,6 +3943,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--325-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--325-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--325-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--325-->  <HQLWHERECLAUSE><![CDATA[e.user.id in ('0', @User.id@)]]></HQLWHERECLAUSE>
 <!--325--></AD_TAB>
 
 <!--327--><AD_TAB>
@@ -3937,7 +3958,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--327-->  <AD_WINDOW_ID><![CDATA[158]]></AD_WINDOW_ID>
 <!--327-->  <SEQNO><![CDATA[50]]></SEQNO>
 <!--327-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
-<!--327-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--327-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--327-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--327-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--327-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3960,7 +3981,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--328-->  <AD_WINDOW_ID><![CDATA[194]]></AD_WINDOW_ID>
 <!--328-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--328-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--328-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--328-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--328-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--328-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--328-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -3983,7 +4004,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--329-->  <AD_WINDOW_ID><![CDATA[194]]></AD_WINDOW_ID>
 <!--329-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--329-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--329-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--329-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--329-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--329-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--329-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -4029,7 +4050,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--332-->  <AD_WINDOW_ID><![CDATA[110]]></AD_WINDOW_ID>
 <!--332-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--332-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--332-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--332-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--332-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--332-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--332-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -4052,7 +4073,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--333-->  <AD_WINDOW_ID><![CDATA[137]]></AD_WINDOW_ID>
 <!--333-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--333-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--333-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--333-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--333-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--333-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--333-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -4121,7 +4142,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--337-->  <AD_WINDOW_ID><![CDATA[197]]></AD_WINDOW_ID>
 <!--337-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--337-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--337-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--337-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--337-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
 <!--337-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--337-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -4144,7 +4165,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--338-->  <AD_WINDOW_ID><![CDATA[198]]></AD_WINDOW_ID>
 <!--338-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--338-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--338-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--338-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--338-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--338-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--338-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -4246,6 +4267,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--344-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--344-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--344-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--344-->  <HQLWHERECLAUSE><![CDATA[e.salesRepresentative.id=@user@]]></HQLWHERECLAUSE>
 <!--344--></AD_TAB>
 
 <!--346--><AD_TAB>
@@ -4638,6 +4660,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--391-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--391-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--391-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--391-->  <HQLWHERECLAUSE><![CDATA[e.bindaryData is null]]></HQLWHERECLAUSE>
 <!--391--></AD_TAB>
 
 <!--401--><AD_TAB>
@@ -4782,6 +4805,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--407-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--407-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--407-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--407-->  <HQLWHERECLAUSE><![CDATA[e.productCategory.id=@ProductCategory.id@]]></HQLWHERECLAUSE>
 <!--407--></AD_TAB>
 
 <!--408--><AD_TAB>
@@ -5201,6 +5225,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--431-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--431-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--431-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--431-->  <HQLWHERECLAUSE><![CDATA[e in (select t1.businessPartner from TimeAndExpenseSheet as t1, TimeAndExpenseSheetLine as t2 where t1=t2.timeSheet and t1.processed='Y' and t2.reinvoice='Y' and t2.salesOrderLine is null))]]></HQLWHERECLAUSE>
 <!--431--></AD_TAB>
 
 <!--432--><AD_TAB>
@@ -5226,6 +5251,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--432-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--432-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--432-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--432-->  <HQLWHERECLAUSE><![CDATA[e.reinvoice='Y' and e.expenseSheet in (select t from TimeAndExpenseSheet t where t.processed='Y'))]]></HQLWHERECLAUSE>
 <!--432--></AD_TAB>
 
 <!--437--><AD_TAB>
@@ -5419,6 +5445,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--445-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--445-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--445-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--445-->  <HQLWHERECLAUSE><![CDATA[e.baseLanguage='N' AND e.systemLanguage='Y']]></HQLWHERECLAUSE>
 <!--445--></AD_TAB>
 
 <!--446--><AD_TAB>
@@ -5591,6 +5618,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--456-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--456-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--456-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--456-->  <HQLWHERECLAUSE><![CDATA[e in (select t1.businessPartner from TimeAndExpenseSheet as t1, TimeAndExpenseSheetLine as t2 where t1=t2.timeSheet and t1.processed='Y' and t2.timeSheet<>'Y' and t2.invoiceLine is null))]]></HQLWHERECLAUSE>
 <!--456--></AD_TAB>
 
 <!--457--><AD_TAB>
@@ -5629,7 +5657,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--458-->  <AD_WINDOW_ID><![CDATA[137]]></AD_WINDOW_ID>
 <!--458-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--458-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--458-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--458-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--458-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--458-->  <ISTRANSLATIONTAB><![CDATA[Y]]></ISTRANSLATIONTAB>
 <!--458-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -5835,6 +5863,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--470-->  <INCLUDED_TAB_ID><![CDATA[471]]></INCLUDED_TAB_ID>
 <!--470-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--470-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--470-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=false]]></HQLWHERECLAUSE>
 <!--470--></AD_TAB>
 
 <!--471--><AD_TAB>
@@ -5884,6 +5913,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--475-->  <FILTERCLAUSE><![CDATA[session_active='Y']]></FILTERCLAUSE>
 <!--475-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--475-->  <UIPATTERN><![CDATA[SR]]></UIPATTERN>
+<!--475-->  <HQLFILTERCLAUSE><![CDATA[e.sessionActive='Y']]></HQLFILTERCLAUSE>
 <!--475--></AD_TAB>
 
 <!--476--><AD_TAB>
@@ -6238,7 +6268,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--496-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--496-->  <SEQNO><![CDATA[100]]></SEQNO>
 <!--496-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--496-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--496-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--496-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--496-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--496-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -6274,6 +6304,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--501-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--501-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--501-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--501-->  <HQLWHERECLAUSE><![CDATA[e.paid='N' and e.salesTransaction='Y']]></HQLWHERECLAUSE>
 <!--501--></AD_TAB>
 
 <!--507--><AD_TAB>
@@ -6835,6 +6866,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--536-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--536-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--536-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--536-->  <HQLWHERECLAUSE><![CDATA[e.areasOfInterest.id=@AreasOfInterest.id@]]></HQLWHERECLAUSE>
 <!--536--></AD_TAB>
 
 <!--537--><AD_TAB>
@@ -6860,6 +6892,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--537-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--537-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--537-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--537-->  <HQLWHERECLAUSE><![CDATA[(e.projectCategory<>'S' OR e.projectCategory IS NULL)]]></HQLWHERECLAUSE>
 <!--537--></AD_TAB>
 
 <!--538--><AD_TAB>
@@ -6958,6 +6991,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--551-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--551-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--551-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--551-->  <HQLWHERECLAUSE><![CDATA[e.businessPartner.id=@BusinessPartner.id@]]></HQLWHERECLAUSE>
 <!--551--></AD_TAB>
 
 <!--552--><AD_TAB>
@@ -6983,6 +7017,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--552-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--552-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--552-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--552-->  <HQLWHERECLAUSE><![CDATA[e.businessPartner.id=@BusinessPartner.id@]]></HQLWHERECLAUSE>
 <!--552--></AD_TAB>
 
 <!--553--><AD_TAB>
@@ -7008,6 +7043,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--553-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--553-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--553-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--553-->  <HQLWHERECLAUSE><![CDATA[e.businessPartner.id=@BusinessPartner.id@]]></HQLWHERECLAUSE>
 <!--553--></AD_TAB>
 
 <!--555--><AD_TAB>
@@ -7033,6 +7069,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--555-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--555-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--555-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--555-->  <HQLWHERECLAUSE><![CDATA[e.businessPartner.id=@BusinessPartner.id@]]></HQLWHERECLAUSE>
 <!--555--></AD_TAB>
 
 <!--556--><AD_TAB>
@@ -7058,6 +7095,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--556-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--556-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--556-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--556-->  <HQLWHERECLAUSE><![CDATA[e.businessPartner.id=@BusinessPartner.id@]]></HQLWHERECLAUSE>
 <!--556--></AD_TAB>
 
 <!--557--><AD_TAB>
@@ -7121,7 +7159,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800000-->  <AD_WINDOW_ID><![CDATA[140]]></AD_WINDOW_ID>
 <!--800000-->  <SEQNO><![CDATA[90]]></SEQNO>
 <!--800000-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--800000-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--800000-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--800000-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--800000-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--800000-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -7180,6 +7218,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800002-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800002-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800002-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800002-->  <HQLWHERECLAUSE><![CDATA[(e.projectCategory<>'S' or e.projectCategory IS NULL)]]></HQLWHERECLAUSE>
 <!--800002--></AD_TAB>
 
 <!--800003--><AD_TAB>
@@ -7205,6 +7244,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800003-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800003-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800003-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800003-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--800003--></AD_TAB>
 
 <!--800004--><AD_TAB>
@@ -7351,6 +7391,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800009-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800009-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800009-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800009-->  <HQLWHERECLAUSE><![CDATA[e.BusinessPartner.id = @BusinessPartner.id@]]></HQLWHERECLAUSE>
 <!--800009--></AD_TAB>
 
 <!--800012--><AD_TAB>
@@ -7472,6 +7513,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800016-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800016-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800016-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800016-->  <HQLWHERECLAUSE><![CDATA[e.volumeDiscount.id=@VolumeDiscount.id@]]></HQLWHERECLAUSE>
 <!--800016--></AD_TAB>
 
 <!--800017--><AD_TAB>
@@ -7521,6 +7563,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800018-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800018-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800018-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800018-->  <HQLWHERECLAUSE><![CDATA["e.bPVolumeDiscount.id = @BusinessPartner.id@"]]></HQLWHERECLAUSE>
 <!--800018--></AD_TAB>
 
 <!--800019--><AD_TAB>
@@ -7570,6 +7613,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800020-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800020-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800020-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800020-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=true]]></HQLWHERECLAUSE>
 <!--800020--></AD_TAB>
 
 <!--800021--><AD_TAB>
@@ -7594,6 +7638,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800021-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800021-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800021-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800021-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--800021--></AD_TAB>
 
 <!--800022--><AD_TAB>
@@ -7644,6 +7689,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800025-->  <FILTERCLAUSE><![CDATA[C_Settlement.settlementtype='C']]></FILTERCLAUSE>
 <!--800025-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800025-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800025-->  <HQLWHERECLAUSE><![CDATA[e.settlementType<>'I']]></HQLWHERECLAUSE>
+<!--800025-->  <HQLFILTERCLAUSE><![CDATA[e.settlementType='C']]></HQLFILTERCLAUSE>
 <!--800025--></AD_TAB>
 
 <!--800026--><AD_TAB>
@@ -7658,7 +7705,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800026-->  <AD_WINDOW_ID><![CDATA[800005]]></AD_WINDOW_ID>
 <!--800026-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--800026-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--800026-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--800026-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--800026-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--800026-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--800026-->  <ISREADONLY><![CDATA[Y]]></ISREADONLY>
@@ -7694,6 +7741,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800027-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800027-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800027-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800027-->  <HQLWHERECLAUSE><![CDATA[e.manual='N']]></HQLWHERECLAUSE>
 <!--800027--></AD_TAB>
 
 <!--800028--><AD_TAB>
@@ -7743,6 +7791,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800029-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800029-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800029-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800029-->  <HQLWHERECLAUSE><![CDATA[e.settlementType='I']]></HQLWHERECLAUSE>
 <!--800029--></AD_TAB>
 
 <!--800031--><AD_TAB>
@@ -7767,6 +7816,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800031-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800031-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800031-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800031-->  <HQLWHERECLAUSE><![CDATA[e.manual='Y']]></HQLWHERECLAUSE>
 <!--800031--></AD_TAB>
 
 <!--800032--><AD_TAB>
@@ -8097,6 +8147,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800050-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800050-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800050-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800050-->  <HQLWHERECLAUSE><![CDATA[e.movementType IN ('V-', 'V+') and e.logistic = 'Y']]></HQLWHERECLAUSE>
 <!--800050--></AD_TAB>
 
 <!--800051--><AD_TAB>
@@ -8122,6 +8173,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800051-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800051-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800051-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800051-->  <HQLWHERECLAUSE><![CDATA[e.movementType IN ('C-', 'C+') and e.logistic = 'Y']]></HQLWHERECLAUSE>
 <!--800051--></AD_TAB>
 
 <!--800052--><AD_TAB>
@@ -8242,6 +8294,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800057-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800057-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800057-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800057-->  <HQLORDERBYCLAUSE><![CDATA[startingDate, endingDate]]></HQLORDERBYCLAUSE>
 <!--800057--></AD_TAB>
 
 <!--800058--><AD_TAB>
@@ -8277,7 +8330,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800059-->  <NAME><![CDATA[Discounts]]></NAME>
 <!--800059-->  <AD_TABLE_ID><![CDATA[800045]]></AD_TABLE_ID>
 <!--800059-->  <AD_WINDOW_ID><![CDATA[167]]></AD_WINDOW_ID>
-<!--800059-->  <SEQNO><![CDATA[30]]></SEQNO>
+<!--800059-->  <SEQNO><![CDATA[40]]></SEQNO>
 <!--800059-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--800059-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--800059-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -8386,6 +8439,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800063-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800063-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800063-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800063-->  <HQLORDERBYCLAUSE><![CDATA[searchKey]]></HQLORDERBYCLAUSE>
 <!--800063--></AD_TAB>
 
 <!--800064--><AD_TAB>
@@ -8436,6 +8490,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800065-->  <EDITREFERENCE><![CDATA[800010]]></EDITREFERENCE>
 <!--800065-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800065-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800065-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction='N']]></HQLWHERECLAUSE>
 <!--800065--></AD_TAB>
 
 <!--800066--><AD_TAB>
@@ -9184,6 +9239,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800111-->  <FILTERCLAUSE><![CDATA[MA_WorkRequirement.Closed='N']]></FILTERCLAUSE>
 <!--800111-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800111-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800111-->  <HQLORDERBYCLAUSE><![CDATA[-startingDate]]></HQLORDERBYCLAUSE>
+<!--800111-->  <HQLFILTERCLAUSE><![CDATA[e.closed='N']]></HQLFILTERCLAUSE>
 <!--800111--></AD_TAB>
 
 <!--800112--><AD_TAB>
@@ -9258,6 +9315,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800114-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800114-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800114-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800114-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=false]]></HQLWHERECLAUSE>
+<!--800114-->  <HQLORDERBYCLAUSE><![CDATA[-movementDate, -documentNo]]></HQLORDERBYCLAUSE>
 <!--800114--></AD_TAB>
 
 <!--800115--><AD_TAB>
@@ -9307,6 +9366,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800116-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800116-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800116-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800116-->  <HQLORDERBYCLAUSE><![CDATA[startingTime]]></HQLORDERBYCLAUSE>
 <!--800116--></AD_TAB>
 
 <!--800117--><AD_TAB>
@@ -9332,6 +9392,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800117-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800117-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800117-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800117-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--800117--></AD_TAB>
 
 <!--800118--><AD_TAB>
@@ -9381,6 +9442,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800119-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800119-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800119-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800119-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--800119--></AD_TAB>
 
 <!--800143--><AD_TAB>
@@ -9526,6 +9588,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800153-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800153-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800153-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800153-->  <HQLORDERBYCLAUSE><![CDATA[sequenceNumber]]></HQLORDERBYCLAUSE>
 <!--800153--></AD_TAB>
 
 <!--800154--><AD_TAB>
@@ -9551,6 +9614,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800154-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800154-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800154-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800154-->  <HQLORDERBYCLAUSE><![CDATA[measurementHour]]></HQLORDERBYCLAUSE>
 <!--800154--></AD_TAB>
 
 <!--800155--><AD_TAB>
@@ -9576,6 +9640,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800155-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800155-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800155-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800155-->  <HQLORDERBYCLAUSE><![CDATA[sequenceNumber]]></HQLORDERBYCLAUSE>
 <!--800155--></AD_TAB>
 
 <!--800158--><AD_TAB>
@@ -9602,6 +9667,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800158-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800158-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800158-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800158-->  <HQLORDERBYCLAUSE><![CDATA[-measurementDate]]></HQLORDERBYCLAUSE>
 <!--800158--></AD_TAB>
 
 <!--800159--><AD_TAB>
@@ -9699,6 +9765,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800162-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800162-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800162-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800162-->  <HQLORDERBYCLAUSE><![CDATA[testDate]]></HQLORDERBYCLAUSE>
 <!--800162--></AD_TAB>
 
 <!--800163--><AD_TAB>
@@ -9748,6 +9815,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800165-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800165-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800165-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800165-->  <HQLORDERBYCLAUSE><![CDATA[created]]></HQLORDERBYCLAUSE>
 <!--800165--></AD_TAB>
 
 <!--800167--><AD_TAB>
@@ -9942,6 +10010,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800177-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800177-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800177-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800177-->  <HQLWHERECLAUSE><![CDATA[e.action='C']]></HQLWHERECLAUSE>
 <!--800177--></AD_TAB>
 
 <!--800178--><AD_TAB>
@@ -10184,6 +10253,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800188-->  <FILTERCLAUSE><![CDATA[MA_Maint_Scheduled.MA_Maint_Part_ID IS NULL]]></FILTERCLAUSE>
 <!--800188-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800188-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800188-->  <HQLORDERBYCLAUSE><![CDATA[plannedDate]]></HQLORDERBYCLAUSE>
+<!--800188-->  <HQLFILTERCLAUSE><![CDATA[e.maintenanceOrder is null]]></HQLFILTERCLAUSE>
 <!--800188--></AD_TAB>
 
 <!--800189--><AD_TAB>
@@ -10329,6 +10400,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800195-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800195-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800195-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800195-->  <HQLWHERECLAUSE><![CDATA[e.action='X']]></HQLWHERECLAUSE>
 <!--800195--></AD_TAB>
 
 <!--800196--><AD_TAB>
@@ -10426,6 +10498,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800200-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800200-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800200-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800200-->  <HQLWHERECLAUSE><![CDATA[e.action in ('P','R')]]></HQLWHERECLAUSE>
 <!--800200--></AD_TAB>
 
 <!--800201--><AD_TAB>
@@ -10619,6 +10692,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800209-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800209-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800209-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800209-->  <HQLORDERBYCLAUSE><![CDATA[documentNo]]></HQLORDERBYCLAUSE>
 <!--800209--></AD_TAB>
 
 <!--800210--><AD_TAB>
@@ -10644,6 +10718,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800210-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800210-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800210-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800210-->  <HQLORDERBYCLAUSE><![CDATA[line]]></HQLORDERBYCLAUSE>
 <!--800210--></AD_TAB>
 
 <!--800211--><AD_TAB>
@@ -10656,7 +10731,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800211-->  <HELP><![CDATA[Vendor discounts]]></HELP>
 <!--800211-->  <AD_TABLE_ID><![CDATA[800045]]></AD_TABLE_ID>
 <!--800211-->  <AD_WINDOW_ID><![CDATA[183]]></AD_WINDOW_ID>
-<!--800211-->  <SEQNO><![CDATA[30]]></SEQNO>
+<!--800211-->  <SEQNO><![CDATA[31]]></SEQNO>
 <!--800211-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--800211-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--800211-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -10719,6 +10794,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800213-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800213-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800213-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800213-->  <HQLORDERBYCLAUSE><![CDATA[documentNo]]></HQLORDERBYCLAUSE>
 <!--800213--></AD_TAB>
 
 <!--800214--><AD_TAB>
@@ -10744,6 +10820,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800214-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800214-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800214-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800214-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--800214--></AD_TAB>
 
 <!--800215--><AD_TAB>
@@ -10916,6 +10993,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800221-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800221-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800221-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--800221-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--800221--></AD_TAB>
 
 <!--800222--><AD_TAB>
@@ -11157,6 +11235,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800231-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800231-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800231-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800231-->  <HQLORDERBYCLAUSE><![CDATA[name]]></HQLORDERBYCLAUSE>
 <!--800231--></AD_TAB>
 
 <!--800232--><AD_TAB>
@@ -11278,6 +11357,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800236-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800236-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800236-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800236-->  <HQLORDERBYCLAUSE><![CDATA[validFromDate]]></HQLORDERBYCLAUSE>
 <!--800236--></AD_TAB>
 
 <!--800237--><AD_TAB>
@@ -11524,9 +11604,9 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800249-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800249-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800249-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800249-->  <NAME><![CDATA[Header]]></NAME>
-<!--800249-->  <DESCRIPTION><![CDATA[Create a requisition for procurement.]]></DESCRIPTION>
-<!--800249-->  <HELP><![CDATA[Any ERP user can enter its requisitions. Requisitions are created in Draft status and have to be Completed to confirm them.]]></HELP>
+<!--800249-->  <NAME><![CDATA[Requisition]]></NAME>
+<!--800249-->  <DESCRIPTION><![CDATA[Create requests for the procurement department to buy necessary items based on your defined plan.]]></DESCRIPTION>
+<!--800249-->  <HELP><![CDATA[Users create Requisitions in this window. Each requisition can have a preferred vendor and/or Price List. The requisitions are owned by an user of the ERP and have different statuses, each of them allowing different actions.]]></HELP>
 <!--800249-->  <AD_TABLE_ID><![CDATA[800212]]></AD_TABLE_ID>
 <!--800249-->  <AD_WINDOW_ID><![CDATA[800092]]></AD_WINDOW_ID>
 <!--800249-->  <SEQNO><![CDATA[10]]></SEQNO>
@@ -11543,6 +11623,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800249-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800249-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800249-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800249-->  <HQLWHERECLAUSE><![CDATA[e.userContact.id=@user@]]></HQLWHERECLAUSE>
 <!--800249--></AD_TAB>
 
 <!--800251--><AD_TAB>
@@ -11785,6 +11866,7 @@ Each line is a product demand for a specific date.  It is also possible to defin
 <!--800262-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800262-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800262-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800262-->  <HQLORDERBYCLAUSE><![CDATA[line]]></HQLORDERBYCLAUSE>
 <!--800262--></AD_TAB>
 
 <!--800263--><AD_TAB>
@@ -11810,6 +11892,7 @@ Each line is a product demand for a specific date.  It is also possible to defin
 <!--800263-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800263-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800263-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800263-->  <HQLORDERBYCLAUSE><![CDATA[line]]></HQLORDERBYCLAUSE>
 <!--800263--></AD_TAB>
 
 <!--800264--><AD_TAB>
@@ -11955,6 +12038,7 @@ Each line is a product demand for a specific date.  It is also possible to defin
 <!--1000500000-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--1000500000-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--1000500000-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--1000500000-->  <HQLWHERECLAUSE><![CDATA[1=1]]></HQLWHERECLAUSE>
 <!--1000500000--></AD_TAB>
 
 <!--1000500001--><AD_TAB>
@@ -11981,6 +12065,7 @@ Each line is a product demand for a specific date.  It is also possible to defin
 <!--1000500001-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--1000500001-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--1000500001-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--1000500001-->  <HQLWHERECLAUSE><![CDATA[e.documentType.id=@DocumentType.id@]]></HQLWHERECLAUSE>
 <!--1000500001--></AD_TAB>
 
 <!--1000500002--><AD_TAB>
@@ -12223,6 +12308,7 @@ Purchase Order lines created to fulfill the product demand.]]></HELP>
 <!--1004400001-->  <FILTERCLAUSE><![CDATA[M_Requisition.DocStatus = 'CO']]></FILTERCLAUSE>
 <!--1004400001-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--1004400001-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--1004400001-->  <HQLFILTERCLAUSE><![CDATA[e.documentStatus='CO']]></HQLFILTERCLAUSE>
 <!--1004400001--></AD_TAB>
 
 <!--1004400002--><AD_TAB>
@@ -12457,6 +12543,7 @@ Purchase Order lines created to fulfill the product demand.]]></HELP>
 <!--0675F934EA9E40C799826AABC47CD837-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--0675F934EA9E40C799826AABC47CD837-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--0675F934EA9E40C799826AABC47CD837-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--0675F934EA9E40C799826AABC47CD837-->  <HQLORDERBYCLAUSE><![CDATA[created]]></HQLORDERBYCLAUSE>
 <!--0675F934EA9E40C799826AABC47CD837--></AD_TAB>
 
 <!--07F009753DA647C2AF38697BA9F1B1A0--><AD_TAB>
@@ -12504,6 +12591,7 @@ Purchase Order lines created to fulfill the product demand.]]></HELP>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <HQLWHERECLAUSE><![CDATA[e.isIncluded='N']]></HQLWHERECLAUSE>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25--></AD_TAB>
 
 <!--1705E06D88D14A0DB0907E5B0A61D8D2--><AD_TAB>
@@ -12624,6 +12712,7 @@ Purchase Order lines created to fulfill the product demand.]]></HELP>
 <!--27456D8A387F4580B30EA784C63831BB-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--27456D8A387F4580B30EA784C63831BB-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--27456D8A387F4580B30EA784C63831BB-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--27456D8A387F4580B30EA784C63831BB-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--27456D8A387F4580B30EA784C63831BB--></AD_TAB>
 
 <!--2845D761A8394468BD3BA4710AA888D4--><AD_TAB>
@@ -12724,6 +12813,8 @@ The corresponding tables have then the following setting:
 <!--2DD6F1E2CAE0456AA9797A1D627BFF5E-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--2DD6F1E2CAE0456AA9797A1D627BFF5E-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--2DD6F1E2CAE0456AA9797A1D627BFF5E-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--2DD6F1E2CAE0456AA9797A1D627BFF5E-->  <HQLWHERECLAUSE><![CDATA[e.receipt='N']]></HQLWHERECLAUSE>
+<!--2DD6F1E2CAE0456AA9797A1D627BFF5E-->  <HQLORDERBYCLAUSE><![CDATA[-documentNo]]></HQLORDERBYCLAUSE>
 <!--2DD6F1E2CAE0456AA9797A1D627BFF5E--></AD_TAB>
 
 <!--3690EB6BA1614375A6F058BBA61B19BC--><AD_TAB>
@@ -12750,6 +12841,8 @@ The corresponding tables have then the following setting:
 <!--3690EB6BA1614375A6F058BBA61B19BC-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--3690EB6BA1614375A6F058BBA61B19BC-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--3690EB6BA1614375A6F058BBA61B19BC-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--3690EB6BA1614375A6F058BBA61B19BC-->  <HQLWHERECLAUSE><![CDATA[e.client.id=@Client.id@]]></HQLWHERECLAUSE>
+<!--3690EB6BA1614375A6F058BBA61B19BC-->  <HQLORDERBYCLAUSE><![CDATA[-eventTime]]></HQLORDERBYCLAUSE>
 <!--3690EB6BA1614375A6F058BBA61B19BC--></AD_TAB>
 
 <!--39B3DB3BF4C44EE192BE3F6CA69903C0--><AD_TAB>
@@ -12890,6 +12983,7 @@ The corresponding tables have then the following setting:
 <!--47B7A4ACDDDE4FF7BFB5506C47892CDD-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--47B7A4ACDDDE4FF7BFB5506C47892CDD-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--47B7A4ACDDDE4FF7BFB5506C47892CDD-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--47B7A4ACDDDE4FF7BFB5506C47892CDD-->  <HQLORDERBYCLAUSE><![CDATA[created]]></HQLORDERBYCLAUSE>
 <!--47B7A4ACDDDE4FF7BFB5506C47892CDD--></AD_TAB>
 
 <!--47F87F1A284B4A7D9FB6ED2D02C5CDA1--><AD_TAB>
@@ -12915,6 +13009,7 @@ The corresponding tables have then the following setting:
 <!--47F87F1A284B4A7D9FB6ED2D02C5CDA1-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--47F87F1A284B4A7D9FB6ED2D02C5CDA1-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--47F87F1A284B4A7D9FB6ED2D02C5CDA1-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--47F87F1A284B4A7D9FB6ED2D02C5CDA1-->  <HQLWHERECLAUSE><![CDATA[e.module.id = @ADModule.id@]]></HQLWHERECLAUSE>
 <!--47F87F1A284B4A7D9FB6ED2D02C5CDA1--></AD_TAB>
 
 <!--4A00053300254EBC8868ABADEBD95525--><AD_TAB>
@@ -13012,6 +13107,7 @@ The corresponding tables have then the following setting:
 <!--5247D51755AA43F384EBC35006FC2329-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--5247D51755AA43F384EBC35006FC2329-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--5247D51755AA43F384EBC35006FC2329-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--5247D51755AA43F384EBC35006FC2329-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
 <!--5247D51755AA43F384EBC35006FC2329--></AD_TAB>
 
 <!--5B6FF3B9E2B4423EB3EE4B2666D7E918--><AD_TAB>
@@ -13043,6 +13139,7 @@ AD_Model_Object.AD_REFERENCE_ID  is null and
 AD_Model_Object.AD_CALLOUT_ID    is null ]]></FILTERCLAUSE>
 <!--5B6FF3B9E2B4423EB3EE4B2666D7E918-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--5B6FF3B9E2B4423EB3EE4B2666D7E918-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--5B6FF3B9E2B4423EB3EE4B2666D7E918-->  <HQLFILTERCLAUSE><![CDATA[e.tab is null and e.workflow is null and e.process is null and e.oSTask is null and e.specialForm is null and e.reference is null and e.callout is null]]></HQLFILTERCLAUSE>
 <!--5B6FF3B9E2B4423EB3EE4B2666D7E918--></AD_TAB>
 
 <!--5DD4A4D36D71411FB3BE2783C3D55473--><AD_TAB>
@@ -13119,6 +13216,8 @@ You can also select if transactions are allowed or not for this organization typ
 <!--6456FDAA469148E580B92126863C5A20-->  <ISSORTTAB><![CDATA[Y]]></ISSORTTAB>
 <!--6456FDAA469148E580B92126863C5A20-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--6456FDAA469148E580B92126863C5A20-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--6456FDAA469148E580B92126863C5A20-->  <HQLWHERECLAUSE><![CDATA[e.displayed='Y' AND e.active='Y']]></HQLWHERECLAUSE>
+<!--6456FDAA469148E580B92126863C5A20-->  <HQLORDERBYCLAUSE><![CDATA[sequenceNumber]]></HQLORDERBYCLAUSE>
 <!--6456FDAA469148E580B92126863C5A20--></AD_TAB>
 
 <!--6BC4F7D2CBE94AEE939CCB5990B55FEA--><AD_TAB>
@@ -13145,6 +13244,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--6BC4F7D2CBE94AEE939CCB5990B55FEA-->  <FILTERCLAUSE><![CDATA[PeriodStatus='O']]></FILTERCLAUSE>
 <!--6BC4F7D2CBE94AEE939CCB5990B55FEA-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--6BC4F7D2CBE94AEE939CCB5990B55FEA-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--6BC4F7D2CBE94AEE939CCB5990B55FEA-->  <HQLFILTERCLAUSE><![CDATA[e.periodStatus='O']]></HQLFILTERCLAUSE>
 <!--6BC4F7D2CBE94AEE939CCB5990B55FEA--></AD_TAB>
 
 <!--719D6C8507CA4B27886C0D8A7859B543--><AD_TAB>
@@ -13170,7 +13270,34 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--719D6C8507CA4B27886C0D8A7859B543-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--719D6C8507CA4B27886C0D8A7859B543-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--719D6C8507CA4B27886C0D8A7859B543-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--719D6C8507CA4B27886C0D8A7859B543-->  <HQLORDERBYCLAUSE><![CDATA[executionDate]]></HQLORDERBYCLAUSE>
 <!--719D6C8507CA4B27886C0D8A7859B543--></AD_TAB>
+
+<!--73D6D0CBB55B434E98EB10767ADD74AC--><AD_TAB>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <AD_TAB_ID><![CDATA[73D6D0CBB55B434E98EB10767ADD74AC]]></AD_TAB_ID>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <NAME><![CDATA[Payment Priority]]></NAME>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <DESCRIPTION><![CDATA[Define priorities for payment plans created when processing invoices and orders.]]></DESCRIPTION>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <HELP><![CDATA[Define priorities for payment plans created when processing invoices and orders. You can mark as default the priority you want to be displayed as selected in Invoice and Order windows. If you mark more than one priority as default the application will use as default the one with lower priority number.]]></HELP>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <AD_TABLE_ID><![CDATA[07A7EA77984146968DDA3C74B92039B5]]></AD_TABLE_ID>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <AD_WINDOW_ID><![CDATA[D549B07D9D774AB2A60FF09E1562C93A]]></AD_WINDOW_ID>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <SEQNO><![CDATA[10]]></SEQNO>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <ORDERBYCLAUSE><![CDATA[Priority]]></ORDERBYCLAUSE>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--73D6D0CBB55B434E98EB10767ADD74AC-->  <HQLORDERBYCLAUSE><![CDATA[priority]]></HQLORDERBYCLAUSE>
+<!--73D6D0CBB55B434E98EB10767ADD74AC--></AD_TAB>
 
 <!--7580F9AE37704571BB0D3935252CAC5A--><AD_TAB>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <AD_TAB_ID><![CDATA[7580F9AE37704571BB0D3935252CAC5A]]></AD_TAB_ID>
@@ -13184,7 +13311,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <AD_WINDOW_ID><![CDATA[110]]></AD_WINDOW_ID>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <SEQNO><![CDATA[40]]></SEQNO>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--7580F9AE37704571BB0D3935252CAC5A-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
+<!--7580F9AE37704571BB0D3935252CAC5A-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -13195,6 +13322,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--7580F9AE37704571BB0D3935252CAC5A-->  <HQLWHERECLAUSE><![CDATA[e.organization.id=@Organization.id@]]></HQLWHERECLAUSE>
 <!--7580F9AE37704571BB0D3935252CAC5A--></AD_TAB>
 
 <!--7F5E8E4C55914138A358F5087B532B59--><AD_TAB>
@@ -13207,7 +13335,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--7F5E8E4C55914138A358F5087B532B59-->  <AD_WINDOW_ID><![CDATA[94EAA455D2644E04AB25D93BE5157B6D]]></AD_WINDOW_ID>
 <!--7F5E8E4C55914138A358F5087B532B59-->  <SEQNO><![CDATA[40]]></SEQNO>
 <!--7F5E8E4C55914138A358F5087B532B59-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
-<!--7F5E8E4C55914138A358F5087B532B59-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--7F5E8E4C55914138A358F5087B532B59-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
 <!--7F5E8E4C55914138A358F5087B532B59-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--7F5E8E4C55914138A358F5087B532B59-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--7F5E8E4C55914138A358F5087B532B59-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -13216,7 +13344,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--7F5E8E4C55914138A358F5087B532B59-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
 <!--7F5E8E4C55914138A358F5087B532B59-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--7F5E8E4C55914138A358F5087B532B59-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--7F5E8E4C55914138A358F5087B532B59-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--7F5E8E4C55914138A358F5087B532B59-->  <UIPATTERN><![CDATA[SR]]></UIPATTERN>
 <!--7F5E8E4C55914138A358F5087B532B59--></AD_TAB>
 
 <!--81F3CB82FABC4208BA76DEBB3728A14B--><AD_TAB>
@@ -13335,6 +13463,8 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--8E5972CF3664486D9D887BDEDA88627D-->  <FILTERCLAUSE><![CDATA[AD_Process_Execution_V.isrolesecurity = 'Y' OR AD_Process_Execution_V.AD_User_ID = @AD_User_ID@]]></FILTERCLAUSE>
 <!--8E5972CF3664486D9D887BDEDA88627D-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--8E5972CF3664486D9D887BDEDA88627D-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--8E5972CF3664486D9D887BDEDA88627D-->  <HQLORDERBYCLAUSE><![CDATA[-created]]></HQLORDERBYCLAUSE>
+<!--8E5972CF3664486D9D887BDEDA88627D-->  <HQLFILTERCLAUSE><![CDATA[e.securityBasedOnRole='Y' or e.userContact.id=@user@]]></HQLFILTERCLAUSE>
 <!--8E5972CF3664486D9D887BDEDA88627D--></AD_TAB>
 
 <!--99DCADEC674D4ECCB158CA5F3DDBFF83--><AD_TAB>
@@ -13478,6 +13608,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--ABD19F77982D41F7A53F7A61948A137D-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--ABD19F77982D41F7A53F7A61948A137D-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--ABD19F77982D41F7A53F7A61948A137D-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--ABD19F77982D41F7A53F7A61948A137D-->  <HQLORDERBYCLAUSE><![CDATA[executionDate]]></HQLORDERBYCLAUSE>
 <!--ABD19F77982D41F7A53F7A61948A137D--></AD_TAB>
 
 <!--ADBD1719BFA14C97A32C7B6E8452D14F--><AD_TAB>
@@ -13528,6 +13659,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--B30CF79CF71245339E94B4B332BAABF1-->  <HQLWHERECLAUSE><![CDATA[e.isIncluded='Y']]></HQLWHERECLAUSE>
 <!--B30CF79CF71245339E94B4B332BAABF1--></AD_TAB>
 
 <!--B3B9080A60E443C58F9476506EEE3D4E--><AD_TAB>
@@ -13601,6 +13733,8 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--C4B6506838E14A349D6717D6856F1B56-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--C4B6506838E14A349D6717D6856F1B56-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--C4B6506838E14A349D6717D6856F1B56-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--C4B6506838E14A349D6717D6856F1B56-->  <HQLWHERECLAUSE><![CDATA[e.receipt='Y']]></HQLWHERECLAUSE>
+<!--C4B6506838E14A349D6717D6856F1B56-->  <HQLORDERBYCLAUSE><![CDATA[-documentNo]]></HQLORDERBYCLAUSE>
 <!--C4B6506838E14A349D6717D6856F1B56--></AD_TAB>
 
 <!--C53967BA96E64FC6B2E4166A7C945168--><AD_TAB>
@@ -13637,7 +13771,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--C56E698100314ABBBBD3A89626CA551C-->  <AD_WINDOW_ID><![CDATA[94EAA455D2644E04AB25D93BE5157B6D]]></AD_WINDOW_ID>
 <!--C56E698100314ABBBBD3A89626CA551C-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--C56E698100314ABBBBD3A89626CA551C-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--C56E698100314ABBBBD3A89626CA551C-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--C56E698100314ABBBBD3A89626CA551C-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
 <!--C56E698100314ABBBBD3A89626CA551C-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--C56E698100314ABBBBD3A89626CA551C-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--C56E698100314ABBBBD3A89626CA551C-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
@@ -13647,7 +13781,8 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--C56E698100314ABBBBD3A89626CA551C-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
 <!--C56E698100314ABBBBD3A89626CA551C-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--C56E698100314ABBBBD3A89626CA551C-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--C56E698100314ABBBBD3A89626CA551C-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--C56E698100314ABBBBD3A89626CA551C-->  <UIPATTERN><![CDATA[SR]]></UIPATTERN>
+<!--C56E698100314ABBBBD3A89626CA551C-->  <HQLORDERBYCLAUSE><![CDATA[-transactionDate]]></HQLORDERBYCLAUSE>
 <!--C56E698100314ABBBBD3A89626CA551C--></AD_TAB>
 
 <!--C65BA4DF317D46CDA72EF9414A3A23ED--><AD_TAB>
@@ -13673,6 +13808,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--C65BA4DF317D46CDA72EF9414A3A23ED-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--C65BA4DF317D46CDA72EF9414A3A23ED-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--C65BA4DF317D46CDA72EF9414A3A23ED-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--C65BA4DF317D46CDA72EF9414A3A23ED-->  <HQLORDERBYCLAUSE><![CDATA[created]]></HQLORDERBYCLAUSE>
 <!--C65BA4DF317D46CDA72EF9414A3A23ED--></AD_TAB>
 
 <!--CD573DF1E351485EA2B2DE487DCACA6F--><AD_TAB>
@@ -13699,6 +13835,8 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--CD573DF1E351485EA2B2DE487DCACA6F-->  <FILTERCLAUSE><![CDATA[AD_Process_Request.Channel = 'Process Scheduler']]></FILTERCLAUSE>
 <!--CD573DF1E351485EA2B2DE487DCACA6F-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--CD573DF1E351485EA2B2DE487DCACA6F-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--CD573DF1E351485EA2B2DE487DCACA6F-->  <HQLORDERBYCLAUSE><![CDATA[-created]]></HQLORDERBYCLAUSE>
+<!--CD573DF1E351485EA2B2DE487DCACA6F-->  <HQLFILTERCLAUSE><![CDATA[e.channel='Process Scheduler']]></HQLFILTERCLAUSE>
 <!--CD573DF1E351485EA2B2DE487DCACA6F--></AD_TAB>
 
 <!--D144E28320BF40A5B5E5E3C5B92D10E9--><AD_TAB>
@@ -13839,6 +13977,8 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--F7A52FDAAA0346EFA07D53C125B40404-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--F7A52FDAAA0346EFA07D53C125B40404-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--F7A52FDAAA0346EFA07D53C125B40404-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--F7A52FDAAA0346EFA07D53C125B40404-->  <HQLWHERECLAUSE><![CDATA[e.receipt='N']]></HQLWHERECLAUSE>
+<!--F7A52FDAAA0346EFA07D53C125B40404-->  <HQLORDERBYCLAUSE><![CDATA[-documentNo]]></HQLORDERBYCLAUSE>
 <!--F7A52FDAAA0346EFA07D53C125B40404--></AD_TAB>
 
 <!--FBC60525011346D6B026D7F8C68199B4--><AD_TAB>

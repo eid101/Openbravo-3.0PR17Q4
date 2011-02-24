@@ -223,7 +223,7 @@
 <!--800013-->  <AD_FORM_ID><![CDATA[800013]]></AD_FORM_ID>
 <!--800013-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800013-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--800013-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800013-->  <ISACTIVE><![CDATA[N]]></ISACTIVE>
 <!--800013-->  <NAME><![CDATA[Remittance Cancellation/Return]]></NAME>
 <!--800013-->  <DESCRIPTION><![CDATA[Edit pending remittances by cancelling or returning them.]]></DESCRIPTION>
 <!--800013-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
@@ -396,7 +396,6 @@ Use Module Management to browse the currently installed modules, to check for up
 <span>After installing or uninstalling a module, you must restart the application context for any changes to take effect.</span>
 <ul>
 <li><b><a name="restart">Restart server:</a></b> Restarts the application server and launches the login screen.</li>
-<li><b><a name="reload">Reload context:</a></b> Reloads the Openbravo context and launches the login screen. <i>Note:</i> There is a know issue with the application server leaking 30MB of memory each time the context is reloaded.</li>
 <li><b><a name="nothing">Take no action:</a></b> Select if you intend to restart the server or reload the application manually, later.</li>
 </ul></div>]]></HELP>
 <!--25C886DA08E947F29AAC1D30D8B753A1-->  <ACCESSLEVEL><![CDATA[4]]></ACCESSLEVEL>
@@ -439,6 +438,19 @@ Use Module Management to browse the currently installed modules, to check for up
 <!--C09B000F160B47BE938A77FDE3207643-->  <CLASSNAME><![CDATA[org.openbravo.erpCommon.ad_forms.UpdateReferenceData]]></CLASSNAME>
 <!--C09B000F160B47BE938A77FDE3207643-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--C09B000F160B47BE938A77FDE3207643--></AD_FORM>
+
+<!--CBFBF581CC3C4D68AD184DD0A20300D1--><AD_FORM>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <AD_FORM_ID><![CDATA[CBFBF581CC3C4D68AD184DD0A20300D1]]></AD_FORM_ID>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <NAME><![CDATA[EditHelp]]></NAME>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <DESCRIPTION><![CDATA[Edit Help]]></DESCRIPTION>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <HELP><![CDATA[Shows a GUI to edit help for windows, tabs, fields and elements.]]></HELP>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <ACCESSLEVEL><![CDATA[7]]></ACCESSLEVEL>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <CLASSNAME><![CDATA[org.openbravo.erpCommon.ad_help.EditHelp]]></CLASSNAME>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--CBFBF581CC3C4D68AD184DD0A20300D1--></AD_FORM>
 
 <!--DE2329ABCAA84D5F99B59043CFFFE454--><AD_FORM>
 <!--DE2329ABCAA84D5F99B59043CFFFE454-->  <AD_FORM_ID><![CDATA[DE2329ABCAA84D5F99B59043CFFFE454]]></AD_FORM_ID>

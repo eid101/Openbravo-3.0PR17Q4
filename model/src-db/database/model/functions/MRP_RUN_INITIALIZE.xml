@@ -42,7 +42,7 @@
       </parameter>
       <body><![CDATA[/*************************************************************************
 * The contents of this file are subject to the Openbravo  Public  License
-* Version  1.0  (the  "License"),  being   the  Mozilla   Public  License
+* Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
 * Version 1.1  with a permitted attribution clause; you may not  use this
 * file except in compliance with the License. You  may  obtain  a copy of
 * the License at http://www.openbravo.com/legal/license.html
@@ -220,6 +220,7 @@ BEGIN
                                   AND Mrp_Check_Planningmethod(Cur_Product.MRP_PlanningMethod_ID, 'WR',
                                   TO_NUMBER(WR.LAUNCHDATE - p_PlanningDate), p_TimeHorizon) <> -1
                                   AND Ad_Isorgincluded(WR.AD_ORG_ID, p_Org_ID, p_Client_ID) > -1
+                                  AND NOT EXISTS(SELECT 1 FROM MRP_RUN_PRODUCTIONLINE RPL WHERE RPL.MA_WORKREQUIREMENT_ID = WR.MA_WORKREQUIREMENT_ID AND RPL.MRP_RUN_PRODUCTION_ID = p_Run)
                                 GROUP BY WR.MA_WORKREQUIREMENT_ID, WR.ENDDATE, WR.STARTDATE, WR.LAUNCHDATE) A
                               WHERE A.EXPECTED >0
                                 AND A.TOTAL <> 0

@@ -6,7 +6,7 @@
       </parameter>
       <body><![CDATA[/*************************************************************************
 * The contents of this file are subject to the Openbravo  Public  License
-* Version  1.0  (the  "License"),  being   the  Mozilla   Public  License
+* Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
 * Version 1.1  with a permitted attribution clause; you may not  use this
 * file except in compliance with the License. You  may  obtain  a copy of
 * the License at http://www.openbravo.com/legal/license.html
@@ -67,7 +67,7 @@
     FOR Cur_workproposal IN (
       SELECT MRP_RUN_PRODUCTIONLINE.* , MA_PROCESSPLAN.EXPLODEPHASES, 
       MA_PROCESSPLAN.CONVERSIONRATE, MA_PROCESSPLAN.SECONDARYUNIT,
-      ROUND((MRP_RUN_PRODUCTIONLINE.qty/A.PROQTY)+0.0005,3) AS PROCESSPLANQTY, MRP_RUN_PRODUCTIONLINE.AD_ORG_ID AS ADORG_ID
+      CEIL(MRP_RUN_PRODUCTIONLINE.qty/A.PROQTY) AS PROCESSPLANQTY, MRP_RUN_PRODUCTIONLINE.AD_ORG_ID AS ADORG_ID
       FROM MRP_RUN_PRODUCTIONLINE, MA_PROCESSPLAN, 
         (SELECT DISTINCT produced, proqty, ma_processplan_id
          FROM MA_PROCESSPLAN_TOTALIZED) A
