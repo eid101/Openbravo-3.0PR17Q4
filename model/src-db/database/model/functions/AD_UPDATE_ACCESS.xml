@@ -3,7 +3,7 @@
     <function name="AD_UPDATE_ACCESS" type="NULL">
       <body><![CDATA[/*************************************************************************
 * The contents of this file are subject to the Openbravo  Public  License
-* Version  1.0  (the  "License"),  being   the  Mozilla   Public  License
+* Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
 * Version 1.1  with a permitted attribution clause; you may not  use this
 * file except in compliance with the License. You  may  obtain  a copy of
 * the License at http://www.openbravo.com/legal/license.html
@@ -13,10 +13,13 @@
 * under the License.
 * The Original Code is Openbravo ERP.
 * The Initial Developer of the Original Code is Openbravo SLU
-* All portions are Copyright (C) 2007-2008 Openbravo SLU
+* All portions are Copyright (C) 2007-2011 Openbravo SLU
 * All Rights Reserved.
 * Contributor(s):  ______________________________________.
 ************************************************************************/
+
+ v_ExtensionPointID varchar2(32) := '8261F79453B64AC7998873A9F81A1E5A';
+ v_count NUMBER;
 BEGIN
 --AD_FORM_ACCESS
   INSERT INTO AD_Form_Access
@@ -176,6 +179,16 @@ BEGIN
                     FROM AD_USER_ROLES
                     WHERE AD_USER_ID = AD_USER.AD_USER_ID
                       AND AD_ROLE_ID = '0');
+                      
+ 
+  --Extension point to add access to additional tables defined within modules 
+  SELECT count(*) INTO v_count
+  FROM DUAL
+  WHERE EXISTS (SELECT 1 FROM ad_ep_procedures WHERE ad_extension_points_id = v_ExtensionPointID);
+  
+  IF (v_count != 0) THEN
+   AD_EXTENSION_POINT_HANDLER(get_uuid(), v_ExtensionPointID);
+  END IF;
 END AD_UPDATE_ACCESS
 ]]></body>
     </function>
