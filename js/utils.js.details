@@ -216,6 +216,7 @@ FUNCTION: calculateMsgBoxWidth
 FUNCTION: changeAuditStatus
 FUNCTION: changeAuditStatusRelation
 FUNCTION: changeAuditIcon
+FUNCTION: changeSearchIcon
 FUNCTION: changeAuditIconTitle
 FUNCTION: goToDivAnchor
 FUNCTION: getGlobalDecSeparator
