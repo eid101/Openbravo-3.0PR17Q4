@@ -357,7 +357,7 @@
 <!--116-->  <HELP><![CDATA[Edit your tab translations for the predefined languages of your choice.]]></HELP>
 <!--116-->  <AD_TABLE_ID><![CDATA[123]]></AD_TABLE_ID>
 <!--116-->  <AD_WINDOW_ID><![CDATA[102]]></AD_WINDOW_ID>
-<!--116-->  <SEQNO><![CDATA[50]]></SEQNO>
+<!--116-->  <SEQNO><![CDATA[115]]></SEQNO>
 <!--116-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
 <!--116-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
 <!--116-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -2588,7 +2588,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--259-->  <SEQNO><![CDATA[10]]></SEQNO>
 <!--259-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
 <!--259-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
-<!--259-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
+<!--259-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
 <!--259-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--259-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
 <!--259-->  <HASTREE><![CDATA[N]]></HASTREE>
@@ -4911,30 +4911,6 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--496-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
 <!--496--></AD_TAB>
 
-<!--512--><AD_TAB>
-<!--512-->  <AD_TAB_ID><![CDATA[512]]></AD_TAB_ID>
-<!--512-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--512-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--512-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--512-->  <NAME><![CDATA[Import Order]]></NAME>
-<!--512-->  <DESCRIPTION><![CDATA[Import orders in .csv format from previously used databases/applications and past business operations.]]></DESCRIPTION>
-<!--512-->  <HELP><![CDATA[Import orders in .csv format from previously used databases/applications and past business operations.]]></HELP>
-<!--512-->  <AD_TABLE_ID><![CDATA[591]]></AD_TABLE_ID>
-<!--512-->  <AD_WINDOW_ID><![CDATA[281]]></AD_WINDOW_ID>
-<!--512-->  <SEQNO><![CDATA[10]]></SEQNO>
-<!--512-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--512-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
-<!--512-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
-<!--512-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
-<!--512-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
-<!--512-->  <HASTREE><![CDATA[N]]></HASTREE>
-<!--512-->  <PROCESSING><![CDATA[N]]></PROCESSING>
-<!--512-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
-<!--512-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
-<!--512-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--512-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
-<!--512--></AD_TAB>
-
 <!--513--><AD_TAB>
 <!--513-->  <AD_TAB_ID><![CDATA[513]]></AD_TAB_ID>
 <!--513-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -5771,80 +5747,6 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800019-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800019-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
 <!--800019--></AD_TAB>
-
-<!--800020--><AD_TAB>
-<!--800020-->  <AD_TAB_ID><![CDATA[800020]]></AD_TAB_ID>
-<!--800020-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--800020-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--800020-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800020-->  <NAME><![CDATA[Header]]></NAME>
-<!--800020-->  <DESCRIPTION><![CDATA[Create and process a simple sales order based on a business partner's product template.]]></DESCRIPTION>
-<!--800020-->  <HELP><![CDATA[Create and process a simple sales order based on a business partner's product template.]]></HELP>
-<!--800020-->  <AD_TABLE_ID><![CDATA[259]]></AD_TABLE_ID>
-<!--800020-->  <AD_WINDOW_ID><![CDATA[800004]]></AD_WINDOW_ID>
-<!--800020-->  <SEQNO><![CDATA[10]]></SEQNO>
-<!--800020-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
-<!--800020-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
-<!--800020-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
-<!--800020-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
-<!--800020-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
-<!--800020-->  <HASTREE><![CDATA[N]]></HASTREE>
-<!--800020-->  <WHERECLAUSE><![CDATA[C_Order.IsSOTrx='Y']]></WHERECLAUSE>
-<!--800020-->  <AD_PROCESS_ID><![CDATA[1000500002]]></AD_PROCESS_ID>
-<!--800020-->  <PROCESSING><![CDATA[N]]></PROCESSING>
-<!--800020-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
-<!--800020-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--800020-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
-<!--800020-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=true]]></HQLWHERECLAUSE>
-<!--800020--></AD_TAB>
-
-<!--800021--><AD_TAB>
-<!--800021-->  <AD_TAB_ID><![CDATA[800021]]></AD_TAB_ID>
-<!--800021-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--800021-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--800021-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800021-->  <NAME><![CDATA[Tax]]></NAME>
-<!--800021-->  <DESCRIPTION><![CDATA[View or edit taxes applied to your order.]]></DESCRIPTION>
-<!--800021-->  <HELP><![CDATA[View or edit taxes applied to your order.]]></HELP>
-<!--800021-->  <AD_TABLE_ID><![CDATA[314]]></AD_TABLE_ID>
-<!--800021-->  <AD_WINDOW_ID><![CDATA[800004]]></AD_WINDOW_ID>
-<!--800021-->  <SEQNO><![CDATA[30]]></SEQNO>
-<!--800021-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--800021-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
-<!--800021-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
-<!--800021-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
-<!--800021-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
-<!--800021-->  <HASTREE><![CDATA[N]]></HASTREE>
-<!--800021-->  <ORDERBYCLAUSE><![CDATA[C_OrderTax.Line]]></ORDERBYCLAUSE>
-<!--800021-->  <PROCESSING><![CDATA[N]]></PROCESSING>
-<!--800021-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
-<!--800021-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--800021-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
-<!--800021-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
-<!--800021--></AD_TAB>
-
-<!--800022--><AD_TAB>
-<!--800022-->  <AD_TAB_ID><![CDATA[800022]]></AD_TAB_ID>
-<!--800022-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--800022-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--800022-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800022-->  <NAME><![CDATA[Lines]]></NAME>
-<!--800022-->  <DESCRIPTION><![CDATA[Add products to be included in your simple sales order.  Each product is added by creating a line.]]></DESCRIPTION>
-<!--800022-->  <HELP><![CDATA[Add products to be included in your simple sales order.  Each product is added by creating a line.]]></HELP>
-<!--800022-->  <AD_TABLE_ID><![CDATA[260]]></AD_TABLE_ID>
-<!--800022-->  <AD_WINDOW_ID><![CDATA[800004]]></AD_WINDOW_ID>
-<!--800022-->  <SEQNO><![CDATA[20]]></SEQNO>
-<!--800022-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
-<!--800022-->  <ISSINGLEROW><![CDATA[Y]]></ISSINGLEROW>
-<!--800022-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
-<!--800022-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
-<!--800022-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
-<!--800022-->  <HASTREE><![CDATA[N]]></HASTREE>
-<!--800022-->  <PROCESSING><![CDATA[N]]></PROCESSING>
-<!--800022-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
-<!--800022-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--800022-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
-<!--800022--></AD_TAB>
 
 <!--800025--><AD_TAB>
 <!--800025-->  <AD_TAB_ID><![CDATA[800025]]></AD_TAB_ID>
@@ -7439,6 +7341,111 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800152-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
 <!--800152--></AD_TAB>
 
+<!--800153--><AD_TAB>
+<!--800153-->  <AD_TAB_ID><![CDATA[800153]]></AD_TAB_ID>
+<!--800153-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800153-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800153-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800153-->  <NAME><![CDATA[Check Point Set]]></NAME>
+<!--800153-->  <DESCRIPTION><![CDATA[Create and edit checkpoints for the related measurement.]]></DESCRIPTION>
+<!--800153-->  <HELP><![CDATA[Create and edit checkpoints for the related measurement.]]></HELP>
+<!--800153-->  <AD_TABLE_ID><![CDATA[800133]]></AD_TABLE_ID>
+<!--800153-->  <AD_WINDOW_ID><![CDATA[800064]]></AD_WINDOW_ID>
+<!--800153-->  <SEQNO><![CDATA[20]]></SEQNO>
+<!--800153-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--800153-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--800153-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--800153-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--800153-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--800153-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--800153-->  <ORDERBYCLAUSE><![CDATA[MA_Measure_Group.seqno]]></ORDERBYCLAUSE>
+<!--800153-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--800153-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--800153-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--800153-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800153-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800153-->  <HQLORDERBYCLAUSE><![CDATA[sequenceNumber]]></HQLORDERBYCLAUSE>
+<!--800153--></AD_TAB>
+
+<!--800154--><AD_TAB>
+<!--800154-->  <AD_TAB_ID><![CDATA[800154]]></AD_TAB_ID>
+<!--800154-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800154-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800154-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800154-->  <NAME><![CDATA[Time]]></NAME>
+<!--800154-->  <DESCRIPTION><![CDATA[Create and edit times for related check points.]]></DESCRIPTION>
+<!--800154-->  <HELP><![CDATA[Create and edit times for related check points.]]></HELP>
+<!--800154-->  <AD_TABLE_ID><![CDATA[800134]]></AD_TABLE_ID>
+<!--800154-->  <AD_WINDOW_ID><![CDATA[800064]]></AD_WINDOW_ID>
+<!--800154-->  <SEQNO><![CDATA[30]]></SEQNO>
+<!--800154-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
+<!--800154-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--800154-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--800154-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--800154-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--800154-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--800154-->  <ORDERBYCLAUSE><![CDATA[MA_Measure_Time.MeasureHour]]></ORDERBYCLAUSE>
+<!--800154-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--800154-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--800154-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--800154-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800154-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800154-->  <HQLORDERBYCLAUSE><![CDATA[measurementHour]]></HQLORDERBYCLAUSE>
+<!--800154--></AD_TAB>
+
+<!--800155--><AD_TAB>
+<!--800155-->  <AD_TAB_ID><![CDATA[800155]]></AD_TAB_ID>
+<!--800155-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800155-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800155-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800155-->  <NAME><![CDATA[Values]]></NAME>
+<!--800155-->  <DESCRIPTION><![CDATA[Create and edit values for a related measurement.]]></DESCRIPTION>
+<!--800155-->  <HELP><![CDATA[Create and edit values for a related measurement.]]></HELP>
+<!--800155-->  <AD_TABLE_ID><![CDATA[800135]]></AD_TABLE_ID>
+<!--800155-->  <AD_WINDOW_ID><![CDATA[800064]]></AD_WINDOW_ID>
+<!--800155-->  <SEQNO><![CDATA[40]]></SEQNO>
+<!--800155-->  <TABLEVEL><![CDATA[3]]></TABLEVEL>
+<!--800155-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--800155-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--800155-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--800155-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--800155-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--800155-->  <ORDERBYCLAUSE><![CDATA[TO_NUMBER(MA_Measure_Values.SeqNo)]]></ORDERBYCLAUSE>
+<!--800155-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--800155-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--800155-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--800155-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800155-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800155-->  <HQLORDERBYCLAUSE><![CDATA[sequenceNumber]]></HQLORDERBYCLAUSE>
+<!--800155--></AD_TAB>
+
+<!--800158--><AD_TAB>
+<!--800158-->  <AD_TAB_ID><![CDATA[800158]]></AD_TAB_ID>
+<!--800158-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800158-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800158-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800158-->  <NAME><![CDATA[Date and Shift]]></NAME>
+<!--800158-->  <DESCRIPTION><![CDATA[Create measurements and insert gathered values or a specifc date and shift.]]></DESCRIPTION>
+<!--800158-->  <HELP><![CDATA[Create measurements and insert gathered values or a specifc date and shift.]]></HELP>
+<!--800158-->  <AD_TABLE_ID><![CDATA[800138]]></AD_TABLE_ID>
+<!--800158-->  <AD_WINDOW_ID><![CDATA[800064]]></AD_WINDOW_ID>
+<!--800158-->  <SEQNO><![CDATA[10]]></SEQNO>
+<!--800158-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
+<!--800158-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--800158-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--800158-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--800158-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--800158-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--800158-->  <ORDERBYCLAUSE><![CDATA[MA_Measure_Shift.MeasureDate DESC]]></ORDERBYCLAUSE>
+<!--800158-->  <AD_PROCESS_ID><![CDATA[800119]]></AD_PROCESS_ID>
+<!--800158-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--800158-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--800158-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--800158-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800158-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800158-->  <HQLORDERBYCLAUSE><![CDATA[-measurementDate]]></HQLORDERBYCLAUSE>
+<!--800158--></AD_TAB>
+
 <!--800159--><AD_TAB>
 <!--800159-->  <AD_TAB_ID><![CDATA[800159]]></AD_TAB_ID>
 <!--800159-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -7948,6 +7955,58 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800186-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
 <!--800186--></AD_TAB>
 
+<!--800188--><AD_TAB>
+<!--800188-->  <AD_TAB_ID><![CDATA[800188]]></AD_TAB_ID>
+<!--800188-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800188-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800188-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800188-->  <NAME><![CDATA[Maintenance]]></NAME>
+<!--800188-->  <DESCRIPTION><![CDATA[Create and edit maintenance tasks for a specific date.]]></DESCRIPTION>
+<!--800188-->  <HELP><![CDATA[Create and edit maintenance tasks for a specific date.]]></HELP>
+<!--800188-->  <AD_TABLE_ID><![CDATA[800161]]></AD_TABLE_ID>
+<!--800188-->  <AD_WINDOW_ID><![CDATA[800074]]></AD_WINDOW_ID>
+<!--800188-->  <SEQNO><![CDATA[0]]></SEQNO>
+<!--800188-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
+<!--800188-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--800188-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--800188-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--800188-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--800188-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--800188-->  <ORDERBYCLAUSE><![CDATA[MA_Maint_Scheduled.ScheduledDate]]></ORDERBYCLAUSE>
+<!--800188-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--800188-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--800188-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--800188-->  <FILTERCLAUSE><![CDATA[MA_Maint_Scheduled.MA_Maint_Part_ID IS NULL]]></FILTERCLAUSE>
+<!--800188-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800188-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800188-->  <HQLORDERBYCLAUSE><![CDATA[plannedDate]]></HQLORDERBYCLAUSE>
+<!--800188-->  <HQLFILTERCLAUSE><![CDATA[e.maintenanceOrder is null]]></HQLFILTERCLAUSE>
+<!--800188--></AD_TAB>
+
+<!--800189--><AD_TAB>
+<!--800189-->  <AD_TAB_ID><![CDATA[800189]]></AD_TAB_ID>
+<!--800189-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800189-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800189-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800189-->  <NAME><![CDATA[Order]]></NAME>
+<!--800189-->  <DESCRIPTION><![CDATA[Add previously scheduled maintenances for a specific date and report observations.]]></DESCRIPTION>
+<!--800189-->  <HELP><![CDATA[Add previously scheduled maintenances for a specific date and report observations.]]></HELP>
+<!--800189-->  <AD_TABLE_ID><![CDATA[800163]]></AD_TABLE_ID>
+<!--800189-->  <AD_WINDOW_ID><![CDATA[800075]]></AD_WINDOW_ID>
+<!--800189-->  <SEQNO><![CDATA[0]]></SEQNO>
+<!--800189-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
+<!--800189-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--800189-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--800189-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--800189-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--800189-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--800189-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--800189-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--800189-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--800189-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800189-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800189--></AD_TAB>
+
 <!--800190--><AD_TAB>
 <!--800190-->  <AD_TAB_ID><![CDATA[800190]]></AD_TAB_ID>
 <!--800190-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -7971,6 +8030,54 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800190-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800190-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
 <!--800190--></AD_TAB>
+
+<!--800191--><AD_TAB>
+<!--800191-->  <AD_TAB_ID><![CDATA[800191]]></AD_TAB_ID>
+<!--800191-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800191-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800191-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800191-->  <NAME><![CDATA[Worker]]></NAME>
+<!--800191-->  <DESCRIPTION><![CDATA[Add or edit workers that took part in a specified maintenance part.]]></DESCRIPTION>
+<!--800191-->  <HELP><![CDATA[Add or edit workers that took part in a specified maintenance part.]]></HELP>
+<!--800191-->  <AD_TABLE_ID><![CDATA[800164]]></AD_TABLE_ID>
+<!--800191-->  <AD_WINDOW_ID><![CDATA[800075]]></AD_WINDOW_ID>
+<!--800191-->  <SEQNO><![CDATA[10]]></SEQNO>
+<!--800191-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--800191-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--800191-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--800191-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--800191-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--800191-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--800191-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--800191-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--800191-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--800191-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800191-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800191--></AD_TAB>
+
+<!--800192--><AD_TAB>
+<!--800192-->  <AD_TAB_ID><![CDATA[800192]]></AD_TAB_ID>
+<!--800192-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800192-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800192-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800192-->  <NAME><![CDATA[Task]]></NAME>
+<!--800192-->  <DESCRIPTION><![CDATA[Edit maintenance tasks of a specified order.]]></DESCRIPTION>
+<!--800192-->  <HELP><![CDATA[Edit maintenance tasks of a specified order.]]></HELP>
+<!--800192-->  <AD_TABLE_ID><![CDATA[800161]]></AD_TABLE_ID>
+<!--800192-->  <AD_WINDOW_ID><![CDATA[800075]]></AD_WINDOW_ID>
+<!--800192-->  <SEQNO><![CDATA[20]]></SEQNO>
+<!--800192-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--800192-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--800192-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--800192-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--800192-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--800192-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--800192-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--800192-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--800192-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--800192-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800192-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--800192--></AD_TAB>
 
 <!--800194--><AD_TAB>
 <!--800194-->  <AD_TAB_ID><![CDATA[800194]]></AD_TAB_ID>
@@ -10149,7 +10256,7 @@ Purchase Order lines created to fulfill the product demand.]]></HELP>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <HELP><![CDATA[Lists all the modules that are form part of the dependencies for the module.]]></HELP>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <AD_TABLE_ID><![CDATA[55EA8703587B40C1A05D225FBEE8C7FE]]></AD_TABLE_ID>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <AD_WINDOW_ID><![CDATA[D586192D06C14EC182B44CAD34CA4295]]></AD_WINDOW_ID>
-<!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <SEQNO><![CDATA[70]]></SEQNO>
+<!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <SEQNO><![CDATA[20]]></SEQNO>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--134DE6BD8CD34FDFB6DC940BF857BC25-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -10348,7 +10455,7 @@ The corresponding tables have then the following setting:
 - SalesOrder, in the org.crm.order package, resulting in the java class: org.crm.order.SalesOrder]]></HELP>
 <!--29021BB9A96244BDA7E8AEBA71ADFB11-->  <AD_TABLE_ID><![CDATA[D5066ABE94C144C19E3516C882B51DE4]]></AD_TABLE_ID>
 <!--29021BB9A96244BDA7E8AEBA71ADFB11-->  <AD_WINDOW_ID><![CDATA[D586192D06C14EC182B44CAD34CA4295]]></AD_WINDOW_ID>
-<!--29021BB9A96244BDA7E8AEBA71ADFB11-->  <SEQNO><![CDATA[90]]></SEQNO>
+<!--29021BB9A96244BDA7E8AEBA71ADFB11-->  <SEQNO><![CDATA[50]]></SEQNO>
 <!--29021BB9A96244BDA7E8AEBA71ADFB11-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--29021BB9A96244BDA7E8AEBA71ADFB11-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--29021BB9A96244BDA7E8AEBA71ADFB11-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -10426,7 +10533,7 @@ The corresponding tables have then the following setting:
 <!--39B3DB3BF4C44EE192BE3F6CA69903C0-->  <HELP><![CDATA[The database objects that do not follow the modularity naming rules but are within the module are defined as Exceptions. This is particularly useful to facilitate the migration of all instances to modules. When an object is added to this tab, it will be exported its module instead of to core.]]></HELP>
 <!--39B3DB3BF4C44EE192BE3F6CA69903C0-->  <AD_TABLE_ID><![CDATA[BE310ED7C5F243C48D41F7684116F4AF]]></AD_TABLE_ID>
 <!--39B3DB3BF4C44EE192BE3F6CA69903C0-->  <AD_WINDOW_ID><![CDATA[D586192D06C14EC182B44CAD34CA4295]]></AD_WINDOW_ID>
-<!--39B3DB3BF4C44EE192BE3F6CA69903C0-->  <SEQNO><![CDATA[110]]></SEQNO>
+<!--39B3DB3BF4C44EE192BE3F6CA69903C0-->  <SEQNO><![CDATA[70]]></SEQNO>
 <!--39B3DB3BF4C44EE192BE3F6CA69903C0-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--39B3DB3BF4C44EE192BE3F6CA69903C0-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--39B3DB3BF4C44EE192BE3F6CA69903C0-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -10474,7 +10581,7 @@ The corresponding tables have then the following setting:
 <!--40207FE1E4F94FDDA026C37C4E1E1847-->  <HELP><![CDATA[Modules can merge other ones. This table contains information about the merges. A module should be merged in a new major version and once it is merged it should be kept in all future versions. When there is a module merged, multiple DBPrefixes are allowed to maintain the one originally defined by the module as well as all the ones defined in the merged modules.]]></HELP>
 <!--40207FE1E4F94FDDA026C37C4E1E1847-->  <AD_TABLE_ID><![CDATA[0EA05A734BA74DDB873CE8DA4BB52473]]></AD_TABLE_ID>
 <!--40207FE1E4F94FDDA026C37C4E1E1847-->  <AD_WINDOW_ID><![CDATA[D586192D06C14EC182B44CAD34CA4295]]></AD_WINDOW_ID>
-<!--40207FE1E4F94FDDA026C37C4E1E1847-->  <SEQNO><![CDATA[120]]></SEQNO>
+<!--40207FE1E4F94FDDA026C37C4E1E1847-->  <SEQNO><![CDATA[60]]></SEQNO>
 <!--40207FE1E4F94FDDA026C37C4E1E1847-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--40207FE1E4F94FDDA026C37C4E1E1847-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--40207FE1E4F94FDDA026C37C4E1E1847-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -11192,7 +11299,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <HELP><![CDATA[For packages and templates the list of included modules is the list of the modules  that form part of the package.]]></HELP>
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <AD_TABLE_ID><![CDATA[55EA8703587B40C1A05D225FBEE8C7FE]]></AD_TABLE_ID>
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <AD_WINDOW_ID><![CDATA[D586192D06C14EC182B44CAD34CA4295]]></AD_WINDOW_ID>
-<!--B30CF79CF71245339E94B4B332BAABF1-->  <SEQNO><![CDATA[60]]></SEQNO>
+<!--B30CF79CF71245339E94B4B332BAABF1-->  <SEQNO><![CDATA[30]]></SEQNO>
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
@@ -11561,7 +11668,7 @@ This tab is read only. If you want to control the periods you must use the "Open
 <!--FD79A6D6DB094BE88F2F0E0333A399B2-->  <HELP><![CDATA[DB Prefixes of the module]]></HELP>
 <!--FD79A6D6DB094BE88F2F0E0333A399B2-->  <AD_TABLE_ID><![CDATA[47CA957C59F947D2B8E8D7E37AFA40DE]]></AD_TABLE_ID>
 <!--FD79A6D6DB094BE88F2F0E0333A399B2-->  <AD_WINDOW_ID><![CDATA[D586192D06C14EC182B44CAD34CA4295]]></AD_WINDOW_ID>
-<!--FD79A6D6DB094BE88F2F0E0333A399B2-->  <SEQNO><![CDATA[100]]></SEQNO>
+<!--FD79A6D6DB094BE88F2F0E0333A399B2-->  <SEQNO><![CDATA[40]]></SEQNO>
 <!--FD79A6D6DB094BE88F2F0E0333A399B2-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
 <!--FD79A6D6DB094BE88F2F0E0333A399B2-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
 <!--FD79A6D6DB094BE88F2F0E0333A399B2-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>

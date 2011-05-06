@@ -1543,47 +1543,6 @@
 <!--205-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
 <!--205--></AD_PROCESS>
 
-<!--206--><AD_PROCESS>
-<!--206-->  <AD_PROCESS_ID><![CDATA[206]]></AD_PROCESS_ID>
-<!--206-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--206-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--206-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--206-->  <VALUE><![CDATA[ImportOrderServlet]]></VALUE>
-<!--206-->  <NAME><![CDATA[Import Orders]]></NAME>
-<!--206-->  <DESCRIPTION><![CDATA[Import Orders]]></DESCRIPTION>
-<!--206-->  <HELP><![CDATA[The Parameters are default values for null import record values, they do not overwrite any data.]]></HELP>
-<!--206-->  <ACCESSLEVEL><![CDATA[7]]></ACCESSLEVEL>
-<!--206-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
-<!--206-->  <ISREPORT><![CDATA[N]]></ISREPORT>
-<!--206-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
-<!--206-->  <CLASSNAME><![CDATA[ad_process/ImportOrderServlet.html]]></CLASSNAME>
-<!--206-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
-<!--206-->  <ISJASPER><![CDATA[N]]></ISJASPER>
-<!--206-->  <ISEXTERNALSERVICE><![CDATA[N]]></ISEXTERNALSERVICE>
-<!--206-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--206-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
-<!--206--></AD_PROCESS>
-
-<!--207--><AD_PROCESS>
-<!--207-->  <AD_PROCESS_ID><![CDATA[207]]></AD_PROCESS_ID>
-<!--207-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--207-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--207-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--207-->  <VALUE><![CDATA[Import_Invoice]]></VALUE>
-<!--207-->  <NAME><![CDATA[Import Invoice]]></NAME>
-<!--207-->  <DESCRIPTION><![CDATA[Import Invoice]]></DESCRIPTION>
-<!--207-->  <HELP><![CDATA[The Parameters are default values for null import record values, they do not overwrite any data.]]></HELP>
-<!--207-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
-<!--207-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
-<!--207-->  <ISREPORT><![CDATA[N]]></ISREPORT>
-<!--207-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
-<!--207-->  <CLASSNAME><![CDATA[org.openbravo.process.ImportInvoice]]></CLASSNAME>
-<!--207-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
-<!--207-->  <ISJASPER><![CDATA[N]]></ISJASPER>
-<!--207-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--207-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
-<!--207--></AD_PROCESS>
-
 <!--208--><AD_PROCESS>
 <!--208-->  <AD_PROCESS_ID><![CDATA[208]]></AD_PROCESS_ID>
 <!--208-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -1784,46 +1743,6 @@
 <!--218-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--218-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
 <!--218--></AD_PROCESS>
-
-<!--219--><AD_PROCESS>
-<!--219-->  <AD_PROCESS_ID><![CDATA[219]]></AD_PROCESS_ID>
-<!--219-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--219-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--219-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--219-->  <VALUE><![CDATA[Import_Inventory]]></VALUE>
-<!--219-->  <NAME><![CDATA[Import Inventory]]></NAME>
-<!--219-->  <DESCRIPTION><![CDATA[Import Physical Inventory]]></DESCRIPTION>
-<!--219-->  <HELP><![CDATA[The Parameters are default values for null import record values, they do not overwrite any data.]]></HELP>
-<!--219-->  <ACCESSLEVEL><![CDATA[1]]></ACCESSLEVEL>
-<!--219-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
-<!--219-->  <ISREPORT><![CDATA[N]]></ISREPORT>
-<!--219-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
-<!--219-->  <CLASSNAME><![CDATA[org.openbravo.process.ImportInventory]]></CLASSNAME>
-<!--219-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
-<!--219-->  <ISJASPER><![CDATA[N]]></ISJASPER>
-<!--219-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--219-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
-<!--219--></AD_PROCESS>
-
-<!--220--><AD_PROCESS>
-<!--220-->  <AD_PROCESS_ID><![CDATA[220]]></AD_PROCESS_ID>
-<!--220-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--220-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--220-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--220-->  <VALUE><![CDATA[Import_GLJournal]]></VALUE>
-<!--220-->  <NAME><![CDATA[Import Journal]]></NAME>
-<!--220-->  <DESCRIPTION><![CDATA[Import General Ledger Batch/Journal/Line]]></DESCRIPTION>
-<!--220-->  <HELP><![CDATA[The Parameters are default values for null import record values, they do not overwrite any data.]]></HELP>
-<!--220-->  <ACCESSLEVEL><![CDATA[1]]></ACCESSLEVEL>
-<!--220-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
-<!--220-->  <ISREPORT><![CDATA[N]]></ISREPORT>
-<!--220-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
-<!--220-->  <CLASSNAME><![CDATA[org.openbravo.process.ImportGLJournal]]></CLASSNAME>
-<!--220-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
-<!--220-->  <ISJASPER><![CDATA[N]]></ISJASPER>
-<!--220-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--220-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
-<!--220--></AD_PROCESS>
 
 <!--221--><AD_PROCESS>
 <!--221-->  <AD_PROCESS_ID><![CDATA[221]]></AD_PROCESS_ID>
@@ -2367,26 +2286,6 @@ The Excel export generates an xls file that can be used to perform more advanced
 <!--800027-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
 <!--800027--></AD_PROCESS>
 
-<!--800028--><AD_PROCESS>
-<!--800028-->  <AD_PROCESS_ID><![CDATA[800028]]></AD_PROCESS_ID>
-<!--800028-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--800028-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--800028-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800028-->  <VALUE><![CDATA[C_Order_Reset]]></VALUE>
-<!--800028-->  <NAME><![CDATA[Change Order Organization]]></NAME>
-<!--800028-->  <DESCRIPTION><![CDATA[Change Order Organization]]></DESCRIPTION>
-<!--800028-->  <HELP><![CDATA[Change Order Organization]]></HELP>
-<!--800028-->  <ACCESSLEVEL><![CDATA[1]]></ACCESSLEVEL>
-<!--800028-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
-<!--800028-->  <ISREPORT><![CDATA[N]]></ISREPORT>
-<!--800028-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
-<!--800028-->  <CLASSNAME><![CDATA[ad_process/ChangeOrderOrg.html]]></CLASSNAME>
-<!--800028-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
-<!--800028-->  <ISJASPER><![CDATA[N]]></ISJASPER>
-<!--800028-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--800028-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
-<!--800028--></AD_PROCESS>
-
 <!--800030--><AD_PROCESS>
 <!--800030-->  <AD_PROCESS_ID><![CDATA[800030]]></AD_PROCESS_ID>
 <!--800030-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -2848,26 +2747,6 @@ The Excel export generates an xls file that can be used to perform more advanced
 <!--800077-->  <UIPATTERN><![CDATA[S]]></UIPATTERN>
 <!--800077--></AD_PROCESS>
 
-<!--800078--><AD_PROCESS>
-<!--800078-->  <AD_PROCESS_ID><![CDATA[800078]]></AD_PROCESS_ID>
-<!--800078-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
-<!--800078-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--800078-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800078-->  <VALUE><![CDATA[C_Order_Actualize_Pricelist]]></VALUE>
-<!--800078-->  <NAME><![CDATA[Update Price List from Orders]]></NAME>
-<!--800078-->  <DESCRIPTION><![CDATA[Update pricelist from orders]]></DESCRIPTION>
-<!--800078-->  <HELP><![CDATA[Update pricelist from orders]]></HELP>
-<!--800078-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
-<!--800078-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
-<!--800078-->  <PROCEDURENAME><![CDATA[C_Order_Actualize_Pricelist]]></PROCEDURENAME>
-<!--800078-->  <ISREPORT><![CDATA[N]]></ISREPORT>
-<!--800078-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
-<!--800078-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
-<!--800078-->  <ISJASPER><![CDATA[N]]></ISJASPER>
-<!--800078-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--800078-->  <UIPATTERN><![CDATA[S]]></UIPATTERN>
-<!--800078--></AD_PROCESS>
-
 <!--800079--><AD_PROCESS>
 <!--800079-->  <AD_PROCESS_ID><![CDATA[800079]]></AD_PROCESS_ID>
 <!--800079-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -3164,6 +3043,7 @@ The product price of each receipt is calculated based on the on the product pric
 <!--800101-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
 <!--800101-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
 <!--800101-->  <ISJASPER><![CDATA[N]]></ISJASPER>
+<!--800101-->  <ISEXTERNALSERVICE><![CDATA[N]]></ISEXTERNALSERVICE>
 <!--800101-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800101-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
 <!--800101--></AD_PROCESS>
@@ -3291,6 +3171,26 @@ Depending on the configuration of the Cost Center the process will also calculat
 <!--800112-->  <UIPATTERN><![CDATA[S]]></UIPATTERN>
 <!--800112--></AD_PROCESS>
 
+<!--800114--><AD_PROCESS>
+<!--800114-->  <AD_PROCESS_ID><![CDATA[800114]]></AD_PROCESS_ID>
+<!--800114-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800114-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800114-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800114-->  <VALUE><![CDATA[MA_Measure_Time_Explode]]></VALUE>
+<!--800114-->  <NAME><![CDATA[Input Time Measurement]]></NAME>
+<!--800114-->  <DESCRIPTION><![CDATA[With this process are inserted all the Control Points of the selected group to fill with taken measurements.]]></DESCRIPTION>
+<!--800114-->  <HELP><![CDATA[With this process are inserted all the Control Points of the selected group to fill with taken measurements.]]></HELP>
+<!--800114-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
+<!--800114-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
+<!--800114-->  <PROCEDURENAME><![CDATA[MA_Measure_Time_Explode0]]></PROCEDURENAME>
+<!--800114-->  <ISREPORT><![CDATA[N]]></ISREPORT>
+<!--800114-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
+<!--800114-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
+<!--800114-->  <ISJASPER><![CDATA[N]]></ISJASPER>
+<!--800114-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800114-->  <UIPATTERN><![CDATA[S]]></UIPATTERN>
+<!--800114--></AD_PROCESS>
+
 <!--800115--><AD_PROCESS>
 <!--800115-->  <AD_PROCESS_ID><![CDATA[800115]]></AD_PROCESS_ID>
 <!--800115-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -3349,6 +3249,25 @@ Depending on the configuration of the Cost Center the process will also calculat
 <!--800118-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800118-->  <UIPATTERN><![CDATA[S]]></UIPATTERN>
 <!--800118--></AD_PROCESS>
+
+<!--800119--><AD_PROCESS>
+<!--800119-->  <AD_PROCESS_ID><![CDATA[800119]]></AD_PROCESS_ID>
+<!--800119-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800119-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800119-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800119-->  <VALUE><![CDATA[Rpt MA_CCP_Measures]]></VALUE>
+<!--800119-->  <NAME><![CDATA[CCP Measures sheet]]></NAME>
+<!--800119-->  <DESCRIPTION><![CDATA[Print of the selected critical control points measures.]]></DESCRIPTION>
+<!--800119-->  <HELP><![CDATA[Print of the selected critical control points measures.]]></HELP>
+<!--800119-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
+<!--800119-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
+<!--800119-->  <ISREPORT><![CDATA[Y]]></ISREPORT>
+<!--800119-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
+<!--800119-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
+<!--800119-->  <ISJASPER><![CDATA[N]]></ISJASPER>
+<!--800119-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800119-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
+<!--800119--></AD_PROCESS>
 
 <!--800123--><AD_PROCESS>
 <!--800123-->  <AD_PROCESS_ID><![CDATA[800123]]></AD_PROCESS_ID>
@@ -3427,6 +3346,86 @@ Depending on the configuration of the Cost Center the process will also calculat
 <!--800126-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800126-->  <UIPATTERN><![CDATA[S]]></UIPATTERN>
 <!--800126--></AD_PROCESS>
+
+<!--800127--><AD_PROCESS>
+<!--800127-->  <AD_PROCESS_ID><![CDATA[800127]]></AD_PROCESS_ID>
+<!--800127-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800127-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800127-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800127-->  <VALUE><![CDATA[MA_Measure_Shift_Explode]]></VALUE>
+<!--800127-->  <NAME><![CDATA[Explode Measure Shift]]></NAME>
+<!--800127-->  <DESCRIPTION><![CDATA[Explode Measure Shift]]></DESCRIPTION>
+<!--800127-->  <HELP><![CDATA[Explode Measure Shift]]></HELP>
+<!--800127-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
+<!--800127-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
+<!--800127-->  <PROCEDURENAME><![CDATA[MA_Measure_Shift_Explode]]></PROCEDURENAME>
+<!--800127-->  <ISREPORT><![CDATA[N]]></ISREPORT>
+<!--800127-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
+<!--800127-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
+<!--800127-->  <ISJASPER><![CDATA[N]]></ISJASPER>
+<!--800127-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800127-->  <UIPATTERN><![CDATA[S]]></UIPATTERN>
+<!--800127--></AD_PROCESS>
+
+<!--800128--><AD_PROCESS>
+<!--800128-->  <AD_PROCESS_ID><![CDATA[800128]]></AD_PROCESS_ID>
+<!--800128-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800128-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800128-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800128-->  <VALUE><![CDATA[EditCCPMeasureValues]]></VALUE>
+<!--800128-->  <NAME><![CDATA[Edit CCP Measured Values]]></NAME>
+<!--800128-->  <DESCRIPTION><![CDATA[Edit CCP Measured Values]]></DESCRIPTION>
+<!--800128-->  <HELP><![CDATA[Edit CCP Measured Values]]></HELP>
+<!--800128-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
+<!--800128-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
+<!--800128-->  <ISREPORT><![CDATA[N]]></ISREPORT>
+<!--800128-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
+<!--800128-->  <CLASSNAME><![CDATA[org.openbravo.erpCommon.ad_actionButton.EditCCPMeasureValues]]></CLASSNAME>
+<!--800128-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
+<!--800128-->  <ISJASPER><![CDATA[N]]></ISJASPER>
+<!--800128-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800128-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
+<!--800128--></AD_PROCESS>
+
+<!--800129--><AD_PROCESS>
+<!--800129-->  <AD_PROCESS_ID><![CDATA[800129]]></AD_PROCESS_ID>
+<!--800129-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800129-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800129-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800129-->  <VALUE><![CDATA[MA_Maint_Part_CreateFrom]]></VALUE>
+<!--800129-->  <NAME><![CDATA[Create from Maintenance Part]]></NAME>
+<!--800129-->  <DESCRIPTION><![CDATA[Create from Maintenance Part]]></DESCRIPTION>
+<!--800129-->  <HELP><![CDATA[Create from Maintenance Part]]></HELP>
+<!--800129-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
+<!--800129-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
+<!--800129-->  <ISREPORT><![CDATA[N]]></ISREPORT>
+<!--800129-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
+<!--800129-->  <CLASSNAME><![CDATA[org.openbravo.erpCommon.ad_actionButton.UpdateMaintenanceScheduled]]></CLASSNAME>
+<!--800129-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
+<!--800129-->  <ISJASPER><![CDATA[N]]></ISJASPER>
+<!--800129-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800129-->  <UIPATTERN><![CDATA[M]]></UIPATTERN>
+<!--800129--></AD_PROCESS>
+
+<!--800130--><AD_PROCESS>
+<!--800130-->  <AD_PROCESS_ID><![CDATA[800130]]></AD_PROCESS_ID>
+<!--800130-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--800130-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--800130-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--800130-->  <VALUE><![CDATA[MA_Maint_All]]></VALUE>
+<!--800130-->  <NAME><![CDATA[Insert Maintenances]]></NAME>
+<!--800130-->  <DESCRIPTION><![CDATA[Insert Maintenances]]></DESCRIPTION>
+<!--800130-->  <HELP><![CDATA[Insert Maintenances]]></HELP>
+<!--800130-->  <ACCESSLEVEL><![CDATA[3]]></ACCESSLEVEL>
+<!--800130-->  <ISUSERSTARTABLE><![CDATA[N]]></ISUSERSTARTABLE>
+<!--800130-->  <PROCEDURENAME><![CDATA[MA_Maint_All]]></PROCEDURENAME>
+<!--800130-->  <ISREPORT><![CDATA[N]]></ISREPORT>
+<!--800130-->  <ISDIRECTPRINT><![CDATA[N]]></ISDIRECTPRINT>
+<!--800130-->  <ISBACKGROUND><![CDATA[N]]></ISBACKGROUND>
+<!--800130-->  <ISJASPER><![CDATA[N]]></ISJASPER>
+<!--800130-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--800130-->  <UIPATTERN><![CDATA[S]]></UIPATTERN>
+<!--800130--></AD_PROCESS>
 
 <!--800131--><AD_PROCESS>
 <!--800131-->  <AD_PROCESS_ID><![CDATA[800131]]></AD_PROCESS_ID>
