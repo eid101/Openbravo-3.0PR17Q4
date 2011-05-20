@@ -105,7 +105,9 @@
       T.M_PRODUCT_UOM_ID,
       COALESCE(T.QtyOnHand, 0) AS QtyOnHand,
       T.QtyOrderOnHand AS QtyOrder
-    FROM M_STORAGE_DETAIL T,
+    FROM M_STORAGE_DETAIL T LEFT OUTER JOIN
+      M_ATTRIBUTESETINSTANCE A
+      ON T.M_ATTRIBUTESETINSTANCE_ID = A.M_ATTRIBUTESETINSTANCE_ID,
       M_LOCATOR L
     WHERE T.M_PRODUCT_ID=p_Product AND
       T.M_LOCATOR_ID=L.M_LOCATOR_ID AND
@@ -115,7 +117,8 @@
       COALESCE(T.M_ATTRIBUTESETINSTANCE_ID, '0')=COALESCE(p_Attribute, COALESCE(T.M_ATTRIBUTESETINSTANCE_ID, '0')) AND
       COALESCE(T.QtyOnHand, 0)>0
     ORDER BY L.PRIORITYNO,
-      T.CREATED;
+      A.CREATED, T.CREATED;
+    
     v_storage Cur_Storage%ROWTYPE;
     --
     v_NextNo varchar2(32);
@@ -307,7 +310,7 @@
             IF Cur_Order.DocSubTypeSO = 'WR' THEN
               v_NEWORDERDATE := Cur_Order.DATEORDERED; -- IS A POS ORDER
             ELSE
-              v_NEWORDERDATE := now();
+              v_NEWORDERDATE := TRUNC(now());
             END IF;
 
             --RAISE_APPLICATION_ERROR(-20100,'el numero documento es:'||COALESCE(v_DocumentNo,0)||' El doctypeId es: '||COALESCE(v_DocType_ID,0)||' El cOrderId es: '||COALESCE(Cur_Order.C_Order_ID,'0'));
@@ -332,7 +335,7 @@
               Cur_Order.AD_Org_ID, 'Y', now(), v_User_ID,
               now(), v_User_ID, v_DocumentNo, v_DocType_ID,
               Cur_Order.Description, 'N', 'C-', v_NEWORDERDATE,
-              now(), Cur_Order.C_BPartner_ID, Cur_Order.C_BPartner_Location_ID, Cur_Order.AD_User_ID,
+              TRUNC(now()), Cur_Order.C_BPartner_ID, Cur_Order.C_BPartner_Location_ID, Cur_Order.AD_User_ID,
               Cur_Order.M_Warehouse_ID, Cur_Order.POReference, Cur_Order.DateOrdered, Cur_Order.DeliveryRule,
               Cur_Order.FreightCostRule, Cur_Order.FreightAmt, Cur_Order.C_Project_ID, Cur_Order.C_Activity_ID,
               Cur_Order.C_Campaign_ID, Cur_Order.AD_OrgTrx_ID, Cur_Order.User1_ID, Cur_Order.User2_ID,
@@ -418,6 +421,8 @@
                         FETCH Cur_Storage INTO v_storage;
                         IF Cur_Storage%NOTFOUND THEN
                           NEXT_PRODUCT:=true;
+                          CLOSE Cur_Storage;
+                          Cur_Storage_ISOPEN:=false;
                         END IF;
                         IF(NOT NEXT_PRODUCT) THEN
                           v_QtyStorage:=v_storage.QtyOnHand;
