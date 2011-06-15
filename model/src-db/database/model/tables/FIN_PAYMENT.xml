@@ -37,7 +37,7 @@
         <default><![CDATA[Y]]></default>
         <onCreateDefault/>
       </column>
-      <column name="C_BPARTNER_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+      <column name="C_BPARTNER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
         <default/>
         <onCreateDefault/>
       </column>
@@ -128,6 +128,14 @@
       <column name="CREATEDBYALGORITHM" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
         <default><![CDATA[N]]></default>
         <onCreateDefault/>
+      </column>
+      <column name="FINACC_TXN_CONVERT_RATE" primaryKey="false" required="true" type="DECIMAL" autoIncrement="false">
+        <default><![CDATA[1]]></default>
+        <onCreateDefault><![CDATA[1]]></onCreateDefault>
+      </column>
+      <column name="FINACC_TXN_AMOUNT" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault><![CDATA[AMOUNT]]></onCreateDefault>
       </column>
       <foreign-key foreignTable="AD_CLIENT" name="FIN_AD_CLIENT_PAYMENTS">
         <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
