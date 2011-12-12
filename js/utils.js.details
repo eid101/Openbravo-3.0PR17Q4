@@ -42,6 +42,7 @@ FUNCTION: checkBrowserCompatibility250
 FUNCTION: getObjAttribute
 FUNCTION: setObjAttribute
 FUNCTION: getElementsByName
+FUNCTION: getElementsByClassName
 FUNCTION: setFocusFirstControl
 FUNCTION: clearForm
 FUNCTION: confirmAction
