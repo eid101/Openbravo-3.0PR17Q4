@@ -1,3 +1,4 @@
+VAR: OB
 FUNCTION: gt_callback
 FUNCTION: gt_showHideLayer
 FUNCTION: gt_updateData
