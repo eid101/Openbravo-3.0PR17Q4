@@ -1713,7 +1713,7 @@
 <!--800017-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--800017-->  <NAME><![CDATA[Discount]]></NAME>
 <!--800017-->  <DESCRIPTION><![CDATA[Create and edit product price percentage discounts.]]></DESCRIPTION>
-<!--800017-->  <HELP><![CDATA[A discount is a deduction from the total amount of an invoice.]]></HELP>
+<!--800017-->  <HELP><![CDATA[A discount is a deduction from the total amount of an order or an invoice.]]></HELP>
 <!--800017-->  <WINDOWTYPE><![CDATA[M]]></WINDOWTYPE>
 <!--800017-->  <ISSOTRX><![CDATA[N]]></ISSOTRX>
 <!--800017-->  <PROCESSING><![CDATA[N]]></PROCESSING>
@@ -2588,7 +2588,7 @@ By enabling the heartbeat, you consent to the processing of this data and storin
 <!--0CFFACC0F91C4DFDA429CCF80EBF4BC4-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--0CFFACC0F91C4DFDA429CCF80EBF4BC4-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--0CFFACC0F91C4DFDA429CCF80EBF4BC4-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--0CFFACC0F91C4DFDA429CCF80EBF4BC4-->  <NAME><![CDATA[Return reasons]]></NAME>
+<!--0CFFACC0F91C4DFDA429CCF80EBF4BC4-->  <NAME><![CDATA[Return Reasons]]></NAME>
 <!--0CFFACC0F91C4DFDA429CCF80EBF4BC4-->  <DESCRIPTION><![CDATA[Here you define the return reason]]></DESCRIPTION>
 <!--0CFFACC0F91C4DFDA429CCF80EBF4BC4-->  <WINDOWTYPE><![CDATA[M]]></WINDOWTYPE>
 <!--0CFFACC0F91C4DFDA429CCF80EBF4BC4-->  <ISSOTRX><![CDATA[Y]]></ISSOTRX>
