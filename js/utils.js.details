@@ -1,4 +1,6 @@
 FUNCTION: utilsJSDirectExecution
+VAR: isIE9Strict
+VAR: isRTL
 VAR: isWindowInMDIPopup
 VAR: isWindowInMDITab
 VAR: isWindowInMDIPage
@@ -258,6 +260,9 @@ FUNCTION: checkWindowInMDITab
 FUNCTION: checkWindowInMDIPage
 FUNCTION: checkWindowInMDIContext
 FUNCTION: sendWindowInfoToMDI
+FUNCTION: checkWindowInRTLMode
+FUNCTION: fixIE9WindowBorders
+FUNCTION: moreOnLoadDoFunctions
 VAR: arrTeclas
 FUNCTION: Teclas
 FUNCTION: controlTecla
