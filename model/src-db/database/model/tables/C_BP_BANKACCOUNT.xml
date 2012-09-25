@@ -137,6 +137,10 @@
         <default/>
         <onCreateDefault/>
       </column>
+      <column name="BANKFORMAT" primaryKey="false" required="true" type="VARCHAR" size="60" autoIncrement="false">
+        <default><![CDATA[GENERIC]]></default>
+        <onCreateDefault><![CDATA[CASE WHEN SHOWIBAN='Y' THEN 'IBAN' ELSE 'GENERIC' END]]></onCreateDefault>
+      </column>
       <foreign-key foreignTable="AD_CLIENT" name="C_BP_BANKACCOUNT_AD_CLIENT">
         <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
       </foreign-key>
@@ -156,7 +160,9 @@
         <index-column name="C_BPARTNER_ID"/>
       </index>
       <check name="C_BP_BACC_COUNTRY_CHECK"><![CDATA[(IBAN IS NULL) OR (C_COUNTRY_ID IS NOT NULL)]]></check>
-      <check name="C_BP_BACC_IBAN_CHECK"><![CDATA[(((SHOWIBAN = 'Y') AND (SHOWACCOUNTNO = 'N')) AND (IBAN IS NOT NULL)) OR (((SHOWIBAN = 'N') AND (SHOWACCOUNTNO = 'Y')) AND (ACCOUNTNO IS NOT NULL))]]></check>
+      <check name="C_BP_BACC_SHOWGENERIC_CHK"><![CDATA[((UPPER((BANKFORMAT)) = UPPER('GENERIC')) AND (ACCOUNTNO IS NOT NULL)) OR (UPPER((BANKFORMAT)) <> UPPER('GENERIC'))]]></check>
+      <check name="C_BP_BACC_SHOWIBAN_CHK"><![CDATA[((UPPER((BANKFORMAT)) = UPPER('IBAN')) AND (IBAN IS NOT NULL)) OR (UPPER((BANKFORMAT)) <> UPPER('IBAN'))]]></check>
+      <check name="C_BP_BACC_SHOWSWIFT_CHK"><![CDATA[(((UPPER((BANKFORMAT)) = UPPER('SWIFT')) AND (SWIFTCODE IS NOT NULL)) AND (ACCOUNTNO IS NOT NULL)) OR (UPPER((BANKFORMAT)) <> UPPER('SWIFT'))]]></check>
       <check name="C_BP_BANKACCOUNT_ISACTIVE_CHK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
     </table>
   </database>
