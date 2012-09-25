@@ -45,7 +45,7 @@
         <default/>
         <onCreateDefault/>
       </column>
-      <column name="ACCOUNTNO" primaryKey="false" required="false" type="NVARCHAR" size="20" autoIncrement="false">
+      <column name="ACCOUNTNO" primaryKey="false" required="false" type="NVARCHAR" size="100" autoIncrement="false">
         <default/>
         <onCreateDefault/>
       </column>
@@ -125,7 +125,7 @@
         <default/>
         <onCreateDefault><![CDATA['N']]></onCreateDefault>
       </column>
-      <column name="DISPLAYEDACCOUNT" primaryKey="false" required="false" type="NVARCHAR" size="34" autoIncrement="false">
+      <column name="DISPLAYEDACCOUNT" primaryKey="false" required="false" type="NVARCHAR" size="120" autoIncrement="false">
         <default/>
         <onCreateDefault><![CDATA[SELECT ACCOUNTNO FROM C_BP_BANKACCOUNT A WHERE C_BP_BANKACCOUNT.C_BP_BANKACCOUNT_ID = A.C_BP_BANKACCOUNT_ID]]></onCreateDefault>
       </column>
