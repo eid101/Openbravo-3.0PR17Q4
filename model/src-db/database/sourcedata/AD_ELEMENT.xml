@@ -998,10 +998,10 @@ or All (AD_CLIENT=anything, AD_ORG_ID=anything)]]></HELP>
 <!--199-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--199-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--199-->  <COLUMNNAME><![CDATA[C_Element_ID]]></COLUMNNAME>
-<!--199-->  <NAME><![CDATA[Accounting Element]]></NAME>
+<!--199-->  <NAME><![CDATA[Account Tree]]></NAME>
 <!--199-->  <PRINTNAME><![CDATA[Element]]></PRINTNAME>
-<!--199-->  <DESCRIPTION><![CDATA[A unique identifier for an account type.]]></DESCRIPTION>
-<!--199-->  <HELP><![CDATA[The Account Element uniquely identifies an Account Type.  These are commonly known as a Chart of Accounts.]]></HELP>
+<!--199-->  <DESCRIPTION><![CDATA[A unique identifier of the Account Tree.]]></DESCRIPTION>
+<!--199-->  <HELP><![CDATA[The Account Tree uniquely identifies the Account Tree, also known as Chart of Accounts, linked to the Accounting Schema.]]></HELP>
 <!--199-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--199-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--199--></AD_ELEMENT>
@@ -2063,10 +2063,10 @@ You find the current status in the Document Status field. The options are listed
 <!--307-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--307-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--307-->  <COLUMNNAME><![CDATA[GAAP]]></COLUMNNAME>
-<!--307-->  <NAME><![CDATA[GAAP]]></NAME>
-<!--307-->  <PRINTNAME><![CDATA[GAAP]]></PRINTNAME>
-<!--307-->  <DESCRIPTION><![CDATA[Generally Accepted Accounting Principles]]></DESCRIPTION>
-<!--307-->  <HELP><![CDATA[The GAAP identifies the account principles that this accounting schema will adhere to.]]></HELP>
+<!--307-->  <NAME><![CDATA[Accounting Standard]]></NAME>
+<!--307-->  <PRINTNAME><![CDATA[Accounting Standard]]></PRINTNAME>
+<!--307-->  <DESCRIPTION><![CDATA[Accounting Standard]]></DESCRIPTION>
+<!--307-->  <HELP><![CDATA[The Accounting Standard identifies the account principles that this accounting schema will adhere to.]]></HELP>
 <!--307-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--307-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--307--></AD_ELEMENT>
@@ -4136,7 +4136,7 @@ Price Lists are used to determine the pricing, margin and cost of items purchase
 <!--565-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--565-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--565-->  <COLUMNNAME><![CDATA[Separator]]></COLUMNNAME>
-<!--565-->  <NAME><![CDATA[Storage Bin Separator]]></NAME>
+<!--565-->  <NAME><![CDATA[Element separator]]></NAME>
 <!--565-->  <PRINTNAME><![CDATA[Element Separator]]></PRINTNAME>
 <!--565-->  <DESCRIPTION><![CDATA[Element Separator]]></DESCRIPTION>
 <!--565-->  <HELP><![CDATA[The Element Separator defines the delimiter printed between elements of the structure]]></HELP>
@@ -5648,10 +5648,10 @@ Usually, company's internal identifiers for various records (products, customers
 <!--973-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--973-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--973-->  <COLUMNNAME><![CDATA[SwiftCode]]></COLUMNNAME>
-<!--973-->  <NAME><![CDATA[Swift code]]></NAME>
-<!--973-->  <PRINTNAME><![CDATA[Swift code]]></PRINTNAME>
-<!--973-->  <DESCRIPTION><![CDATA[Swift Code (Society of Worldwide Interbank Financial Telecommunications)]]></DESCRIPTION>
-<!--973-->  <HELP><![CDATA[The SWIFT code is an identifier of a Bank]]></HELP>
+<!--973-->  <NAME><![CDATA[SWIFT Code]]></NAME>
+<!--973-->  <PRINTNAME><![CDATA[SWIFT Code]]></PRINTNAME>
+<!--973-->  <DESCRIPTION><![CDATA[SWIFT Code (Society of Worldwide Interbank Financial Telecommunications)]]></DESCRIPTION>
+<!--973-->  <HELP><![CDATA[The SWIFT Code is an identifier of a Bank]]></HELP>
 <!--973-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--973-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--973--></AD_ELEMENT>
@@ -6089,7 +6089,7 @@ Usually, company's internal identifiers for various records (products, customers
 <!--1042-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--1042-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--1042-->  <COLUMNNAME><![CDATA[P_Asset_Acct]]></COLUMNNAME>
-<!--1042-->  <NAME><![CDATA[Fixed Asset]]></NAME>
+<!--1042-->  <NAME><![CDATA[Product Asset]]></NAME>
 <!--1042-->  <PRINTNAME><![CDATA[Product Asset]]></PRINTNAME>
 <!--1042-->  <DESCRIPTION><![CDATA[A tangible asset used for business without expectation of sale in the coming fiscal year.]]></DESCRIPTION>
 <!--1042-->  <HELP><![CDATA[The Product Asset Account indicates the account used for valuing this a product in inventory.]]></HELP>
@@ -10594,7 +10594,8 @@ If selected, this column will be used in the Search Window as an available filte
 <!--1899-->  <NAME><![CDATA[Product Type]]></NAME>
 <!--1899-->  <PRINTNAME><![CDATA[Product Type]]></PRINTNAME>
 <!--1899-->  <DESCRIPTION><![CDATA[An important classification used to determine the accounting and management of a product.]]></DESCRIPTION>
-<!--1899-->  <HELP><![CDATA[The type of product also determines accounting consequences.]]></HELP>
+<!--1899-->  <HELP><![CDATA[There are four types of products available. Item type can be used to configure any product such as raw materials or finished products ready to be sold. An item can be flagged as Socked or not, can be part of a production process and/or can be a bill of materials. Item type is the only one for which a cost type calculation can be configured.  Service type can be used to configure consultancy, transport or insurance services. Service type can be purchased or sold but can not be stocked. A service can be a bill of materials. Finally Resource and Expense are product types which can be used to distinguish between different types of products which can be purchased or sold but make not sense to stock. Expense type can be used to configure travel expenses fto be used while reporting Employee Expenses.
+The fact of using a given product type does not mean a different accounting. All product types account same way while being purchased, stocked or sold. All of them use the ledger accounts defined in the Accounting tab of the Product window.]]></HELP>
 <!--1899-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--1899-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--1899--></AD_ELEMENT>
@@ -11037,8 +11038,8 @@ If selected, this column will be used in the Search Window as an available filte
 <!--2003-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--2003-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--2003-->  <COLUMNNAME><![CDATA[NetDay]]></COLUMNNAME>
-<!--2003-->  <NAME><![CDATA[Overdue Payment Day Rule]]></NAME>
-<!--2003-->  <PRINTNAME><![CDATA[Net Day]]></PRINTNAME>
+<!--2003-->  <NAME><![CDATA[Fixed Week Day]]></NAME>
+<!--2003-->  <PRINTNAME><![CDATA[Fixed Week Day]]></PRINTNAME>
 <!--2003-->  <DESCRIPTION><![CDATA[A plan to give until a specific day after the agreed payment term to pay without penalty.]]></DESCRIPTION>
 <!--2003-->  <HELP><![CDATA[When defined, overwrites the number of net days with the relative number of days to the day defined.]]></HELP>
 <!--2003-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
@@ -20442,10 +20443,10 @@ The causes are The Requisition to Order window or the inclusion of the demand in
 <!--1005500008-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--1005500008-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--1005500008-->  <COLUMNNAME><![CDATA[GenericAccount]]></COLUMNNAME>
-<!--1005500008-->  <NAME><![CDATA[Generic Account]]></NAME>
-<!--1005500008-->  <PRINTNAME><![CDATA[Generic Account]]></PRINTNAME>
-<!--1005500008-->  <DESCRIPTION><![CDATA[Number of the bank account, in a generic format. Usefull if the bank does not use nor IBAN nor our country bank account number's structure]]></DESCRIPTION>
-<!--1005500008-->  <HELP><![CDATA[Number of the bank account, in a generic format. Usefull if the bank does not use nor IBAN nor our country bank account number's structure]]></HELP>
+<!--1005500008-->  <NAME><![CDATA[Generic Account No.]]></NAME>
+<!--1005500008-->  <PRINTNAME><![CDATA[Generic Account No.]]></PRINTNAME>
+<!--1005500008-->  <DESCRIPTION><![CDATA[Bank account number in a generic format.]]></DESCRIPTION>
+<!--1005500008-->  <HELP><![CDATA[Bank account number in a generic format.]]></HELP>
 <!--1005500008-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--1005500008-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--1005500008--></AD_ELEMENT>
@@ -20456,10 +20457,10 @@ The causes are The Requisition to Order window or the inclusion of the demand in
 <!--1005500009-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--1005500009-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--1005500009-->  <COLUMNNAME><![CDATA[ShowAccountNo]]></COLUMNNAME>
-<!--1005500009-->  <NAME><![CDATA[Show Generic]]></NAME>
-<!--1005500009-->  <PRINTNAME><![CDATA[Show Generic]]></PRINTNAME>
-<!--1005500009-->  <DESCRIPTION><![CDATA[Show Generic]]></DESCRIPTION>
-<!--1005500009-->  <HELP><![CDATA[Show Generic]]></HELP>
+<!--1005500009-->  <NAME><![CDATA[Use Generic Account No.]]></NAME>
+<!--1005500009-->  <PRINTNAME><![CDATA[Use Generic Account No.]]></PRINTNAME>
+<!--1005500009-->  <DESCRIPTION><![CDATA[Use the Generic Account Number for generating the Displayed Account Number]]></DESCRIPTION>
+<!--1005500009-->  <HELP><![CDATA[Use the Generic Account Number for generating the Displayed Account Number]]></HELP>
 <!--1005500009-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--1005500009-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--1005500009--></AD_ELEMENT>
@@ -20470,10 +20471,10 @@ The causes are The Requisition to Order window or the inclusion of the demand in
 <!--1005500010-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--1005500010-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--1005500010-->  <COLUMNNAME><![CDATA[ShowIBAN]]></COLUMNNAME>
-<!--1005500010-->  <NAME><![CDATA[Show IBAN]]></NAME>
-<!--1005500010-->  <PRINTNAME><![CDATA[Show IBAN]]></PRINTNAME>
-<!--1005500010-->  <DESCRIPTION><![CDATA[Show IBAN]]></DESCRIPTION>
-<!--1005500010-->  <HELP><![CDATA[Show IBAN]]></HELP>
+<!--1005500010-->  <NAME><![CDATA[Use IBAN]]></NAME>
+<!--1005500010-->  <PRINTNAME><![CDATA[Use IBAN]]></PRINTNAME>
+<!--1005500010-->  <DESCRIPTION><![CDATA[Use IBAN for generating the Displayed Account Number]]></DESCRIPTION>
+<!--1005500010-->  <HELP><![CDATA[Use IBAN for generating the Displayed Account Number]]></HELP>
 <!--1005500010-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--1005500010-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--1005500010--></AD_ELEMENT>
@@ -20484,10 +20485,10 @@ The causes are The Requisition to Order window or the inclusion of the demand in
 <!--1005500011-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--1005500011-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--1005500011-->  <COLUMNNAME><![CDATA[ShowSpanish]]></COLUMNNAME>
-<!--1005500011-->  <NAME><![CDATA[Show Spanish]]></NAME>
-<!--1005500011-->  <PRINTNAME><![CDATA[Show Spanish]]></PRINTNAME>
-<!--1005500011-->  <DESCRIPTION><![CDATA[Show Spanish]]></DESCRIPTION>
-<!--1005500011-->  <HELP><![CDATA[Show Spanish]]></HELP>
+<!--1005500011-->  <NAME><![CDATA[Use Spanish Format]]></NAME>
+<!--1005500011-->  <PRINTNAME><![CDATA[Use Spanish Format]]></PRINTNAME>
+<!--1005500011-->  <DESCRIPTION><![CDATA[Use Spanish Format]]></DESCRIPTION>
+<!--1005500011-->  <HELP><![CDATA[Use Spanish Format]]></HELP>
 <!--1005500011-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--1005500011-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--1005500011--></AD_ELEMENT>
@@ -24311,6 +24312,20 @@ The distribution algorithm will be driven by this priority. The pending payments
 <!--667AE26F6635E6A7E040007F01015B98-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--667AE26F6635E6A7E040007F01015B98--></AD_ELEMENT>
 
+<!--66D79DCEE41D41588FCC2DB58A467EA3--><AD_ELEMENT>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <AD_ELEMENT_ID><![CDATA[66D79DCEE41D41588FCC2DB58A467EA3]]></AD_ELEMENT_ID>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <COLUMNNAME><![CDATA[IsStatic]]></COLUMNNAME>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <NAME><![CDATA[Static]]></NAME>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <PRINTNAME><![CDATA[Static]]></PRINTNAME>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <DESCRIPTION><![CDATA[Prevents from moving the record into the tree]]></DESCRIPTION>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <HELP><![CDATA[Prevents from moving the record into the tree]]></HELP>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--66D79DCEE41D41588FCC2DB58A467EA3-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
+<!--66D79DCEE41D41588FCC2DB58A467EA3--></AD_ELEMENT>
+
 <!--66E1860A46E045D4BD7F018323FA10D4--><AD_ELEMENT>
 <!--66E1860A46E045D4BD7F018323FA10D4-->  <AD_ELEMENT_ID><![CDATA[66E1860A46E045D4BD7F018323FA10D4]]></AD_ELEMENT_ID>
 <!--66E1860A46E045D4BD7F018323FA10D4-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -28120,6 +28135,20 @@ By disabling this option standard beats will be sent to HeartBeat server, but no
 <!--B1EB4BB84F52592AE040A8C028010F07-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--B1EB4BB84F52592AE040A8C028010F07--></AD_ELEMENT>
 
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D--><AD_ELEMENT>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <AD_ELEMENT_ID><![CDATA[B1FA47C8408A44F6A23CFE48F7E8EB3D]]></AD_ELEMENT_ID>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <COLUMNNAME><![CDATA[Writeofflimit]]></COLUMNNAME>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <NAME><![CDATA[Write-off Limit]]></NAME>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <PRINTNAME><![CDATA[Write-off Limit]]></PRINTNAME>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <DESCRIPTION><![CDATA[Value for the Write-off limit in a payment. ]]></DESCRIPTION>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <HELP><![CDATA[Value for the Write-off limit in a payment. When type selected is Amount, the value holds the amount on financial account currency.  This field is displayed when write-off limit preference value is set to "Y".]]></HELP>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
+<!--B1FA47C8408A44F6A23CFE48F7E8EB3D--></AD_ELEMENT>
+
 <!--B241E19041029C74E040007F01005C18--><AD_ELEMENT>
 <!--B241E19041029C74E040007F01005C18-->  <AD_ELEMENT_ID><![CDATA[B241E19041029C74E040007F01005C18]]></AD_ELEMENT_ID>
 <!--B241E19041029C74E040007F01005C18-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -28505,6 +28534,20 @@ The main purpose of this whereclause is to select which of the records in a part
 <!--BD2D5C4D0AED4962B1EDF25726015579-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--BD2D5C4D0AED4962B1EDF25726015579--></AD_ELEMENT>
 
+<!--BD442402746540CF8171E3CF5B018CD8--><AD_ELEMENT>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <AD_ELEMENT_ID><![CDATA[BD442402746540CF8171E3CF5B018CD8]]></AD_ELEMENT_ID>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <COLUMNNAME><![CDATA[Bankformat]]></COLUMNNAME>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <NAME><![CDATA[Bank Account Format]]></NAME>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <PRINTNAME><![CDATA[Bank Account Format]]></PRINTNAME>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <DESCRIPTION><![CDATA[Bank Account Format used for generating the Displayed Account No]]></DESCRIPTION>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <HELP><![CDATA[Bank Account Format used for generating the Displayed Account Number]]></HELP>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--BD442402746540CF8171E3CF5B018CD8-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
+<!--BD442402746540CF8171E3CF5B018CD8--></AD_ELEMENT>
+
 <!--BEADA4ABFE544524B69FEC20E82F2D95--><AD_ELEMENT>
 <!--BEADA4ABFE544524B69FEC20E82F2D95-->  <AD_ELEMENT_ID><![CDATA[BEADA4ABFE544524B69FEC20E82F2D95]]></AD_ELEMENT_ID>
 <!--BEADA4ABFE544524B69FEC20E82F2D95-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -28724,8 +28767,8 @@ The main purpose of this whereclause is to select which of the records in a part
 <!--C8204FA5E433458A863CCE094FE54BD6-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--C8204FA5E433458A863CCE094FE54BD6-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--C8204FA5E433458A863CCE094FE54BD6-->  <COLUMNNAME><![CDATA[Costing_Status]]></COLUMNNAME>
-<!--C8204FA5E433458A863CCE094FE54BD6-->  <NAME><![CDATA[Costing_Status]]></NAME>
-<!--C8204FA5E433458A863CCE094FE54BD6-->  <PRINTNAME><![CDATA[Costing_Status]]></PRINTNAME>
+<!--C8204FA5E433458A863CCE094FE54BD6-->  <NAME><![CDATA[Costing Status]]></NAME>
+<!--C8204FA5E433458A863CCE094FE54BD6-->  <PRINTNAME><![CDATA[Costing Status]]></PRINTNAME>
 <!--C8204FA5E433458A863CCE094FE54BD6-->  <DESCRIPTION><![CDATA[Costing Calculation Status]]></DESCRIPTION>
 <!--C8204FA5E433458A863CCE094FE54BD6-->  <HELP><![CDATA[Costing Calculation Status]]></HELP>
 <!--C8204FA5E433458A863CCE094FE54BD6-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
@@ -29023,6 +29066,18 @@ The main purpose of this whereclause is to select which of the records in a part
 <!--DBB02A64470D4093A2534F0DFC8BF855-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--DBB02A64470D4093A2534F0DFC8BF855--></AD_ELEMENT>
 
+<!--DDC19F22CF8A4A2696B5E74F980BE277--><AD_ELEMENT>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <AD_ELEMENT_ID><![CDATA[DDC19F22CF8A4A2696B5E74F980BE277]]></AD_ELEMENT_ID>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <COLUMNNAME><![CDATA[limitwriteoff]]></COLUMNNAME>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <NAME><![CDATA[limitwriteoff]]></NAME>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <PRINTNAME><![CDATA[limitwriteoff]]></PRINTNAME>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--DDC19F22CF8A4A2696B5E74F980BE277-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
+<!--DDC19F22CF8A4A2696B5E74F980BE277--></AD_ELEMENT>
+
 <!--DF31EE4F8B28472089DC155324337471--><AD_ELEMENT>
 <!--DF31EE4F8B28472089DC155324337471-->  <AD_ELEMENT_ID><![CDATA[DF31EE4F8B28472089DC155324337471]]></AD_ELEMENT_ID>
 <!--DF31EE4F8B28472089DC155324337471-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -29157,6 +29212,20 @@ The main purpose of this whereclause is to select which of the records in a part
 <!--E5702FB7A0A14BF782A5723A131B8F8C-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--E5702FB7A0A14BF782A5723A131B8F8C--></AD_ELEMENT>
 
+<!--E80D311071C54E78859339274535D285--><AD_ELEMENT>
+<!--E80D311071C54E78859339274535D285-->  <AD_ELEMENT_ID><![CDATA[E80D311071C54E78859339274535D285]]></AD_ELEMENT_ID>
+<!--E80D311071C54E78859339274535D285-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--E80D311071C54E78859339274535D285-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--E80D311071C54E78859339274535D285-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--E80D311071C54E78859339274535D285-->  <COLUMNNAME><![CDATA[Type write-off]]></COLUMNNAME>
+<!--E80D311071C54E78859339274535D285-->  <NAME><![CDATA[Type Write-off Limit]]></NAME>
+<!--E80D311071C54E78859339274535D285-->  <PRINTNAME><![CDATA[Type Write-off Limit]]></PRINTNAME>
+<!--E80D311071C54E78859339274535D285-->  <DESCRIPTION><![CDATA[Holds the type of write off limit configured for the financial account.]]></DESCRIPTION>
+<!--E80D311071C54E78859339274535D285-->  <HELP><![CDATA[It allows to define different type of write-off limit for a financial account. This field is displayed when write-off limit preference value is set to "Y". ]]></HELP>
+<!--E80D311071C54E78859339274535D285-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--E80D311071C54E78859339274535D285-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
+<!--E80D311071C54E78859339274535D285--></AD_ELEMENT>
+
 <!--E8960F2356544158BC13E363B1364E41--><AD_ELEMENT>
 <!--E8960F2356544158BC13E363B1364E41-->  <AD_ELEMENT_ID><![CDATA[E8960F2356544158BC13E363B1364E41]]></AD_ELEMENT_ID>
 <!--E8960F2356544158BC13E363B1364E41-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -29191,8 +29260,10 @@ The main purpose of this whereclause is to select which of the records in a part
 <!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <COLUMNNAME><![CDATA[M_Returnlocator_ID]]></COLUMNNAME>
-<!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <NAME><![CDATA[Returned bin]]></NAME>
-<!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <PRINTNAME><![CDATA[Returned bin]]></PRINTNAME>
+<!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <NAME><![CDATA[Return Bin]]></NAME>
+<!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <PRINTNAME><![CDATA[Return Bin]]></PRINTNAME>
+<!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <DESCRIPTION><![CDATA[Bin designated for returns.]]></DESCRIPTION>
+<!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <HELP><![CDATA[Bin designated for returns.]]></HELP>
 <!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--EB58AFE2D52942FEA4B7DA407282DC1D-->  <ISGLOSSARY><![CDATA[N]]></ISGLOSSARY>
 <!--EB58AFE2D52942FEA4B7DA407282DC1D--></AD_ELEMENT>
