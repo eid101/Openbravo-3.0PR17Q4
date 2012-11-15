@@ -221,7 +221,7 @@
         <default/>
         <onCreateDefault/>
       </column>
-      <column name="CH_EXPENSE_ACCT" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+      <column name="CH_EXPENSE_ACCT" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
         <default/>
         <onCreateDefault/>
       </column>
@@ -257,11 +257,11 @@
         <default/>
         <onCreateDefault/>
       </column>
-      <column name="CB_EXPENSE_ACCT" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+      <column name="CB_EXPENSE_ACCT" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
         <default/>
         <onCreateDefault/>
       </column>
-      <column name="CB_RECEIPT_ACCT" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+      <column name="CB_RECEIPT_ACCT" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
         <default/>
         <onCreateDefault/>
       </column>
@@ -297,6 +297,20 @@
         <default/>
         <onCreateDefault/>
       </column>
+      <column name="P_DEF_REVENUE_ACCT" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="P_DEF_EXPENSE_ACCT" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_VALIDCOMBINATION" name="C_ACCTSCH_DEF_P_PURCHASEPRICE">
+        <reference local="P_DEF_REVENUE_ACCT" foreign="C_VALIDCOMBINATION_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_VALIDCOMBINATION" name="C_ACCTSCH_DEF_P_SALEPRICE">
+        <reference local="P_DEF_EXPENSE_ACCT" foreign="C_VALIDCOMBINATION_ID"/>
+      </foreign-key>
       <foreign-key foreignTable="C_VALIDCOMBINATION" name="C_ACCTSCHEMA_DEF_WRITEOFF_REV">
         <reference local="WRITEOFF_REV_ACCT" foreign="C_VALIDCOMBINATION_ID"/>
       </foreign-key>
