@@ -722,7 +722,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--132-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--132-->  <NAME><![CDATA[Element Value]]></NAME>
 <!--132-->  <DESCRIPTION><![CDATA[Add and edit elements and edit elements tree structures.]]></DESCRIPTION>
-<!--132-->  <HELP><![CDATA[Element value tab is a list of the account tree elements of a given chart of accounts.]]></HELP>
+<!--132-->  <HELP><![CDATA[Element value tab list every chart of account element from the chart of accounts headings to the sub-accounts.]]></HELP>
 <!--132-->  <AD_TABLE_ID><![CDATA[188]]></AD_TABLE_ID>
 <!--132-->  <AD_WINDOW_ID><![CDATA[118]]></AD_WINDOW_ID>
 <!--132-->  <SEQNO><![CDATA[20]]></SEQNO>
@@ -872,7 +872,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--143-->  <PROCESSING><![CDATA[N]]></PROCESSING>
 <!--143-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--143-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
-<!--143-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--143-->  <UIPATTERN><![CDATA[ED]]></UIPATTERN>
 <!--143-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
 <!--143-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
 <!--143-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
@@ -969,7 +969,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--153-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--153-->  <NAME><![CDATA[Element]]></NAME>
 <!--153-->  <DESCRIPTION><![CDATA[Create account elements structures to be used in the accounting  schema.]]></DESCRIPTION>
-<!--153-->  <HELP><![CDATA[Account Tree window allows to review and maintain imported chart of accounts and to create new ones if needed.]]></HELP>
+<!--153-->  <HELP><![CDATA[The account tree window allows to review and maintain the chart of accounts imported through a chart of accounts module as well as to create new ones from scratch.]]></HELP>
 <!--153-->  <AD_TABLE_ID><![CDATA[142]]></AD_TABLE_ID>
 <!--153-->  <AD_WINDOW_ID><![CDATA[118]]></AD_WINDOW_ID>
 <!--153-->  <SEQNO><![CDATA[10]]></SEQNO>
@@ -1614,7 +1614,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--186-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--186-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--186-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
-<!--186-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=true AND e.transactionDocument.return= false]]></HQLWHERECLAUSE>
+<!--186-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=true AND e.transactionDocument.return= false AND e.transactionDocument.sOSubType NOT LIKE 'OB']]></HQLWHERECLAUSE>
 <!--186-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
 <!--186-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
 <!--186-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
@@ -1791,9 +1791,9 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--199-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--199-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--199-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--199-->  <NAME><![CDATA[Accounting Schema]]></NAME>
-<!--199-->  <DESCRIPTION><![CDATA[Create multiple accounting schemas.]]></DESCRIPTION>
-<!--199-->  <HELP><![CDATA[The accounting schema window allows you to review and maintain imported accounting schemas and to create new ones if needed.]]></HELP>
+<!--199-->  <NAME><![CDATA[General Ledger Configuration]]></NAME>
+<!--199-->  <DESCRIPTION><![CDATA[Create multiple general ledger]]></DESCRIPTION>
+<!--199-->  <HELP><![CDATA[General Ledger window allows to review and maintain imported accounting schemas and to create new ones if needed.]]></HELP>
 <!--199-->  <AD_TABLE_ID><![CDATA[265]]></AD_TABLE_ID>
 <!--199-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--199-->  <SEQNO><![CDATA[10]]></SEQNO>
@@ -1819,9 +1819,9 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--200-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--200-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--200-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--200-->  <NAME><![CDATA[General Ledger]]></NAME>
+<!--200-->  <NAME><![CDATA[General Accounts]]></NAME>
 <!--200-->  <DESCRIPTION><![CDATA[Add and edit G/L accounts to be used by default in the application.]]></DESCRIPTION>
-<!--200-->  <HELP><![CDATA[General ledger tab allows to define defult accounts to be used while posting certain type of transactions if applicable.]]></HELP>
+<!--200-->  <HELP><![CDATA[General accounts tab allows you to define accounts to be used in balancing entries and posting fiscal close. ]]></HELP>
 <!--200-->  <AD_TABLE_ID><![CDATA[266]]></AD_TABLE_ID>
 <!--200-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--200-->  <SEQNO><![CDATA[30]]></SEQNO>
@@ -2012,7 +2012,7 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--207-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--207-->  <NAME><![CDATA[Combination]]></NAME>
 <!--207-->  <DESCRIPTION><![CDATA[Create and edit customized accounts to be used for reporting purposes.]]></DESCRIPTION>
-<!--207-->  <HELP><![CDATA[Openbravo allows to create as many account combinations as required for a given organization and accounting schema.]]></HELP>
+<!--207-->  <HELP><![CDATA[The Account Combination window allows to review the accounts of an accounting schema. ]]></HELP>
 <!--207-->  <AD_TABLE_ID><![CDATA[176]]></AD_TABLE_ID>
 <!--207-->  <AD_WINDOW_ID><![CDATA[153]]></AD_WINDOW_ID>
 <!--207-->  <SEQNO><![CDATA[10]]></SEQNO>
@@ -2228,9 +2228,9 @@ OR AD_User.C_BPartner_ID IS NULL)]]></FILTERCLAUSE>
 <!--217-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--217-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--217-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--217-->  <NAME><![CDATA[Account Schema Element]]></NAME>
-<!--217-->  <DESCRIPTION><![CDATA[Add and edit account elements to be used for a specified accounting schema.]]></DESCRIPTION>
-<!--217-->  <HELP><![CDATA[The account schema element tab list the accounting dimensions  selected while running either the Initial Client Setup process or the Initial Organization Setup process. It is always possible to add additional accounting dimensions to the list.]]></HELP>
+<!--217-->  <NAME><![CDATA[Dimension]]></NAME>
+<!--217-->  <DESCRIPTION><![CDATA[Holds the list of dimensions enabled by this ledger.]]></DESCRIPTION>
+<!--217-->  <HELP><![CDATA[Definition of dimensions to be used by the system. There are two mandatory dimensions by default: Organization and Account. Any other dimension can be as well enabled here so that they appear in transactional windows.]]></HELP>
 <!--217-->  <AD_TABLE_ID><![CDATA[279]]></AD_TABLE_ID>
 <!--217-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--217-->  <SEQNO><![CDATA[20]]></SEQNO>
@@ -2889,7 +2889,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--252-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--252-->  <NAME><![CDATA[Defaults]]></NAME>
 <!--252-->  <DESCRIPTION><![CDATA[Add and edit detailed G/L accounts to be used by default in the application.]]></DESCRIPTION>
-<!--252-->  <HELP><![CDATA[Default tab allows to maintain or to add a complete set of default accounts to be used while posting certain transactions types.]]></HELP>
+<!--252-->  <HELP><![CDATA[Defaults tab allows to maintain or to add a set of default accounts to use while posting a certain type of transactions.]]></HELP>
 <!--252-->  <AD_TABLE_ID><![CDATA[315]]></AD_TABLE_ID>
 <!--252-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--252-->  <SEQNO><![CDATA[40]]></SEQNO>
@@ -4285,8 +4285,11 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--355-->  <HASTREE><![CDATA[N]]></HASTREE>
 <!--355-->  <PROCESSING><![CDATA[N]]></PROCESSING>
 <!--355-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--355-->  <FILTERCLAUSE><![CDATA[C_Commission.IsActive='Y']]></FILTERCLAUSE>
 <!--355-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--355-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--355-->  <HQLFILTERCLAUSE><![CDATA[e.active='Y']]></HQLFILTERCLAUSE>
+<!--355-->  <FILTERNAME><![CDATA[Active commissions]]></FILTERNAME>
 <!--355-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
 <!--355-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
 <!--355-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
@@ -6637,7 +6640,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800019-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--800019-->  <NAME><![CDATA[Customized Elements]]></NAME>
 <!--800019-->  <DESCRIPTION><![CDATA[Edit elements and add or subtract them according to your needs.]]></DESCRIPTION>
-<!--800019-->  <HELP><![CDATA[Customized elements tab allows to introduce basic operations between account tree elements.]]></HELP>
+<!--800019-->  <HELP><![CDATA[The customized elements tab allows to get an account tree element as a combination of a given list of existing elements.]]></HELP>
 <!--800019-->  <AD_TABLE_ID><![CDATA[800015]]></AD_TABLE_ID>
 <!--800019-->  <AD_WINDOW_ID><![CDATA[118]]></AD_WINDOW_ID>
 <!--800019-->  <SEQNO><![CDATA[25]]></SEQNO>
@@ -7011,7 +7014,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800041-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800041-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800041-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800041-->  <NAME><![CDATA[Account Schema Tables]]></NAME>
+<!--800041-->  <NAME><![CDATA[Active Tables]]></NAME>
 <!--800041-->  <DESCRIPTION><![CDATA[Add and edit DB tables to be included in accounting processes.]]></DESCRIPTION>
 <!--800041-->  <HELP><![CDATA[Account schema tables allows to define which tables and therefore transactions generate accounting and which ones not. ]]></HELP>
 <!--800041-->  <AD_TABLE_ID><![CDATA[800027]]></AD_TABLE_ID>
@@ -7079,7 +7082,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800050-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
 <!--800050-->  <HASTREE><![CDATA[N]]></HASTREE>
 <!--800050-->  <WHERECLAUSE><![CDATA[M_InOut.MovementType IN ('V-', 'V+') and M_InOut.isLogistic = 'Y']]></WHERECLAUSE>
-<!--800050-->  <AD_PROCESS_ID><![CDATA[117]]></AD_PROCESS_ID>
+<!--800050-->  <AD_PROCESS_ID><![CDATA[1000500004]]></AD_PROCESS_ID>
 <!--800050-->  <PROCESSING><![CDATA[N]]></PROCESSING>
 <!--800050-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800050-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
@@ -7109,7 +7112,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800051-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
 <!--800051-->  <HASTREE><![CDATA[N]]></HASTREE>
 <!--800051-->  <WHERECLAUSE><![CDATA[M_InOut.MovementType IN ('C-', 'C+') and M_InOut.isLogistic = 'Y']]></WHERECLAUSE>
-<!--800051-->  <AD_PROCESS_ID><![CDATA[117]]></AD_PROCESS_ID>
+<!--800051-->  <AD_PROCESS_ID><![CDATA[1000500004]]></AD_PROCESS_ID>
 <!--800051-->  <PROCESSING><![CDATA[N]]></PROCESSING>
 <!--800051-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800051-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
@@ -7267,7 +7270,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800058-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800058-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800058-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800058-->  <NAME><![CDATA[Discount]]></NAME>
+<!--800058-->  <NAME><![CDATA[Basic Discount]]></NAME>
 <!--800058-->  <DESCRIPTION><![CDATA[Create a discount.]]></DESCRIPTION>
 <!--800058-->  <HELP><![CDATA[A total discount can be created and configured by entering a discount name, a discount product and a discount %.]]></HELP>
 <!--800058-->  <AD_TABLE_ID><![CDATA[800044]]></AD_TABLE_ID>
@@ -7296,7 +7299,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800059-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800059-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800059-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800059-->  <NAME><![CDATA[Discounts]]></NAME>
+<!--800059-->  <NAME><![CDATA[Basic Discounts]]></NAME>
 <!--800059-->  <AD_TABLE_ID><![CDATA[800045]]></AD_TABLE_ID>
 <!--800059-->  <AD_WINDOW_ID><![CDATA[167]]></AD_WINDOW_ID>
 <!--800059-->  <SEQNO><![CDATA[40]]></SEQNO>
@@ -7322,9 +7325,9 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800060-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800060-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800060-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800060-->  <NAME><![CDATA[Discount]]></NAME>
-<!--800060-->  <DESCRIPTION><![CDATA[Add discounts which may be made available to this business partner.]]></DESCRIPTION>
-<!--800060-->  <HELP><![CDATA[Discount tab allows you to add and configure business partner discounts.]]></HELP>
+<!--800060-->  <NAME><![CDATA[Basic Discount]]></NAME>
+<!--800060-->  <DESCRIPTION><![CDATA[Add Basic Discounts which may be made available to this business partner.]]></DESCRIPTION>
+<!--800060-->  <HELP><![CDATA[Basic Discount tab allows you to add and configure business partner Basic Discounts.]]></HELP>
 <!--800060-->  <AD_TABLE_ID><![CDATA[800046]]></AD_TABLE_ID>
 <!--800060-->  <AD_WINDOW_ID><![CDATA[123]]></AD_WINDOW_ID>
 <!--800060-->  <SEQNO><![CDATA[110]]></SEQNO>
@@ -7605,9 +7608,9 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800079-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800079-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800079-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800079-->  <NAME><![CDATA[Adjustments]]></NAME>
-<!--800079-->  <DESCRIPTION><![CDATA[Define price adjustments to be applied to business partners, products, and price lists.]]></DESCRIPTION>
-<!--800079-->  <HELP><![CDATA[Define price adjustments to be applied to business partners, products, and price lists.]]></HELP>
+<!--800079-->  <NAME><![CDATA[Discounts and Promotions]]></NAME>
+<!--800079-->  <DESCRIPTION><![CDATA[Definition of Discounts and Promotions]]></DESCRIPTION>
+<!--800079-->  <HELP><![CDATA[Defines the Discounts and Promotions main characteristics such as Discount Type, how it is filtered and actual discount information based on type.]]></HELP>
 <!--800079-->  <AD_TABLE_ID><![CDATA[800062]]></AD_TABLE_ID>
 <!--800079-->  <AD_WINDOW_ID><![CDATA[800028]]></AD_WINDOW_ID>
 <!--800079-->  <SEQNO><![CDATA[0]]></SEQNO>
@@ -7634,8 +7637,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800080-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800080-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--800080-->  <NAME><![CDATA[Business Partner]]></NAME>
-<!--800080-->  <DESCRIPTION><![CDATA[Add business partners in order to include or exclude them from a selected price adjustment.]]></DESCRIPTION>
-<!--800080-->  <HELP><![CDATA[Add business partners in order to include or exclude them from a selected price adjustment.]]></HELP>
+<!--800080-->  <DESCRIPTION><![CDATA[Add business partners in order to include or exclude them from a selected Promotion/Discount..]]></DESCRIPTION>
+<!--800080-->  <HELP><![CDATA[Add business partners in order to include or exclude them from a selected Promotion/Discount..]]></HELP>
 <!--800080-->  <AD_TABLE_ID><![CDATA[800063]]></AD_TABLE_ID>
 <!--800080-->  <AD_WINDOW_ID><![CDATA[800028]]></AD_WINDOW_ID>
 <!--800080-->  <SEQNO><![CDATA[20]]></SEQNO>
@@ -7662,8 +7665,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800081-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800081-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--800081-->  <NAME><![CDATA[Business Partner Category]]></NAME>
-<!--800081-->  <DESCRIPTION><![CDATA[Add business partner categories in order to include or exclude them from a selected price adjustment.]]></DESCRIPTION>
-<!--800081-->  <HELP><![CDATA[Add business partner categories in order to include or exclude them from a selected price adjustment.]]></HELP>
+<!--800081-->  <DESCRIPTION><![CDATA[Add business partner categories in order to include or exclude them from a selected Promotion/Discount..]]></DESCRIPTION>
+<!--800081-->  <HELP><![CDATA[Add business partner categories in order to include or exclude them from a selected Promotion/Discount..]]></HELP>
 <!--800081-->  <AD_TABLE_ID><![CDATA[800064]]></AD_TABLE_ID>
 <!--800081-->  <AD_WINDOW_ID><![CDATA[800028]]></AD_WINDOW_ID>
 <!--800081-->  <SEQNO><![CDATA[10]]></SEQNO>
@@ -7690,8 +7693,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800082-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800082-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--800082-->  <NAME><![CDATA[Products]]></NAME>
-<!--800082-->  <DESCRIPTION><![CDATA[Add products in order to include or exclude them from a selected price adjustment.]]></DESCRIPTION>
-<!--800082-->  <HELP><![CDATA[Add products in order to include or exclude them from a selected price adjustment.]]></HELP>
+<!--800082-->  <DESCRIPTION><![CDATA[Add products in order to include or exclude them from a selected Promotion/Discount..]]></DESCRIPTION>
+<!--800082-->  <HELP><![CDATA[Add products in order to include or exclude them from a selected Promotion/Discount..]]></HELP>
 <!--800082-->  <AD_TABLE_ID><![CDATA[800065]]></AD_TABLE_ID>
 <!--800082-->  <AD_WINDOW_ID><![CDATA[800028]]></AD_WINDOW_ID>
 <!--800082-->  <SEQNO><![CDATA[30]]></SEQNO>
@@ -7718,8 +7721,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800083-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800083-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--800083-->  <NAME><![CDATA[Product Category]]></NAME>
-<!--800083-->  <DESCRIPTION><![CDATA[Add product categories in order to include or exclude them from a selected price adjustment.]]></DESCRIPTION>
-<!--800083-->  <HELP><![CDATA[Add product categories in order to include or exclude them from a selected price adjustment.]]></HELP>
+<!--800083-->  <DESCRIPTION><![CDATA[Add product categories in order to include or exclude them from a selected Promotion/Discount..]]></DESCRIPTION>
+<!--800083-->  <HELP><![CDATA[Add product categories in order to include or exclude them from a selected Promotion/Discount..]]></HELP>
 <!--800083-->  <AD_TABLE_ID><![CDATA[800066]]></AD_TABLE_ID>
 <!--800083-->  <AD_WINDOW_ID><![CDATA[800028]]></AD_WINDOW_ID>
 <!--800083-->  <SEQNO><![CDATA[25]]></SEQNO>
@@ -9834,7 +9837,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800211-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800211-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800211-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800211-->  <NAME><![CDATA[Discounts]]></NAME>
+<!--800211-->  <NAME><![CDATA[Basic Discounts]]></NAME>
 <!--800211-->  <DESCRIPTION><![CDATA[Vendor discounts]]></DESCRIPTION>
 <!--800211-->  <HELP><![CDATA[Lists information about discounts automatically applied based on the supplier configuration and / or manually entered for the purchase invoice.]]></HELP>
 <!--800211-->  <AD_TABLE_ID><![CDATA[800045]]></AD_TABLE_ID>
@@ -10123,9 +10126,9 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800221-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800221-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800221-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800221-->  <NAME><![CDATA[Price Adjustment]]></NAME>
-<!--800221-->  <DESCRIPTION><![CDATA[View applied price adjustments for each order line.]]></DESCRIPTION>
-<!--800221-->  <HELP><![CDATA[View applied price adjustments for each order line.]]></HELP>
+<!--800221-->  <NAME><![CDATA[Discounts and Promotions]]></NAME>
+<!--800221-->  <DESCRIPTION><![CDATA[View applied Discounts and Promotions for each line.]]></DESCRIPTION>
+<!--800221-->  <HELP><![CDATA[View applied Discounts and Promotions for each line.]]></HELP>
 <!--800221-->  <AD_TABLE_ID><![CDATA[800185]]></AD_TABLE_ID>
 <!--800221-->  <AD_WINDOW_ID><![CDATA[181]]></AD_WINDOW_ID>
 <!--800221-->  <SEQNO><![CDATA[25]]></SEQNO>
@@ -10153,9 +10156,9 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800222-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800222-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800222-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800222-->  <NAME><![CDATA[Price Adjustments]]></NAME>
-<!--800222-->  <DESCRIPTION><![CDATA[View applied price adjustments for each order line.]]></DESCRIPTION>
-<!--800222-->  <HELP><![CDATA[View applied price adjustments for each order line.]]></HELP>
+<!--800222-->  <NAME><![CDATA[Discounts and Promotions]]></NAME>
+<!--800222-->  <DESCRIPTION><![CDATA[View applied Discounts and Promotions for each line.]]></DESCRIPTION>
+<!--800222-->  <HELP><![CDATA[View applied Discounts and Promotions for each line.]]></HELP>
 <!--800222-->  <AD_TABLE_ID><![CDATA[800185]]></AD_TABLE_ID>
 <!--800222-->  <AD_WINDOW_ID><![CDATA[143]]></AD_WINDOW_ID>
 <!--800222-->  <SEQNO><![CDATA[25]]></SEQNO>
@@ -10181,9 +10184,9 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800223-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800223-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800223-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800223-->  <NAME><![CDATA[Price Adjustments]]></NAME>
-<!--800223-->  <DESCRIPTION><![CDATA[View applied price adjustments for each order line.]]></DESCRIPTION>
-<!--800223-->  <HELP><![CDATA[View applied price adjustments for each order line.]]></HELP>
+<!--800223-->  <NAME><![CDATA[Discounts and Promotions]]></NAME>
+<!--800223-->  <DESCRIPTION><![CDATA[View applied Discounts and Promotions for each line.]]></DESCRIPTION>
+<!--800223-->  <HELP><![CDATA[View applied Discounts and Promotions for each line.]]></HELP>
 <!--800223-->  <AD_TABLE_ID><![CDATA[800186]]></AD_TABLE_ID>
 <!--800223-->  <AD_WINDOW_ID><![CDATA[167]]></AD_WINDOW_ID>
 <!--800223-->  <SEQNO><![CDATA[25]]></SEQNO>
@@ -10209,9 +10212,9 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800224-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--800224-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800224-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--800224-->  <NAME><![CDATA[Price Adjustment]]></NAME>
-<!--800224-->  <DESCRIPTION><![CDATA[View applied price adjustments for each order line.]]></DESCRIPTION>
-<!--800224-->  <HELP><![CDATA[View applied price adjustments for each order line.]]></HELP>
+<!--800224-->  <NAME><![CDATA[Discounts and Promotions]]></NAME>
+<!--800224-->  <DESCRIPTION><![CDATA[View applied Discounts and Promotions for each line.]]></DESCRIPTION>
+<!--800224-->  <HELP><![CDATA[View applied Discounts and Promotions for each line.]]></HELP>
 <!--800224-->  <AD_TABLE_ID><![CDATA[800186]]></AD_TABLE_ID>
 <!--800224-->  <AD_WINDOW_ID><![CDATA[183]]></AD_WINDOW_ID>
 <!--800224-->  <SEQNO><![CDATA[25]]></SEQNO>
@@ -10436,8 +10439,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800232-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--800232-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--800232-->  <NAME><![CDATA[Price List]]></NAME>
-<!--800232-->  <DESCRIPTION><![CDATA[Add price lists in order to include or exclude them from a selected price adjustment.]]></DESCRIPTION>
-<!--800232-->  <HELP><![CDATA[Add price lists in order to include or exclude them from a selected price adjustment.]]></HELP>
+<!--800232-->  <DESCRIPTION><![CDATA[Add price lists in order to include or exclude them from a selected Promotion/Discount.]]></DESCRIPTION>
+<!--800232-->  <HELP><![CDATA[Add price lists in order to include or exclude them from a selected Promotion/Discount.]]></HELP>
 <!--800232-->  <AD_TABLE_ID><![CDATA[800194]]></AD_TABLE_ID>
 <!--800232-->  <AD_WINDOW_ID><![CDATA[800028]]></AD_WINDOW_ID>
 <!--800232-->  <SEQNO><![CDATA[40]]></SEQNO>
@@ -11794,7 +11797,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--1007400000-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--1007400000-->  <NAME><![CDATA[Documents]]></NAME>
 <!--1007400000-->  <DESCRIPTION><![CDATA[Add documents to allow/avoid negative entries]]></DESCRIPTION>
-<!--1007400000-->  <HELP><![CDATA[Documents tab allows to define which document types within a table type allow negative posting at document level and whether they use a different accounting process than the default one based on a given accounting template.]]></HELP>
+<!--1007400000-->  <HELP><![CDATA[Documents tab allows to define which document types of a table allow negative posting and if they use a different accounting process than the default one based on a given accounting template.]]></HELP>
 <!--1007400000-->  <AD_TABLE_ID><![CDATA[1007400000]]></AD_TABLE_ID>
 <!--1007400000-->  <AD_WINDOW_ID><![CDATA[125]]></AD_WINDOW_ID>
 <!--1007400000-->  <SEQNO><![CDATA[27]]></SEQNO>
@@ -11820,7 +11823,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--1011100000-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--1011100000-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--1011100000-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--1011100000-->  <NAME><![CDATA[Discounts]]></NAME>
+<!--1011100000-->  <NAME><![CDATA[Basic Discounts]]></NAME>
 <!--1011100000-->  <AD_TABLE_ID><![CDATA[1011100000]]></AD_TABLE_ID>
 <!--1011100000-->  <AD_WINDOW_ID><![CDATA[143]]></AD_WINDOW_ID>
 <!--1011100000-->  <SEQNO><![CDATA[30]]></SEQNO>
@@ -11846,7 +11849,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--1011100001-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--1011100001-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--1011100001-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--1011100001-->  <NAME><![CDATA[Discounts]]></NAME>
+<!--1011100001-->  <NAME><![CDATA[Basic Discounts]]></NAME>
 <!--1011100001-->  <HELP><![CDATA[Lists information about discounts automatically applied based on the supplier configuration and / or manually entered for the purchase order.]]></HELP>
 <!--1011100001-->  <AD_TABLE_ID><![CDATA[1011100000]]></AD_TABLE_ID>
 <!--1011100001-->  <AD_WINDOW_ID><![CDATA[181]]></AD_WINDOW_ID>
@@ -12092,6 +12095,34 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--1ACDA2572EAB4D84A59265DC256F07AD-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--1ACDA2572EAB4D84A59265DC256F07AD--></AD_TAB>
 
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4--><AD_TAB>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <AD_TAB_ID><![CDATA[1EB39A39CFDB402FBDA86AB8BAF2EDB4]]></AD_TAB_ID>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <NAME><![CDATA[Organization]]></NAME>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <DESCRIPTION><![CDATA[Add price lists in order to include or exclude them from a selected price adjustment.]]></DESCRIPTION>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <HELP><![CDATA[Add organizations in order to include or exclude them from a selected Promotion/Discount.]]></HELP>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <AD_TABLE_ID><![CDATA[CBF045D2539A4249B091CCE4B1F5EEDB]]></AD_TABLE_ID>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <AD_WINDOW_ID><![CDATA[800028]]></AD_WINDOW_ID>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <SEQNO><![CDATA[50]]></SEQNO>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--1EB39A39CFDB402FBDA86AB8BAF2EDB4--></AD_TAB>
+
 <!--25C70617A7964B479BDA71197E7E88E9--><AD_TAB>
 <!--25C70617A7964B479BDA71197E7E88E9-->  <AD_TAB_ID><![CDATA[25C70617A7964B479BDA71197E7E88E9]]></AD_TAB_ID>
 <!--25C70617A7964B479BDA71197E7E88E9-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -12265,6 +12296,35 @@ The corresponding tables have then the following setting:
 <!--2AABA620227C4531B9466831C8063F5A-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
 <!--2AABA620227C4531B9466831C8063F5A-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--2AABA620227C4531B9466831C8063F5A--></AD_TAB>
+
+<!--2C9A8C451DD847FEA493A9CC08AF6822--><AD_TAB>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <AD_TAB_ID><![CDATA[2C9A8C451DD847FEA493A9CC08AF6822]]></AD_TAB_ID>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <NAME><![CDATA[Line Tax]]></NAME>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <DESCRIPTION><![CDATA[Order Line Tax]]></DESCRIPTION>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <HELP><![CDATA[Taxes related to the order line.]]></HELP>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <AD_TABLE_ID><![CDATA[E42DDB42FF0B4F82B1CF3C711B3F0DC0]]></AD_TABLE_ID>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <SEQNO><![CDATA[27]]></SEQNO>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <ORDERBYCLAUSE><![CDATA[C_OrderLineTax.Line]]></ORDERBYCLAUSE>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--2C9A8C451DD847FEA493A9CC08AF6822-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--2C9A8C451DD847FEA493A9CC08AF6822--></AD_TAB>
 
 <!--2DD6F1E2CAE0456AA9797A1D627BFF5E--><AD_TAB>
 <!--2DD6F1E2CAE0456AA9797A1D627BFF5E-->  <AD_TAB_ID><![CDATA[2DD6F1E2CAE0456AA9797A1D627BFF5E]]></AD_TAB_ID>
@@ -12745,6 +12805,33 @@ The corresponding tables have then the following setting:
 <!--5247D51755AA43F384EBC35006FC2329-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--5247D51755AA43F384EBC35006FC2329--></AD_TAB>
 
+<!--560493C813AE4B94A2425E3E4B62C525--><AD_TAB>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <AD_TAB_ID><![CDATA[560493C813AE4B94A2425E3E4B62C525]]></AD_TAB_ID>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <NAME><![CDATA[Discounts and Promotions]]></NAME>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <DESCRIPTION><![CDATA[View applied price adjustments for each order line.]]></DESCRIPTION>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <HELP><![CDATA[View applied price adjustments for each order line.]]></HELP>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <AD_TABLE_ID><![CDATA[800185]]></AD_TABLE_ID>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <SEQNO><![CDATA[25]]></SEQNO>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <ISREADONLY><![CDATA[Y]]></ISREADONLY>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--560493C813AE4B94A2425E3E4B62C525-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--560493C813AE4B94A2425E3E4B62C525--></AD_TAB>
+
 <!--5A5CCFC8359B4D79BA705DC487FE8173--><AD_TAB>
 <!--5A5CCFC8359B4D79BA705DC487FE8173-->  <AD_TAB_ID><![CDATA[5A5CCFC8359B4D79BA705DC487FE8173]]></AD_TAB_ID>
 <!--5A5CCFC8359B4D79BA705DC487FE8173-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -12899,6 +12986,35 @@ You can also select if transactions are allowed or not for this organization typ
 <!--60D23955480440CBAB7F4EC562B87F31-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--60D23955480440CBAB7F4EC562B87F31--></AD_TAB>
 
+<!--62EB234861174F658093BA10DAFF81FA--><AD_TAB>
+<!--62EB234861174F658093BA10DAFF81FA-->  <AD_TAB_ID><![CDATA[62EB234861174F658093BA10DAFF81FA]]></AD_TAB_ID>
+<!--62EB234861174F658093BA10DAFF81FA-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--62EB234861174F658093BA10DAFF81FA-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--62EB234861174F658093BA10DAFF81FA-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--62EB234861174F658093BA10DAFF81FA-->  <NAME><![CDATA[Tax]]></NAME>
+<!--62EB234861174F658093BA10DAFF81FA-->  <DESCRIPTION><![CDATA[Edit taxes applied to your order.]]></DESCRIPTION>
+<!--62EB234861174F658093BA10DAFF81FA-->  <HELP><![CDATA[Edit taxes applied to your order.]]></HELP>
+<!--62EB234861174F658093BA10DAFF81FA-->  <AD_TABLE_ID><![CDATA[314]]></AD_TABLE_ID>
+<!--62EB234861174F658093BA10DAFF81FA-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--62EB234861174F658093BA10DAFF81FA-->  <SEQNO><![CDATA[40]]></SEQNO>
+<!--62EB234861174F658093BA10DAFF81FA-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--62EB234861174F658093BA10DAFF81FA-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--62EB234861174F658093BA10DAFF81FA-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--62EB234861174F658093BA10DAFF81FA-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--62EB234861174F658093BA10DAFF81FA-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--62EB234861174F658093BA10DAFF81FA-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--62EB234861174F658093BA10DAFF81FA-->  <ORDERBYCLAUSE><![CDATA[C_OrderTax.Line]]></ORDERBYCLAUSE>
+<!--62EB234861174F658093BA10DAFF81FA-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--62EB234861174F658093BA10DAFF81FA-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--62EB234861174F658093BA10DAFF81FA-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--62EB234861174F658093BA10DAFF81FA-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--62EB234861174F658093BA10DAFF81FA-->  <HQLORDERBYCLAUSE><![CDATA[lineNo]]></HQLORDERBYCLAUSE>
+<!--62EB234861174F658093BA10DAFF81FA-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--62EB234861174F658093BA10DAFF81FA-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--62EB234861174F658093BA10DAFF81FA-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--62EB234861174F658093BA10DAFF81FA-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--62EB234861174F658093BA10DAFF81FA--></AD_TAB>
+
 <!--6349699C48D74C72BF982551E927AF1D--><AD_TAB>
 <!--6349699C48D74C72BF982551E927AF1D-->  <AD_TAB_ID><![CDATA[6349699C48D74C72BF982551E927AF1D]]></AD_TAB_ID>
 <!--6349699C48D74C72BF982551E927AF1D-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -13044,6 +13160,32 @@ You can also select if transactions are allowed or not for this organization typ
 <!--6BC4F7D2CBE94AEE939CCB5990B55FEA-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--6BC4F7D2CBE94AEE939CCB5990B55FEA--></AD_TAB>
 
+<!--6C52A4D47900474DAA542342305DD084--><AD_TAB>
+<!--6C52A4D47900474DAA542342305DD084-->  <AD_TAB_ID><![CDATA[6C52A4D47900474DAA542342305DD084]]></AD_TAB_ID>
+<!--6C52A4D47900474DAA542342305DD084-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--6C52A4D47900474DAA542342305DD084-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--6C52A4D47900474DAA542342305DD084-->  <ISACTIVE><![CDATA[N]]></ISACTIVE>
+<!--6C52A4D47900474DAA542342305DD084-->  <NAME><![CDATA[Payment Details]]></NAME>
+<!--6C52A4D47900474DAA542342305DD084-->  <HELP><![CDATA[Displays the details of the payments (pre-payments or regular payments) received for the order or for the invoice/s of the order.]]></HELP>
+<!--6C52A4D47900474DAA542342305DD084-->  <AD_TABLE_ID><![CDATA[DC63963AB3F1489BAAB5A9A7EFD1B407]]></AD_TABLE_ID>
+<!--6C52A4D47900474DAA542342305DD084-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--6C52A4D47900474DAA542342305DD084-->  <SEQNO><![CDATA[46]]></SEQNO>
+<!--6C52A4D47900474DAA542342305DD084-->  <TABLEVEL><![CDATA[2]]></TABLEVEL>
+<!--6C52A4D47900474DAA542342305DD084-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--6C52A4D47900474DAA542342305DD084-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--6C52A4D47900474DAA542342305DD084-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--6C52A4D47900474DAA542342305DD084-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--6C52A4D47900474DAA542342305DD084-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--6C52A4D47900474DAA542342305DD084-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--6C52A4D47900474DAA542342305DD084-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--6C52A4D47900474DAA542342305DD084-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--6C52A4D47900474DAA542342305DD084-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--6C52A4D47900474DAA542342305DD084-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--6C52A4D47900474DAA542342305DD084-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--6C52A4D47900474DAA542342305DD084-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--6C52A4D47900474DAA542342305DD084-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--6C52A4D47900474DAA542342305DD084--></AD_TAB>
+
 <!--719D6C8507CA4B27886C0D8A7859B543--><AD_TAB>
 <!--719D6C8507CA4B27886C0D8A7859B543-->  <AD_TAB_ID><![CDATA[719D6C8507CA4B27886C0D8A7859B543]]></AD_TAB_ID>
 <!--719D6C8507CA4B27886C0D8A7859B543-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -13134,11 +13276,37 @@ You can also select if transactions are allowed or not for this organization typ
 <!--73D6D0CBB55B434E98EB10767ADD74AC-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--73D6D0CBB55B434E98EB10767ADD74AC--></AD_TAB>
 
+<!--74FF24CE63D9406FBDABA3BA1D20B09A--><AD_TAB>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <AD_TAB_ID><![CDATA[74FF24CE63D9406FBDABA3BA1D20B09A]]></AD_TAB_ID>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <NAME><![CDATA[Reject Reason]]></NAME>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <AD_TABLE_ID><![CDATA[875C949BC32D455BBA6944E4B1BAB5CF]]></AD_TABLE_ID>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <AD_WINDOW_ID><![CDATA[AB30B4B4C94540849D221C4BC31A9816]]></AD_WINDOW_ID>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <SEQNO><![CDATA[10]]></SEQNO>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--74FF24CE63D9406FBDABA3BA1D20B09A--></AD_TAB>
+
 <!--7580F9AE37704571BB0D3935252CAC5A--><AD_TAB>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <AD_TAB_ID><![CDATA[7580F9AE37704571BB0D3935252CAC5A]]></AD_TAB_ID>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
-<!--7580F9AE37704571BB0D3935252CAC5A-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--7580F9AE37704571BB0D3935252CAC5A-->  <ISACTIVE><![CDATA[N]]></ISACTIVE>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <NAME><![CDATA[Org Schema]]></NAME>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <DESCRIPTION><![CDATA[It is used for configuring the accounting schemas attached to the organization]]></DESCRIPTION>
 <!--7580F9AE37704571BB0D3935252CAC5A-->  <HELP><![CDATA[Org Schema tabs allows to add or to review the accounting schema/s of the organization.]]></HELP>
@@ -13190,6 +13358,34 @@ You can also select if transactions are allowed or not for this organization typ
 <!--78DB1C6BBAFF46A5B80AA1FB3D5F18F9-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
 <!--78DB1C6BBAFF46A5B80AA1FB3D5F18F9-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--78DB1C6BBAFF46A5B80AA1FB3D5F18F9--></AD_TAB>
+
+<!--79C291C04E5C48B2BB3A4779E44C1291--><AD_TAB>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <AD_TAB_ID><![CDATA[79C291C04E5C48B2BB3A4779E44C1291]]></AD_TAB_ID>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <NAME><![CDATA[Discounts and Promotions Types]]></NAME>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <DESCRIPTION><![CDATA[Discounts and Promotions Types]]></DESCRIPTION>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <HELP><![CDATA[Types define how Discounts and Promotions  behave. Modules can add new types by providing implementation for them.]]></HELP>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <AD_TABLE_ID><![CDATA[4E9F9B0D69AC4BC2874FD2B80B948704]]></AD_TABLE_ID>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <AD_WINDOW_ID><![CDATA[9153155013C843839F88E9940B976148]]></AD_WINDOW_ID>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <SEQNO><![CDATA[10]]></SEQNO>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--79C291C04E5C48B2BB3A4779E44C1291-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--79C291C04E5C48B2BB3A4779E44C1291--></AD_TAB>
 
 <!--7F5E8E4C55914138A358F5087B532B59--><AD_TAB>
 <!--7F5E8E4C55914138A358F5087B532B59-->  <AD_TAB_ID><![CDATA[7F5E8E4C55914138A358F5087B532B59]]></AD_TAB_ID>
@@ -13378,6 +13574,59 @@ You can also select if transactions are allowed or not for this organization typ
 <!--8652BB9E40664869A5132CEB8A907B9B-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--8652BB9E40664869A5132CEB8A907B9B--></AD_TAB>
 
+<!--8723B0D2464B4AF8B63EDD3E541B883D--><AD_TAB>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <AD_TAB_ID><![CDATA[8723B0D2464B4AF8B63EDD3E541B883D]]></AD_TAB_ID>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <ISACTIVE><![CDATA[N]]></ISACTIVE>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <NAME><![CDATA[Payment]]></NAME>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <DESCRIPTION><![CDATA[Create an obligation for accounting to expect to receive all or part of your sales order amount in advance.]]></DESCRIPTION>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <HELP><![CDATA[Create an obligation for accounting to expect to receive all or part of your sales order amount in advance.]]></HELP>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <AD_TABLE_ID><![CDATA[800018]]></AD_TABLE_ID>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <SEQNO><![CDATA[50]]></SEQNO>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--8723B0D2464B4AF8B63EDD3E541B883D-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--8723B0D2464B4AF8B63EDD3E541B883D--></AD_TAB>
+
+<!--8A7BC392A4D548E1B97E11548E20E5F2--><AD_TAB>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <AD_TAB_ID><![CDATA[8A7BC392A4D548E1B97E11548E20E5F2]]></AD_TAB_ID>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <NAME><![CDATA[Rule]]></NAME>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <AD_TABLE_ID><![CDATA[8D057FD1218B44C3BD5B97DA65A6E3C1]]></AD_TABLE_ID>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <AD_WINDOW_ID><![CDATA[FC404D2406A9491CBD905D0D38F04846]]></AD_WINDOW_ID>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <SEQNO><![CDATA[10]]></SEQNO>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--8A7BC392A4D548E1B97E11548E20E5F2-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--8A7BC392A4D548E1B97E11548E20E5F2--></AD_TAB>
+
 <!--8E5972CF3664486D9D887BDEDA88627D--><AD_TAB>
 <!--8E5972CF3664486D9D887BDEDA88627D-->  <AD_TAB_ID><![CDATA[8E5972CF3664486D9D887BDEDA88627D]]></AD_TAB_ID>
 <!--8E5972CF3664486D9D887BDEDA88627D-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -13496,12 +13745,39 @@ AND e.pending <> 0]]></HQLWHERECLAUSE>
 <!--9E7E3EF08A054A30BB084DC5D2830926-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--9E7E3EF08A054A30BB084DC5D2830926--></AD_TAB>
 
+<!--9F030341690C4BB3A3C15835AEC0FF39--><AD_TAB>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <AD_TAB_ID><![CDATA[9F030341690C4BB3A3C15835AEC0FF39]]></AD_TAB_ID>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <NAME><![CDATA[Warehouse]]></NAME>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <HELP><![CDATA[Relation of prioritized on hand warehouses of the Organization.]]></HELP>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <AD_TABLE_ID><![CDATA[26673F55911848E894D837F57207A92B]]></AD_TABLE_ID>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <AD_WINDOW_ID><![CDATA[110]]></AD_WINDOW_ID>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <SEQNO><![CDATA[70]]></SEQNO>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--9F030341690C4BB3A3C15835AEC0FF39-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--9F030341690C4BB3A3C15835AEC0FF39--></AD_TAB>
+
 <!--A0F74205D11848FAB0393A11B0CFB515--><AD_TAB>
 <!--A0F74205D11848FAB0393A11B0CFB515-->  <AD_TAB_ID><![CDATA[A0F74205D11848FAB0393A11B0CFB515]]></AD_TAB_ID>
 <!--A0F74205D11848FAB0393A11B0CFB515-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--A0F74205D11848FAB0393A11B0CFB515-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--A0F74205D11848FAB0393A11B0CFB515-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--A0F74205D11848FAB0393A11B0CFB515-->  <NAME><![CDATA[Discounts]]></NAME>
+<!--A0F74205D11848FAB0393A11B0CFB515-->  <NAME><![CDATA[Basic Discounts]]></NAME>
 <!--A0F74205D11848FAB0393A11B0CFB515-->  <AD_TABLE_ID><![CDATA[1011100000]]></AD_TABLE_ID>
 <!--A0F74205D11848FAB0393A11B0CFB515-->  <AD_WINDOW_ID><![CDATA[C50A8AEE6F044825B5EF54FAAE76826F]]></AD_WINDOW_ID>
 <!--A0F74205D11848FAB0393A11B0CFB515-->  <SEQNO><![CDATA[30]]></SEQNO>
@@ -13546,6 +13822,31 @@ AND e.pending <> 0]]></HQLWHERECLAUSE>
 <!--A4A463FA34F946BFA3F687DC8754ED93-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
 <!--A4A463FA34F946BFA3F687DC8754ED93-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--A4A463FA34F946BFA3F687DC8754ED93--></AD_TAB>
+
+<!--A4C162259A204149A3F8CBC9E6170127--><AD_TAB>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <AD_TAB_ID><![CDATA[A4C162259A204149A3F8CBC9E6170127]]></AD_TAB_ID>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <NAME><![CDATA[Basic Discounts]]></NAME>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <AD_TABLE_ID><![CDATA[1011100000]]></AD_TABLE_ID>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <SEQNO><![CDATA[30]]></SEQNO>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--A4C162259A204149A3F8CBC9E6170127-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--A4C162259A204149A3F8CBC9E6170127--></AD_TAB>
 
 <!--A9F3CB2CCAA0406AB97E73274DF60B93--><AD_TAB>
 <!--A9F3CB2CCAA0406AB97E73274DF60B93-->  <AD_TAB_ID><![CDATA[A9F3CB2CCAA0406AB97E73274DF60B93]]></AD_TAB_ID>
@@ -13836,7 +14137,7 @@ AND e.pending <> 0]]></HQLWHERECLAUSE>
 <!--AF4090093DA61431E040007F010048A5-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
 <!--AF4090093DA61431E040007F010048A5-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--AF4090093DA61431E040007F010048A5-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
-<!--AF4090093DA61431E040007F010048A5-->  <NAME><![CDATA[Discounts]]></NAME>
+<!--AF4090093DA61431E040007F010048A5-->  <NAME><![CDATA[Basic Discounts]]></NAME>
 <!--AF4090093DA61431E040007F010048A5-->  <AD_TABLE_ID><![CDATA[1011100000]]></AD_TABLE_ID>
 <!--AF4090093DA61431E040007F010048A5-->  <AD_WINDOW_ID><![CDATA[FF808081330213E60133021822E40007]]></AD_WINDOW_ID>
 <!--AF4090093DA61431E040007F010048A5-->  <SEQNO><![CDATA[30]]></SEQNO>
@@ -14508,6 +14809,59 @@ AND (e.orderNo IS NULL OR e.priceIncludesTax = (SELECT priceIncludesTax FROM Pri
 <!--E166858871CA4F74BBC0E1BBDC5C9887-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--E166858871CA4F74BBC0E1BBDC5C9887--></AD_TAB>
 
+<!--E2F36B4352DA4CA8BE324DC428BEE358--><AD_TAB>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <AD_TAB_ID><![CDATA[E2F36B4352DA4CA8BE324DC428BEE358]]></AD_TAB_ID>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <NAME><![CDATA[Lines]]></NAME>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <DESCRIPTION><![CDATA[Add products to be included in your sales order.  Each product is added by creating a line.]]></DESCRIPTION>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <HELP><![CDATA[Add products to be included in your sales order.  Each product is added by creating a line.]]></HELP>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <AD_TABLE_ID><![CDATA[260]]></AD_TABLE_ID>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <SEQNO><![CDATA[20]]></SEQNO>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--E2F36B4352DA4CA8BE324DC428BEE358-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--E2F36B4352DA4CA8BE324DC428BEE358--></AD_TAB>
+
+<!--EF42DED63D3641ED83C4141DFAB2D607--><AD_TAB>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <AD_TAB_ID><![CDATA[EF42DED63D3641ED83C4141DFAB2D607]]></AD_TAB_ID>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <ISACTIVE><![CDATA[N]]></ISACTIVE>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <NAME><![CDATA[Payment Plan]]></NAME>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <HELP><![CDATA[Shows the total amount expected to be collected upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.]]></HELP>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <AD_TABLE_ID><![CDATA[70E57DEA195843729FF303C9A71EBCA3]]></AD_TABLE_ID>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <SEQNO><![CDATA[45]]></SEQNO>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <UIPATTERN><![CDATA[RO]]></UIPATTERN>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--EF42DED63D3641ED83C4141DFAB2D607-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--EF42DED63D3641ED83C4141DFAB2D607--></AD_TAB>
+
 <!--F53E35A11C564F20BE4082A7B8CFF6B7--><AD_TAB>
 <!--F53E35A11C564F20BE4082A7B8CFF6B7-->  <AD_TAB_ID><![CDATA[F53E35A11C564F20BE4082A7B8CFF6B7]]></AD_TAB_ID>
 <!--F53E35A11C564F20BE4082A7B8CFF6B7-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
@@ -14566,6 +14920,36 @@ AND (e.orderNo IS NULL OR e.priceIncludesTax = (SELECT priceIncludesTax FROM Pri
 <!--F7A52FDAAA0346EFA07D53C125B40404-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
 <!--F7A52FDAAA0346EFA07D53C125B40404-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--F7A52FDAAA0346EFA07D53C125B40404--></AD_TAB>
+
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334--><AD_TAB>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <AD_TAB_ID><![CDATA[F87F1EB7EB404F1F916EBAFAD1A0A334]]></AD_TAB_ID>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <NAME><![CDATA[Header]]></NAME>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <DESCRIPTION><![CDATA[Create a sales order and process it when ready.]]></DESCRIPTION>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <HELP><![CDATA[Create a sales order and process it when ready.]]></HELP>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <AD_TABLE_ID><![CDATA[259]]></AD_TABLE_ID>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <AD_WINDOW_ID><![CDATA[6CB5B67ED33F47DFA334079D3EA2340E]]></AD_WINDOW_ID>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <SEQNO><![CDATA[10]]></SEQNO>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <TABLEVEL><![CDATA[0]]></TABLEVEL>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <WHERECLAUSE><![CDATA[C_Order.IsSOTrx='Y']]></WHERECLAUSE>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <AD_PROCESS_ID><![CDATA[1000500002]]></AD_PROCESS_ID>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <HQLWHERECLAUSE><![CDATA[e.salesTransaction=true AND e.transactionDocument.sOSubType LIKE 'OB']]></HQLWHERECLAUSE>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--F87F1EB7EB404F1F916EBAFAD1A0A334--></AD_TAB>
 
 <!--FA619778CCD24476BD89873D139824BB--><AD_TAB>
 <!--FA619778CCD24476BD89873D139824BB-->  <AD_TAB_ID><![CDATA[FA619778CCD24476BD89873D139824BB]]></AD_TAB_ID>
@@ -15034,5 +15418,31 @@ AND @MaterialMgmtShipmentInOut.businessPartner@ = e.orderLine.salesOrder.busines
 <!--FF80818132AFC4050132AFC7F94A000A-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
 <!--FF80818132AFC4050132AFC7F94A000A-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--FF80818132AFC4050132AFC7F94A000A--></AD_TAB>
+
+<!--FFA978C976384149AF6F11364957EA4C--><AD_TAB>
+<!--FFA978C976384149AF6F11364957EA4C-->  <AD_TAB_ID><![CDATA[FFA978C976384149AF6F11364957EA4C]]></AD_TAB_ID>
+<!--FFA978C976384149AF6F11364957EA4C-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--FFA978C976384149AF6F11364957EA4C-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--FFA978C976384149AF6F11364957EA4C-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--FFA978C976384149AF6F11364957EA4C-->  <NAME><![CDATA[Exceptions]]></NAME>
+<!--FFA978C976384149AF6F11364957EA4C-->  <AD_TABLE_ID><![CDATA[66AED72572944ACB9BED8B132EC89A07]]></AD_TABLE_ID>
+<!--FFA978C976384149AF6F11364957EA4C-->  <AD_WINDOW_ID><![CDATA[557A0AA1D0D745F9A61557C05483072C]]></AD_WINDOW_ID>
+<!--FFA978C976384149AF6F11364957EA4C-->  <SEQNO><![CDATA[20]]></SEQNO>
+<!--FFA978C976384149AF6F11364957EA4C-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--FFA978C976384149AF6F11364957EA4C-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--FFA978C976384149AF6F11364957EA4C-->  <ISINFOTAB><![CDATA[N]]></ISINFOTAB>
+<!--FFA978C976384149AF6F11364957EA4C-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--FFA978C976384149AF6F11364957EA4C-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--FFA978C976384149AF6F11364957EA4C-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--FFA978C976384149AF6F11364957EA4C-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--FFA978C976384149AF6F11364957EA4C-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--FFA978C976384149AF6F11364957EA4C-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--FFA978C976384149AF6F11364957EA4C-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--FFA978C976384149AF6F11364957EA4C-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
+<!--FFA978C976384149AF6F11364957EA4C-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--FFA978C976384149AF6F11364957EA4C-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--FFA978C976384149AF6F11364957EA4C-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--FFA978C976384149AF6F11364957EA4C-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--FFA978C976384149AF6F11364957EA4C--></AD_TAB>
 
 </data>
