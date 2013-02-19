@@ -201,3 +201,12 @@ BEGIN
  return 'ORACLE';
 END AD_GET_RDBMS;
 /-- END 
+
+
+--Creates dummy view AD_INTEGER	because is needed for compilation.
+--See issue:  https://issues.openbravo.com/view.php?id=22999
+CREATE OR REPLACE VIEW AD_INTEGER AS 
+SELECT 0 AS value
+   FROM DUAL
+/-- END
+
