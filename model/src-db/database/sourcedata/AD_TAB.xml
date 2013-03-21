@@ -3803,6 +3803,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--317-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--317-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
 <!--317-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--317-->  <DISPLAYLOGIC><![CDATA[@IsBOM@='Y']]></DISPLAYLOGIC>
 <!--317-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
 <!--317-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
 <!--317-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
@@ -3897,8 +3898,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--322-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--322-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--322-->  <NAME><![CDATA[Business Partner Category]]></NAME>
-<!--322-->  <DESCRIPTION><![CDATA[Create a business partner category.]]></DESCRIPTION>
-<!--322-->  <HELP><![CDATA[Business partner category window allows you to create and configure every business partner category your company may need.]]></HELP>
+<!--322-->  <DESCRIPTION><![CDATA[Business partner category window allows to create and configure every business partner category your organization may need.]]></DESCRIPTION>
+<!--322-->  <HELP><![CDATA[Business partner category window allows to create and configure every business partner category your organization may need.]]></HELP>
 <!--322-->  <AD_TABLE_ID><![CDATA[394]]></AD_TABLE_ID>
 <!--322-->  <AD_WINDOW_ID><![CDATA[192]]></AD_WINDOW_ID>
 <!--322-->  <SEQNO><![CDATA[10]]></SEQNO>
@@ -5130,8 +5131,8 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--452-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
 <!--452-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--452-->  <NAME><![CDATA[Asset Category]]></NAME>
-<!--452-->  <DESCRIPTION><![CDATA[Create asset categories to group assets with similar characteristics.]]></DESCRIPTION>
-<!--452-->  <HELP><![CDATA[Create asset categories to group assets with similar characteristics.]]></HELP>
+<!--452-->  <DESCRIPTION><![CDATA[Asset category window allows to create and configure every asset category your organization may need.]]></DESCRIPTION>
+<!--452-->  <HELP><![CDATA[Asset category window allows to create and configure every asset category your organization may need.]]></HELP>
 <!--452-->  <AD_TABLE_ID><![CDATA[542]]></AD_TABLE_ID>
 <!--452-->  <AD_WINDOW_ID><![CDATA[252]]></AD_WINDOW_ID>
 <!--452-->  <SEQNO><![CDATA[10]]></SEQNO>
@@ -8801,13 +8802,11 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800165-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
 <!--800165-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
 <!--800165-->  <HASTREE><![CDATA[N]]></HASTREE>
-<!--800165-->  <ORDERBYCLAUSE><![CDATA[created]]></ORDERBYCLAUSE>
 <!--800165-->  <PROCESSING><![CDATA[N]]></PROCESSING>
 <!--800165-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
 <!--800165-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--800165-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
 <!--800165-->  <UIPATTERN><![CDATA[STD]]></UIPATTERN>
-<!--800165-->  <HQLORDERBYCLAUSE><![CDATA[created]]></HQLORDERBYCLAUSE>
 <!--800165-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
 <!--800165-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
 <!--800165-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
@@ -9700,7 +9699,7 @@ For changes to become effective, you must re-login and re-start the Application 
 <!--800204-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
 <!--800204-->  <NAME><![CDATA[Accounting]]></NAME>
 <!--800204-->  <DESCRIPTION><![CDATA[Create and edit G/L accounts to be used in transactions which include a selected asset group.]]></DESCRIPTION>
-<!--800204-->  <HELP><![CDATA[Create and edit G/L accounts to be used in transactions which include a selected asset group.]]></HELP>
+<!--800204-->  <HELP><![CDATA[Each asset category allows to configure a different set of accounts to use to post asset depreciation.]]></HELP>
 <!--800204-->  <AD_TABLE_ID><![CDATA[800171]]></AD_TABLE_ID>
 <!--800204-->  <AD_WINDOW_ID><![CDATA[252]]></AD_WINDOW_ID>
 <!--800204-->  <SEQNO><![CDATA[20]]></SEQNO>
@@ -12527,6 +12526,7 @@ The corresponding tables have then the following setting:
 <!--30576C6ABD12419F9D19D497216FC9B8-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
 <!--30576C6ABD12419F9D19D497216FC9B8-->  <HASTREE><![CDATA[N]]></HASTREE>
 <!--30576C6ABD12419F9D19D497216FC9B8-->  <WHERECLAUSE><![CDATA[M_InOut.MovementType IN ('C-', 'C+') and M_InOut.isLogistic = 'N']]></WHERECLAUSE>
+<!--30576C6ABD12419F9D19D497216FC9B8-->  <AD_PROCESS_ID><![CDATA[1000500004]]></AD_PROCESS_ID>
 <!--30576C6ABD12419F9D19D497216FC9B8-->  <PROCESSING><![CDATA[N]]></PROCESSING>
 <!--30576C6ABD12419F9D19D497216FC9B8-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
 <!--30576C6ABD12419F9D19D497216FC9B8-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
@@ -14825,6 +14825,36 @@ AND e.pending <> 0]]></HQLWHERECLAUSE>
 <!--AF4090093DD21431E040007F010048A5-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
 <!--AF4090093DD21431E040007F010048A5-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
 <!--AF4090093DD21431E040007F010048A5--></AD_TAB>
+
+<!--B1A51802BAF64D34BC59B91EA36D5064--><AD_TAB>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <AD_TAB_ID><![CDATA[B1A51802BAF64D34BC59B91EA36D5064]]></AD_TAB_ID>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <NAME><![CDATA[Accounting]]></NAME>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <DESCRIPTION><![CDATA[Accounting information related to the matched invoices]]></DESCRIPTION>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <HELP><![CDATA[Accounting information related to the matched invoices]]></HELP>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <AD_TABLE_ID><![CDATA[270]]></AD_TABLE_ID>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <AD_WINDOW_ID><![CDATA[107]]></AD_WINDOW_ID>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <SEQNO><![CDATA[20]]></SEQNO>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <TABLEVEL><![CDATA[1]]></TABLEVEL>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <ISSINGLEROW><![CDATA[N]]></ISSINGLEROW>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <ISINFOTAB><![CDATA[Y]]></ISINFOTAB>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <ISTRANSLATIONTAB><![CDATA[N]]></ISTRANSLATIONTAB>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <ISREADONLY><![CDATA[N]]></ISREADONLY>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <HASTREE><![CDATA[N]]></HASTREE>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <PROCESSING><![CDATA[N]]></PROCESSING>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <IMPORTFIELDS><![CDATA[N]]></IMPORTFIELDS>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <ISSORTTAB><![CDATA[N]]></ISSORTTAB>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <AD_MODULE_ID><![CDATA[0]]></AD_MODULE_ID>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <UIPATTERN><![CDATA[SR]]></UIPATTERN>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <HQLWHERECLAUSE><![CDATA[e.table.id = '472' and e.recordID = @ProcurementReceiptInvoiceMatch.id@]]></HQLWHERECLAUSE>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <HQLORDERBYCLAUSE><![CDATA[accountingSchema.name, accountingDate, debit desc, credit desc, value]]></HQLORDERBYCLAUSE>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <SHOWPARENTBUTTONS><![CDATA[Y]]></SHOWPARENTBUTTONS>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <EM_OBUIAPP_CAN_ADD><![CDATA[N]]></EM_OBUIAPP_CAN_ADD>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <EM_OBUIAPP_CAN_DELETE><![CDATA[N]]></EM_OBUIAPP_CAN_DELETE>
+<!--B1A51802BAF64D34BC59B91EA36D5064-->  <EM_OBUIAPP_SHOW_SELECT><![CDATA[Y]]></EM_OBUIAPP_SHOW_SELECT>
+<!--B1A51802BAF64D34BC59B91EA36D5064--></AD_TAB>
 
 <!--B30CF79CF71245339E94B4B332BAABF1--><AD_TAB>
 <!--B30CF79CF71245339E94B4B332BAABF1-->  <AD_TAB_ID><![CDATA[B30CF79CF71245339E94B4B332BAABF1]]></AD_TAB_ID>
