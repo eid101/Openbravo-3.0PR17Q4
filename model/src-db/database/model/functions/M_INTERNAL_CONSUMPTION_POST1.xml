@@ -22,7 +22,7 @@
 * under the License.
 * The Original Code is Openbravo ERP.
 * The Initial Developer of the Original Code is Openbravo SLU
-* All portions are Copyright (C) 2012 Openbravo SLU
+* All portions are Copyright (C) 2012-2013 Openbravo SLU
 * All Rights Reserved.
 * Contributor(s):  ______________________________________.
 ************************************************************************/
@@ -47,6 +47,7 @@
   v_action VARCHAR2(60):='CO';
   v_status M_Internal_Consumption.status%TYPE;
   v_name M_Internal_Consumption.name%TYPE;
+  v_productname m_product.name%TYPE;
 BEGIN
   --  Update AD_PInstance
   IF (pinstance_id IS NOT NULL) THEN
@@ -112,6 +113,21 @@ BEGIN --BODY
   WHERE M_Internal_Consumption_ID=Record_ID;
   IF (v_Count = 0) THEN
     RAISE_APPLICATION_ERROR(-20000, '@InternalConsuptionNoLines@') ;
+  END IF;
+
+  SELECT count(*) INTO v_count
+  FROM dual
+  WHERE EXISTS (
+      SELECT 1
+      FROM m_internal_consumptionline icl JOIN m_product p ON icl.m_product_id = p.m_product_id
+      WHERE icl.m_internal_consumption_id = record_id
+        AND p.isgeneric = 'Y');
+  IF (v_count > 0) THEN
+    SELECT max(p.name) INTO v_productname
+    FROM m_internal_consumptionline icl JOIN m_product p ON icl.m_product_id = p.m_product_id
+    WHERE icl.m_internal_consumption_id = record_id
+      AND p.isgeneric = 'Y';
+    RAISE_APPLICATION_ERROR(-20000, '@CannotUseGenericProduct@ ' || v_productName);
   END IF;
   
   IF (v_action IN ('CO')) THEN

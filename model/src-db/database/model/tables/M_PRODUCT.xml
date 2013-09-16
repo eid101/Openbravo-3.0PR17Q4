@@ -325,6 +325,34 @@
         <default/>
         <onCreateDefault/>
       </column>
+      <column name="M_BRAND_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISGENERIC" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA['N']]></onCreateDefault>
+      </column>
+      <column name="GENERIC_PRODUCT_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEVARIANTS" primaryKey="false" required="false" type="CHAR" size="1" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="CHARACTERISTIC_DESC" primaryKey="false" required="false" type="NVARCHAR" size="2000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEINVARIANTS" primaryKey="false" required="false" type="CHAR" size="1" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="MANAGEVARIANTS" primaryKey="false" required="false" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
       <foreign-key foreignTable="AD_ORG" name="AD_ORG_MPRODUCT">
         <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
       </foreign-key>
@@ -337,6 +365,9 @@
       <foreign-key foreignTable="AD_USER" name="M_PRODUCT_AD_USER">
         <reference local="SALESREP_ID" foreign="AD_USER_ID"/>
       </foreign-key>
+      <foreign-key foreignTable="M_BRAND" name="M_PRODUCT_BRAND">
+        <reference local="M_BRAND_ID" foreign="M_BRAND_ID"/>
+      </foreign-key>
       <foreign-key foreignTable="C_BPARTNER" name="M_PRODUCT_C_BPARTNER">
         <reference local="C_BPARTNER_ID" foreign="C_BPARTNER_ID"/>
       </foreign-key>
@@ -345,6 +376,9 @@
       </foreign-key>
       <foreign-key foreignTable="C_UOM" name="M_PRODUCT_C_UOM">
         <reference local="C_UOM_ID" foreign="C_UOM_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="M_PRODUCT" name="M_PRODUCT_GENERICPRODUCT">
+        <reference local="GENERIC_PRODUCT_ID" foreign="M_PRODUCT_ID"/>
       </foreign-key>
       <foreign-key foreignTable="M_ATTRIBUTESET" name="M_PRODUCT_M_ATTRIBUTESET" onDelete="cascade">
         <reference local="M_ATTRIBUTESET_ID" foreign="M_ATTRIBUTESET_ID"/>
@@ -379,8 +413,14 @@
       <foreign-key foreignTable="MA_PROCESSPLAN" name="MA_PROCESSPLAN_MPRODUCT">
         <reference local="MA_PROCESSPLAN_ID" foreign="MA_PROCESSPLAN_ID"/>
       </foreign-key>
+      <index name="M_PRODUC_ISGENERID_IDX" unique="false">
+        <index-column name="ISGENERIC"/>
+      </index>
       <index name="M_PRODUCT_BPARTNER" unique="false">
         <index-column name="C_BPARTNER_ID"/>
+      </index>
+      <index name="M_PRODUCT_GEN_PROD" unique="false">
+        <index-column name="GENERIC_PRODUCT_ID"/>
       </index>
       <index name="M_PRODUCT_NAME" unique="false">
         <index-column name="NAME"/>
@@ -408,6 +448,7 @@
       <check name="M_PRODUCT_ISBOM_CHECK"><![CDATA[ISBOM IN ('Y', 'N')]]></check>
       <check name="M_PRODUCT_ISEXPDEFCOMPLETE_CHK"><![CDATA[(ISDEFERREDEXPENSE = 'N') OR ((((ISDEFERREDEXPENSE = 'Y') AND (EXPPLANTYPE IS NOT NULL)) AND (DEFAULTPERIOD_EXP IS NOT NULL)) AND (PERIODNUMBER_EXP IS NOT NULL))]]></check>
       <check name="M_PRODUCT_ISEXPDEFERRED_CHK"><![CDATA[ISDEFERREDEXPENSE IN ('Y', 'N')]]></check>
+      <check name="M_PRODUCT_ISGENERIC"><![CDATA[ISGENERIC IN ('Y', 'N')]]></check>
       <check name="M_PRODUCT_ISINVOICEPRINTDE_CHK"><![CDATA[ISINVOICEPRINTDETAILS IN ('Y', 'N')]]></check>
       <check name="M_PRODUCT_ISPICKLISTPRINTD_CHK"><![CDATA[ISPICKLISTPRINTDETAILS IN ('Y', 'N')]]></check>
       <check name="M_PRODUCT_ISPURCHASED_CHECK"><![CDATA[ISPURCHASED IN ('Y', 'N')]]></check>
