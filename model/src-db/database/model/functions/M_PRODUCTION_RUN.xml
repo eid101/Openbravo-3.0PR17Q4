@@ -19,7 +19,7 @@
   * parts created by ComPiere are Copyright (C) ComPiere, Inc.;
   * All Rights Reserved.
   * Contributor(s): Openbravo SLU
-  * Contributions are Copyright (C) 2001-2012 Openbravo, S.L.U.
+  * Contributions are Copyright (C) 2001-2013 Openbravo, S.L.U.
   *
   * Specifically, this derivative work is based upon the following Compiere
   * file and version.
@@ -45,6 +45,7 @@
   -- Parameter
   TYPE RECORD IS REF CURSOR;
     Cur_Parameter RECORD;
+    CUR_ProductionPlan RECORD;
     CUR_PP RECORD;
     CUR_PLineBOM RECORD;
     CUR_BOM_PRODUCT RECORD;
@@ -59,7 +60,7 @@
   v_Line NUMBER;
   v_Count NUMBER;
   p_User VARCHAR2(32);
-  v_Product_Name VARCHAR2(2000):='';
+  v_Product_Name m_product.name%TYPE;
   -- Stocked BOMs
   -- Proposed stock from given warehouse is priorized.
   CURSOR CUR_STOCK (v_ad_pinstance_id VARCHAR) IS
@@ -456,6 +457,77 @@ BEGIN --BODY
       v_Message:='@Product@'||' "' ||v_Product_Name ||'" ' || '@ProductWithoutAttributeSet@';
       RAISE_APPLICATION_ERROR(-20000, v_Message);
     END IF;
+
+    SELECT COUNT(M_ProductionPlan_ID)
+    INTO v_count
+    FROM M_ProductionPlan pp
+    WHERE pp.M_Production_ID = v_Record_ID
+    AND NOT EXISTS (SELECT 1 FROM M_ProductionLine WHERE M_ProductionPlan_ID = pp.M_ProductionPlan_ID AND MovementQty > 0);
+
+    v_Message := NULL;      
+    IF(v_count <> 0) THEN
+      FOR CUR_ProductionPlan IN (
+	SELECT DISTINCT(pp.line)
+	FROM M_ProductionPlan pp
+	WHERE pp.M_Production_ID = v_Record_ID
+	AND NOT EXISTS (SELECT 1 FROM M_ProductionLine WHERE M_ProductionPlan_ID = pp.M_ProductionPlan_ID AND MovementQty > 0)
+	ORDER BY Line
+        )
+      LOOP
+        IF v_Message IS NULL THEN
+          v_Message := CUR_ProductionPlan.line;
+        ELSE
+	  v_Message := v_Message || ', ' || CUR_ProductionPlan.line;
+	END IF;
+      END LOOP;
+      v_Message := '@ProducedProductWithNegativeQty@' || ' @ReferProductionPlanLines@' || ': ' || v_Message;
+      RAISE_APPLICATION_ERROR(-20000, v_Message);
+    END IF;   
+
+    SELECT COUNT(M_ProductionPlan_ID)
+    INTO v_count
+    FROM M_ProductionPlan pp
+    WHERE pp.M_Production_ID = v_Record_ID
+    AND (SELECT COUNT(M_ProductionLine_ID) FROM M_ProductionLine WHERE M_ProductionPlan_ID = pp.M_ProductionPlan_ID AND movementQty > 0) > 1;
+    
+    IF (v_count <> 0) THEN
+      FOR CUR_ProductionPlan IN (
+	SELECT DISTINCT(pp.line)
+	FROM M_ProductionPlan pp
+	WHERE pp.M_Production_ID = v_Record_ID
+	AND (SELECT COUNT(M_ProductionLine_ID) FROM M_ProductionLine WHERE M_ProductionPlan_ID = pp.M_ProductionPlan_ID AND movementQty > 0) > 1
+	ORDER BY Line
+      )
+      LOOP
+        IF v_Message IS NULL THEN
+          v_Message := CUR_ProductionPlan.line;
+        ELSE
+	  v_Message := v_Message || ', ' || CUR_ProductionPlan.line;
+	END IF;
+      END LOOP;
+      v_Message:= '@ConsumedProductWithPostiveQty@' || ' @ReferProductionPlanLines@' || ': ' || v_Message;
+      RAISE_APPLICATION_ERROR(-20000, v_Message);
+    END IF;
+    
+    SELECT count(*) INTO v_count
+    FROM dual
+    WHERE EXISTS (
+        SELECT 1
+        FROM m_productionplan pp
+            JOIN m_productionline pl ON pp.m_productionplan_id = pl.m_productionplan_id
+            JOIN m_product p ON pl.m_product_id = p.m_product_id
+        WHERE pp.m_production_id = v_record_id
+          AND p.isgeneric = 'Y');
+    IF (v_count > 0) THEN
+      SELECT max(p.name) INTO v_product_name
+      FROM m_productionplan pp
+          JOIN m_productionline pl ON pp.m_productionplan_id = pl.m_productionplan_id
+          JOIN m_product p ON pl.m_product_id = p.m_product_id
+      WHERE pp.m_production_id = v_record_id
+        AND p.isgeneric = 'Y';
+      RAISE_APPLICATION_ERROR(-20000, '@CannotUseGenericProduct@ ' || v_product_Name);
+    END IF;
+
     -- All Production Lines
     FOR CUR_PL_Post IN (
         SELECT pl.M_ProductionLine_ID, pl.AD_Client_ID, pl.AD_Org_ID, p.MovementDate,

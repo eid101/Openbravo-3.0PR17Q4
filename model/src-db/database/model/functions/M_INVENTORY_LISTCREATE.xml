@@ -19,7 +19,7 @@
   * parts created by ComPiere are Copyright (C) ComPiere, Inc.;
   * All Rights Reserved.
   * Contributor(s): Openbravo SLU
-  * Contributions are Copyright (C) 2001-2008 Openbravo, S.L.U.
+  * Contributions are Copyright (C) 2001-2013 Openbravo, S.L.U.
   *
   * Specifically, this derivative work is based upon the following Compiere
   * file and version.
@@ -165,6 +165,7 @@
           FROM M_Product p
           WHERE p.AD_Client_ID=v_Client_ID
             AND IsStocked='Y'
+            AND p.isgeneric = 'N'
             AND NOT EXISTS
             (SELECT *
             FROM M_Storage_Detail s
@@ -240,6 +241,7 @@
 		 AND COALESCE(QTYORDERONHAND,0) = 0
 		 AND PREQTYONHAND=0
 		 AND COALESCE(PREQTYORDERONHAND,0) = 0) OR v_QtyRange = '=')
+        AND p.isgeneric = 'N'
       ORDER BY s.M_Locator_ID,
         p.Value,
         s.Created

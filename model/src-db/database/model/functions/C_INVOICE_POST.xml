@@ -169,7 +169,7 @@
   v_bpartner_blocked VARCHAR2(1):='N';
   v_invoiceBlocking VARCHAR2(1):='N';
   v_bpartner_name c_bpartner.name%TYPE;
-
+  v_productname m_product.name%TYPE;
     
 BEGIN
   IF (p_PInstance_ID IS NOT NULL) THEN
@@ -294,6 +294,21 @@ BEGIN --BODY
     IF (v_count=0) THEN
       RAISE_APPLICATION_ERROR(-20000, '@InvoicesNeedLines@');
     END IF;
+    SELECT count(*) INTO v_count
+    FROM dual
+    WHERE EXISTS (
+        SELECT 1
+        FROM c_invoiceline il JOIN m_product p ON il.m_product_id = p.m_product_id
+        WHERE p.isgeneric = 'Y'
+          AND il.c_invoice_id = v_record_id);
+    IF (v_count > 0) THEN
+      SELECT max(p.name) INTO v_productname
+      FROM c_invoiceline il JOIN m_product p ON il.m_product_id = p.m_product_id
+      WHERE p.isgeneric = 'Y'
+        AND il.c_invoice_id = v_record_id;
+      RAISE_APPLICATION_ERROR(-20000, '@CannotUseGenericProduct@ ' || v_productName);
+    END IF;
+
     /*
      * Avoids repeating the same documentno for the same organization tree within the same fiscal year
      */
@@ -585,7 +600,7 @@ IF (NOT FINISH_PROCESS) THEN
             v_UpdatedBy, IsSOTrx, v_RDocumentNo, 'DR',
              'CO', 'N', 'N', v_DoctypeReversed_ID,
             v_DoctypeReversed_ID, '(*R*: ' || DocumentNo || ') ' || Description, SalesRep_ID,
-            now(), NULL, 'N', now(),
+            now(), NULL, 'N', NULL,
             now(), C_PaymentTerm_ID, C_BPartner_ID, C_BPartner_Location_ID,
             AD_User_ID, POReference, DateOrdered, IsDiscountPrinted,
             C_Currency_ID, PaymentRule, C_Charge_ID, ChargeAmt * -1,
