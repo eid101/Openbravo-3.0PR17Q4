@@ -157,10 +157,6 @@
       <index name="AD_TABLE_PACKAGE_IDX" unique="false">
         <index-column name="AD_PACKAGE_ID"/>
       </index>
-      <index name="AD_TABLE_CLASSNAME_PACKAGE_UN" unique="true">
-        <index-column name="CLASSNAME"/>
-        <index-column name="AD_PACKAGE_ID"/>
-      </index>
       <unique name="AD_TABLE_NAME">
         <unique-column name="NAME"/>
       </unique>
