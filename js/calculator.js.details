@@ -1,0 +1,8 @@
+VAR: TCR
+FUNCTION: Tcalculator
+FUNCTION: TCRisPoint
+FUNCTION: TCRisNumber
+FUNCTION: TCRrezult
+FUNCTION: TCRPopup
+FUNCTION: TCRmntr
+FUNCTION: calculator
