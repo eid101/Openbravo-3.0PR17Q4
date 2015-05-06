@@ -22,7 +22,7 @@
   * parts created by ComPiere are Copyright (C) ComPiere, Inc.;
   * All Rights Reserved.
   * Contributor(s): Openbravo SLU
-  * Contributions are Copyright (C) 2001-2014 Openbravo, S.L.U.
+  * Contributions are Copyright (C) 2001-2015 Openbravo, S.L.U.
   *
   * Specifically, this derivative work is based upon the following Compiere
   * file and version.
@@ -610,7 +610,7 @@
                       ) VALUES (
                         get_uuid(), cur_reserve_stock.ad_client_id, cur_reserve_stock.ad_org_id, 'Y',
                         now(), v_user, now(), v_user,
-                        cur_reserve_stock.m_reservation_id, cur_inoutline.m_attributesetinstance_id, cur_inoutline.m_locator_id, cur_inoutline.c_orderline_id,
+                        cur_reserve_stock.m_reservation_id, coalesce(cur_inoutline.m_attributesetinstance_id,'0'), cur_inoutline.m_locator_id, cur_inoutline.c_orderline_id,
                         v_qtyaux, 0, cur_reserve_stock.isallocated
                       );
                     END IF;
