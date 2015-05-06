@@ -1,0 +1,16 @@
+VAR: gDefaultType
+FUNCTION: messageType
+FUNCTION: messagesTexts
+FUNCTION: getMessage
+FUNCTION: getDefaultText
+FUNCTION: getType
+FUNCTION: showStdMessage
+FUNCTION: showMessage
+FUNCTION: mensaje
+FUNCTION: showJSMessage
+FUNCTION: renderMessageBox
+FUNCTION: getUrl
+FUNCTION: getDataBaseMessage
+FUNCTION: getDataBaseStandardMessage
+FUNCTION: messageResponse
+FUNCTION: setValidationMessages
