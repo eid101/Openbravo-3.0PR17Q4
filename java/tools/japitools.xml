@@ -4,7 +4,7 @@
 
   <property environment="env"/>
   <property name="classes" value="src-core/build/classes src-trl/build/classes src-wad/build/classes build/classes"/>
-  <property name="public.apipackages" value="+org.openbravo, -org.openbravo.test, -org.openbravo.translate, -org.openbravo.wad, -org.openbravo.erpWindows, -org.openbravo.ddlutils,"/>
+  <property name="public.apipackages" value="+org.openbravo, -org.openbravo.test, -org.openbravo.translate, -org.openbravo.wad, -org.openbravo.erpWindows, -org.openbravo.ddlutils, -org.openbravo.javascript,"/>
 
   <target name="init">
     <fail message="openbravo.base must be specified and pointing to openbravo working copy" unless="openbravo.base"/>
