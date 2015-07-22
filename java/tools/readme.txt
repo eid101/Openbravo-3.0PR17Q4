@@ -4,13 +4,17 @@ The upstream source can be obtained at: http://sab39.netreach.com/Software/Japit
 
 This local copy is based on the version distributed with ubuntu jaunty: https://launchpad.net/ubuntu/jaunty/+source/japitools
 
-The folder patches contains all local changes against the version included in ubuntu jaunty.
+The following repo contains a initial code import of that unmodified codebase + individual
+commits on top for every local change done and not pushed upstream.
+https://code.openbravo.com/erp/devel/api-checks-japitools-customizations
 
-List of changes.
+Current list of changes:
 - Treat directory not found as empty directory. Needed when .class files are
   split over more than one directory and not all package directories are
   present in all locations
 - Signal via exitcode of japicompat if errors have been found
+- Enhance ClassFile.java parser to read newly added entries in Java8
+  to not crash when needing to read i.e. java8 java.util.Comparator
 
 
 Usage:
