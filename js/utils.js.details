@@ -1,5 +1,6 @@
 FUNCTION: utilsJSDirectExecution
 VAR: isIE9Strict
+VAR: isEdge
 VAR: isRTL
 VAR: isWindowInMDIPopup
 VAR: isWindowInMDITab
