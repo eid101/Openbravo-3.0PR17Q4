@@ -22,7 +22,7 @@
 * under the License.
 * The Original Code is Openbravo ERP.
 * The Initial Developer of the Original Code is Openbravo SLU
-* All portions are Copyright (C) 2001-2015 Openbravo SLU
+* All portions are Copyright (C) 2001-2016 Openbravo SLU
 * All Rights Reserved.
 * Contributor(s):  ______________________________________.
 ************************************************************************/
@@ -158,8 +158,8 @@
   BEGIN --BODY
   
   /*Orderline acct dimension*/
-  SELECT C_ORDER.ISSOTRX , C_ORDER.c_bpartner_id
-  INTO v_IsSOTrx, v_c_Bpartner_ID
+  SELECT C_ORDER.ISSOTRX , C_ORDER.c_bpartner_id, DocAction
+  INTO v_IsSOTrx, v_c_Bpartner_ID, v_DocAction
   FROM C_ORDER
   WHERE C_ORDER_ID = v_Record_ID;
   
@@ -179,6 +179,22 @@
         RAISE_APPLICATION_ERROR(-20000, '@QuantitiesNotMatch@') ;
       END IF;
     END LOOP;
+  ELSE
+     IF (v_DocAction IN ('CO', 'PR')) THEN
+       SELECT COUNT(1) 
+         INTO v_Count
+       FROM DUAL 
+       WHERE EXISTS(SELECT 1
+		      FROM C_ORDERLINE, M_PRODUCT
+		      WHERE C_ORDERLINE.M_PRODUCT_ID = M_PRODUCT.M_PRODUCT_ID 
+		      AND ISLINKEDTOPRODUCT = 'Y'
+		      AND C_ORDER_ID = v_Record_ID
+		      AND NOT EXISTS (SELECT 1 FROM C_ORDERLINE_SERVICERELATION WHERE C_ORDERLINE_SERVICERELATION.C_ORDERLINE_ID = C_ORDERLINE.C_ORDERLINE_ID));
+       IF (v_Count <> 0) THEN
+         v_Message:='@MissingServiceRelation@';
+         RAISE_APPLICATION_ERROR(-20000, '@MissingServiceRelation@') ;
+       END IF;
+     END IF;
   END IF;
 
   /* Check active business partner*/
@@ -351,12 +367,25 @@
     */
     IF (v_DocAction = 'CO' OR v_DocAction = 'PR') THEN
       SELECT COUNT(*)
-        INTO v_Aux
-       FROM C_ORDERLINE
-       WHERE C_ORDER_ID = v_Record_ID;
-       IF v_Aux=0 THEN
-         RAISE_APPLICATION_ERROR(-20000, '@OrderWithoutLines@');
-       END IF;
+      INTO v_Aux
+      FROM C_ORDERLINE
+      WHERE C_ORDER_ID = v_Record_ID;
+      IF (v_Aux = 0) THEN
+        RAISE_APPLICATION_ERROR(-20000, '@OrderWithoutLines@');
+      END IF;
+    END IF;
+
+    /**
+    * Check if already processed / reactivated
+    */
+    IF (v_DocAction = 'CO' OR v_DocAction = 'PR') THEN
+      IF (v_IsProcessed = 'Y') THEN
+        RAISE_APPLICATION_ERROR(-20000,'@AlreadyPosted@');
+      END IF;
+    ELSIF (v_DocAction='RE') THEN
+      IF (v_IsProcessed = 'N') THEN
+        RAISE_APPLICATION_ERROR(-20000,'@ActionNotSupported@');
+      END IF;
     END IF;
 
     -- Check the cash vat flag for all the taxes matches the order one
@@ -1241,7 +1270,7 @@
                 WHERE r.m_reservation_id = v_reservation_id
                 GROUP BY r.quantity, r.reservedqty, r.releasedqty, r.res_status;
                 IF (v_quantity != cur_orderline.qtyordered) THEN
-                  IF (cur_orderline.qtyordered < v_allocated) THEN
+                  IF (v_allocated <> 0) THEN
                     RAISE_APPLICATION_ERROR(-20000, '@ThereIsMoreAllocatedQtyThanOrdered@');
                   END IF;
                   IF (cur_orderline.qtyordered < v_releasedqty) THEN

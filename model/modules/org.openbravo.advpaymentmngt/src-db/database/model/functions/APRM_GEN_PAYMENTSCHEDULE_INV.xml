@@ -16,7 +16,7 @@
 * under the License.
 * The Original Code is Openbravo ERP.
 * The Initial Developer of the Original Code is Openbravo SLU
-* All portions are Copyright (C) 2010-2015 Openbravo SLU
+* All portions are Copyright (C) 2010-2016 Openbravo SLU
 * All Rights Reserved.
 * Contributor(s):  ______________________________________.
 ************************************************************************/
@@ -1070,6 +1070,20 @@ BEGIN
       IF (v_count <> 0) THEN
         RAISE_APPLICATION_ERROR(-20000, '@APRM_InvoiceWithPayments@' || ' ' || v_documentno);
       END IF;
+
+      SELECT count(*)
+      INTO v_count
+      FROM DUAL
+      WHERE EXISTS (SELECT 1
+                    FROM C_InvoiceTax_CashVAT itcv
+                    INNER JOIN C_InvoiceTax it on (it.C_InvoiceTax_ID = itcv.C_InvoiceTax_ID)
+                    WHERE it.C_Invoice_ID = p_record_id
+                    AND itcv.IsManualSettlement = 'Y'
+                    );
+      IF (v_count > 0) THEN
+        RAISE_APPLICATION_ERROR(-20000, '@APRM_InvoiceWithManualCashVATSettlement@');
+      END IF;
+
       SELECT count(*), max(p.documentno)
         INTO v_count, v_documentno
       FROM fin_payment_schedule ps, fin_payment_scheduledetail psd, fin_payment_prop_detail pd, fin_payment_proposal p
@@ -1121,6 +1135,20 @@ BEGIN
       UPDATE C_BPARTNER
          SET SO_CREDITUSED = COALESCE(SO_CREDITUSED,0) - v_convertedAmount
       WHERE C_BPARTNER_ID = v_BPartner_ID;
+
+      -- Delete C_InvoiceTax_CashVAT records for this invoice
+      --  this only happens for prepayments, which are bypassed by the previous check
+      DELETE FROM C_InvoiceTax_CashVAT itcv
+      WHERE EXISTS (SELECT 1
+                    FROM C_InvoiceTax it
+                    WHERE it.C_InvoiceTax_ID = itcv.C_InvoiceTax_ID
+                    AND it.C_Invoice_ID = p_record_id
+                    )
+      AND EXISTS (SELECT 1
+                  FROM FIN_Payment_Detail fpd
+                  WHERE fpd.FIN_Payment_Detail_ID = itcv.FIN_Payment_Detail_ID
+                  AND fpd.IsPrepayment = 'Y')
+      AND itcv.IsManualSettlement = 'N';
     END;
 
   ELSIF (p_docaction = 'RC') THEN
@@ -1229,6 +1257,36 @@ BEGIN
   UPDATE c_invoice
   SET em_aprm_processinvoice = docaction
   WHERE c_invoice_id = p_record_id;
+
+  -- BEGIN Extension Point
+  SELECT count(*) INTO v_count FROM DUAL
+  WHERE EXISTS (SELECT 1 FROM ad_ep_procedures WHERE ad_extension_points_id = 'E845069AC5724A019D8A5343C396CAE8');
+  IF (v_count=1) THEN
+    DECLARE
+      v_ep_instance VARCHAR2(32);
+      v_extension_point_id VARCHAR2(32) := 'E845069AC5724A019D8A5343C396CAE8';
+    BEGIN
+      v_ep_instance := get_uuid();
+      AD_EP_INSTANCE_PARA_INSERT(v_ep_instance, v_extension_point_id, 'Record_ID', p_record_id, NULL, NULL, NULL, NULL, NULL, NULL);
+      AD_EP_INSTANCE_PARA_INSERT(v_ep_instance, v_extension_point_id, 'DocAction', p_docaction, NULL, NULL, NULL, NULL, NULL, NULL);
+      AD_EP_INSTANCE_PARA_INSERT(v_ep_instance, v_extension_point_id, 'User', p_user, NULL, NULL, NULL, NULL, NULL, NULL);
+      AD_EP_INSTANCE_PARA_INSERT(v_ep_instance, v_extension_point_id, 'Message', NULL, NULL, NULL, NULL, NULL, NULL, p_message);
+      AD_EP_INSTANCE_PARA_INSERT(v_ep_instance, v_extension_point_id, 'Result', NULL, NULL, p_result, NULL, NULL, NULL, NULL);
+      AD_EXTENSION_POINT_HANDLER(v_ep_instance, v_extension_point_id);
+      SELECT p_number INTO p_result
+      FROM ad_ep_instance_para
+      WHERE ad_ep_instance_id = v_ep_instance
+        AND parametername LIKE 'Result';
+      SELECT p_text INTO p_message
+      FROM ad_ep_instance_para
+      WHERE ad_ep_instance_id = v_ep_instance
+        AND parametername LIKE 'Message';
+
+      DELETE FROM ad_ep_instance_para
+      WHERE ad_ep_instance_id = v_ep_instance;
+    END;
+  END IF;
+  -- END Extension Point
 
 EXCEPTION
 WHEN OTHERS THEN
