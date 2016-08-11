@@ -22,7 +22,7 @@
  * under the License.
  * The Original Code is Openbravo ERP.
  * The Initial Developer of the Original Code is Openbravo SLU
- * All portions are Copyright (C) 2001-2014 Openbravo SLU
+ * All portions are Copyright (C) 2001-2016 Openbravo SLU
  * All Rights Reserved.
  * Contributor(s):  ______________________________________.
  ************************************************************************/
@@ -31,7 +31,6 @@
   --v_Message                             VARCHAR2(2000) := '';
   -- Parameter
   TYPE RECORD IS REF CURSOR;
-  Cur_Parameter RECORD;
 
   v_Org_ID                              varchar2(32);
   v_Client_ID                           varchar2(32);
@@ -42,7 +41,6 @@
   v_productName                         M_Product.Name%TYPE;
   v_ProductionDate                      DATE;
   v_CostingDate                         DATE;
-  v_Result NUMBER:= 1;
   v_ProductionCost                      NUMBER;
   v_ProductionCost_Tmp                  NUMBER;
   v_ProducedKg                          NUMBER;
@@ -55,9 +53,7 @@
   v_Qty                                 NUMBER;
   v_DateTo                              DATE;
   v_Costing_ID                          varchar2(32);
-  v_CostCenter_ID                       varchar2(32);
-  v_IC_Value                            NUMBER;
-  v_Cost_UOM                            CHAR;
+
   v_NextNo                              VARCHAR2(32);
   v_ProductionNo                        M_Production.DocumentNo%TYPE;
   v_iscostmigrated                      CHAR;
@@ -69,7 +65,6 @@
   Cur_Machine RECORD;
   Cur_IndirectCost RECORD;
   Cur_IndirectCostPorc RECORD;
-  FINISH_PROCESS                        BOOLEAN := FALSE;
 BEGIN
   BEGIN --BODY
     v_ResultStr := 'Update productionline calculated';
@@ -451,12 +446,12 @@ BEGIN
               INSERT INTO M_COSTING (M_COSTING_ID, CREATED, CREATEDBY, UPDATED, UPDATEDBY, AD_CLIENT_ID,
                             AD_ORG_ID, M_PRODUCT_ID, DATETO, DATEFROM, ISMANUAL,
                             M_PRODUCTIONLINE_ID, QTY,
-                            PRICE,  CUMQTY,
+                            PRICE,
                             COST, ISPERMANENT, ISPRODUCTION, COSTTYPE)
                      VALUES (v_NextNo,now(), p_User_ID, now(), p_User_ID, Cur_ProductionLine.AD_CLIENT_ID,
                             Cur_ProductionLine.AD_ORG_ID, Cur_ProductionLine.M_PRODUCT_ID, TO_DATE('31-12-9999','DD-MM-YYYY'), v_CostingDate, 'N',
                             Cur_ProductionLine.M_PRODUCTIONLINE_ID, Cur_ProductionLine.MOVEMENTQTY,
-                            ROUND(v_Cost/Cur_ProductionLine.MOVEMENTQTY,4), COALESCE(v_Qty,0) + Cur_ProductionLine.MOVEMENTQTY,
+                            ROUND(v_Cost/Cur_ProductionLine.MOVEMENTQTY,4),
                             (CASE (Cur_ProductionLine.MOVEMENTQTY) WHEN 0 THEN 0 ELSE ROUND(v_Cost/Cur_ProductionLine.MOVEMENTQTY,4) END), 'N', 'Y', 'AV');
             ELSE
               v_ResultStr := 'update cost';
@@ -508,13 +503,13 @@ BEGIN
                 INSERT INTO M_COSTING (M_COSTING_ID, CREATED, CREATEDBY, UPDATED, UPDATEDBY, AD_CLIENT_ID,
                             AD_ORG_ID, M_PRODUCT_ID, DATETO, DATEFROM, ISMANUAL,
                             M_PRODUCTIONLINE_ID, QTY,
-                            PRICE, CUMQTY,
+                            PRICE,
                             COST,
                             ISPERMANENT, ISPRODUCTION, COSTTYPE)
                        VALUES (v_NextNo,now(), p_User_ID, now(), p_User_ID, Cur_ProductionLine.AD_CLIENT_ID,
                             Cur_ProductionLine.AD_ORG_ID, Cur_ProductionLine.M_PRODUCT_ID, v_DateTo, v_CostingDate, 'N',
                             Cur_ProductionLine.M_PRODUCTIONLINE_ID, Cur_ProductionLine.MOVEMENTQTY,
-                            ROUND(v_Cost/Cur_ProductionLine.MOVEMENTQTY,4), COALESCE(v_Qty,0) + Cur_ProductionLine.MOVEMENTQTY,
+                            ROUND(v_Cost/Cur_ProductionLine.MOVEMENTQTY,4),
                             (CASE (v_Qty+Cur_ProductionLine.MOVEMENTQTY) WHEN 0 THEN 0 ELSE ROUND(((v_Qty*v_CostOld)+(v_Cost))/(v_Qty+Cur_ProductionLine.MOVEMENTQTY),4)END),
                                 'N', 'Y', 'AV');
               ELSIF (v_count2 = 0) THEN
@@ -538,13 +533,13 @@ BEGIN
                 INSERT INTO M_COSTING (M_COSTING_ID, CREATED, CREATEDBY, UPDATED, UPDATEDBY, AD_CLIENT_ID,
                             AD_ORG_ID, M_PRODUCT_ID, DATETO, DATEFROM, ISMANUAL,
                             M_PRODUCTIONLINE_ID, QTY,
-                            PRICE, CUMQTY,
+                            PRICE,
                             COST,
                             ISPERMANENT, ISPRODUCTION, COSTTYPE)
                        VALUES (v_NextNo,now(), p_User_ID, now(), p_User_ID, Cur_ProductionLine.AD_CLIENT_ID,
                             Cur_ProductionLine.AD_ORG_ID, Cur_ProductionLine.M_PRODUCT_ID, v_DateTo, v_CostingDate, 'N',
                             Cur_ProductionLine.M_PRODUCTIONLINE_ID, Cur_ProductionLine.MOVEMENTQTY,
-                            ROUND(v_Cost/Cur_ProductionLine.MOVEMENTQTY,4), COALESCE(v_Qty,0) + Cur_ProductionLine.MOVEMENTQTY,
+                            ROUND(v_Cost/Cur_ProductionLine.MOVEMENTQTY,4),
                             (CASE (v_Qty+Cur_ProductionLine.MOVEMENTQTY) WHEN 0 THEN 0 ELSE ROUND(((v_Qty*v_CostOld)+(v_Cost))/(v_Qty+Cur_ProductionLine.MOVEMENTQTY),4)END),
                               'N', 'Y', 'AV');
 

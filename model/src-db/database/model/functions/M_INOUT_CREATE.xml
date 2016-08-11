@@ -34,7 +34,7 @@
   * parts created by ComPiere are Copyright (C) ComPiere, Inc.;
   * All Rights Reserved.
   * Contributor(s): Openbravo SLU
-  * Contributions are Copyright (C) 2001-2015 Openbravo, S.L.U.
+  * Contributions are Copyright (C) 2001-2016 Openbravo, S.L.U.
   *
   * Specifically, this derivative work is based upon the following Compiere
   * file and version.
@@ -132,7 +132,6 @@
   v_QtyOrder NUMBER;
   v_ProductUOM VARCHAR2(32);
   v_ActualQty NUMBER;
-  v_QtyAux NUMBER;
   --
   v_lines NUMBER:=0;
   v_lines_per_orderline NUMBER:=0;
@@ -445,7 +444,6 @@ BEGIN --BODY
                 v_QtyOrder:=ol.QuantityOrder;
               ELSIF (v_ProductUOM IS NOT NULL) THEN
                 v_QtyOrder:=ROUND(ol.QuantityOrder*v_Qty/ol.QtyOrdered,v_stdPrecision);
-                --v_QtyOrder:=C_Uom_Convert(v_Qty, ol.C_UOM_ID, v_ProductUOM, 'Y') ;
               ELSE
                 v_QtyOrder:=NULL;
               END IF;
@@ -594,7 +592,6 @@ BEGIN --BODY
                   Ad_Sequence_Next('M_InOutLine', Cur_Order.C_Order_ID, v_NextNo) ;
                   IF (v_ProductUOM IS NOT NULL) THEN
                     v_ActualQty:=ol.QuantityOrder*v_Qty/ol.QtyOrdered;
-                    --v_ActualQty:=C_Uom_Convert(v_Qty, ol.C_UOM_ID, v_ProductUOM, 'Y') ;
                   ELSE
                     v_ActualQty:=NULL;
                   END IF;
