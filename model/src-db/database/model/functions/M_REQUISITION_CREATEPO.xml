@@ -54,12 +54,18 @@
   v_stdPre NUMBER;
   v_priPre NUMBER;
   v_Gross NUMBER;
+  v_Description C_OrderLine.Description%TYPE;
 
   p_OrderDate DATE;
   p_Vendor_ID VARCHAR2(32);
   p_PriceList_ID VARCHAR2(32);
   p_Org_ID VARCHAR2(32);
   p_Warehouse_ID VARCHAR2(32);
+
+  v_Aum C_ORDERLINE.C_AUM%TYPE;
+  v_AumQty NUMBER;
+  v_uom_preference AD_PREFERENCE.VALUE%TYPE;
+  v_count NUMBER;
   
   --  Parameter
   TYPE RECORD IS REF CURSOR;
@@ -128,7 +134,7 @@ BEGIN
            M_PRICELIST.ISTAXINCLUDED
        FROM (SELECT COALESCE(p_Vendor_ID, M_REQUISITIONLINE.C_BPARTNER_ID, M_REQUISITION.C_BPARTNER_ID, PRODUCT_PO.C_BPARTNER_ID) AS VENDOR_ID,
                  COALESCE(p_PriceList_ID, M_REQUISITIONLINE.M_PRICELIST_ID, M_REQUISITION.M_PRICELIST_ID) AS A_PRICELIST_ID,
-                 M_REQUISITIONLINE.*
+                 M_REQUISITIONLINE.*, M_REQUISITION.DESCRIPTION AS HEADERDESC
               FROM M_REQUISITION, M_REQUISITIONLINE LEFT JOIN (SELECT MAX(C_BPARTNER_ID) AS C_BPARTNER_ID, M_PRODUCT_ID
                                                                FROM M_PRODUCT_PO
                                                                WHERE ISCURRENTVENDOR = 'Y'
@@ -207,7 +213,8 @@ BEGIN
             DELIVERYRULE, FREIGHTCOSTRULE, DELIVERYVIARULE, PRIORITYRULE,
             TOTALLINES, GRANDTOTAL, M_WAREHOUSE_ID, M_PRICELIST_ID,
             ISTAXINCLUDED, POSTED, PROCESSING, BILLTO_ID,
-            AD_USER_ID, COPYFROM, DATEPROMISED
+            AD_USER_ID, COPYFROM, DATEPROMISED,
+            DESCRIPTION
         ) VALUES (
             v_C_Order_ID, v_CLIENT_ID, p_Org_ID, v_User_ID,now(),
             v_User_ID, now(), 'N', v_DocumentNo, 'DR',
@@ -217,7 +224,8 @@ BEGIN
             COALESCE(Cur_Lines.Deliveryrule, 'A'), 'I', 'D', '5',
             0, 0, p_WAREHOUSE_ID, Cur_Lines.PRICELIST_ID,
              'N', 'N', 'N', v_BillTo_ID,
-            v_sales_rep_ID, 'N', Cur_Lines.NEEDBYDATE
+            v_sales_rep_ID, 'N', Cur_Lines.NEEDBYDATE,
+            Cur_Lines.HEADERDESC
         );
       END IF;
 
@@ -273,6 +281,28 @@ BEGIN
           v_Discount :=ROUND((v_PriceList-v_PriceActual) / v_PriceList*100, v_stdPre); -- Calculate rounded discount
         END IF;
       END IF;
+
+      -- Get AUM
+      v_uom_preference := 'N';      
+      BEGIN
+        v_uom_preference := AD_GET_PREFERENCE_VALUE('UomManagement', 'Y', NULL, NULL, NULL, NULL, NULL);
+      EXCEPTION
+        WHEN OTHERS THEN
+        -- Nothing to do, v_uom_preference = 'N'
+        DBMS_OUTPUT.PUT_LINE('The preference UomManagement was not found') ;
+      END;
+
+      v_Aum := NULL;
+      v_AumQty := NULL;
+      IF (v_uom_preference = 'Y') THEN
+        v_Aum := Cur_Lines.c_aum;
+        v_AumQty := Cur_Lines.aumqty;
+      END IF;
+
+      v_Description := COALESCE(Cur_Lines.DESCRIPTION, '');
+      IF (Cur_Lines.SUPPLIERNOTES IS NOT NULL) THEN
+        v_Description := v_Description || ' ' || Cur_Lines.SUPPLIERNOTES;
+      END IF;
       
       INSERT INTO C_OrderLine (
           C_ORDERLINE_ID, AD_CLIENT_ID, AD_ORG_ID, ISACTIVE,
@@ -283,17 +313,19 @@ BEGIN
           M_WAREHOUSE_ID, C_UOM_ID, QTYORDERED, C_CURRENCY_ID,
           PRICELIST, PRICEACTUAL, PRICELIMIT,
           PRICESTD, LINENETAMT, DISCOUNT,
-          C_TAX_ID, M_PRODUCT_UOM_ID, QUANTITYORDER, GROSS_UNIT_PRICE, LINE_GROSS_AMOUNT
+          C_TAX_ID, M_PRODUCT_UOM_ID, QUANTITYORDER, GROSS_UNIT_PRICE, LINE_GROSS_AMOUNT,
+          C_AUM, AUMQTY
       ) VALUES (
           v_COrderLine_ID,v_Client_ID, p_Org_ID,'Y',
           now(), v_User_ID, now(), v_User_ID,
           v_C_Order_ID, v_Line, Cur_Lines.Vendor_ID, v_BPartner_Location_ID,
-          p_OrderDate, Cur_Lines.NEEDBYDATE, Cur_Lines.SUPPLIERNOTES, Cur_Lines.M_Product_ID,
+          p_OrderDate, Cur_Lines.NEEDBYDATE, v_Description, Cur_Lines.M_Product_ID,
           Cur_Lines.M_AttributeSetInstance_ID,
           p_Warehouse_ID, Cur_Lines.C_UOM_ID, Cur_Lines.QTY - Cur_Lines.ORDEREDQTY, v_Currency_ID,
           v_PriceList, v_PriceActual, v_PriceLimit,
           v_PriceStd, v_LineNetAmt,v_Discount,
-          v_Tax_ID, Cur_Lines.M_Product_UOM_ID, Cur_Lines.QuantityOrder, v_gross_unit_price, v_line_gross_amount
+          v_Tax_ID, Cur_Lines.M_Product_UOM_ID, Cur_Lines.QuantityOrder, v_gross_unit_price, v_line_gross_amount,
+          v_Aum, v_AumQty
       );
 
       Ad_Sequence_Next('M_RequisitionOrder', v_User_ID, v_RequisitionOrder_ID);
