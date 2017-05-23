@@ -1,0 +1,9 @@
+VAR: xmlreq
+VAR: paramXMLRequest
+FUNCTION: getXMLHttpRequest
+FUNCTION: getReadyStateHandler
+FUNCTION: submitXmlHttpRequestUrl
+FUNCTION: submitXmlHttpRequestWithParams
+FUNCTION: submitXmlHttpRequest
+FUNCTION: lockField
+FUNCTION: unlockField
