@@ -55,6 +55,15 @@
       <parameter name="p_message" type="VARCHAR" mode="out">
         <default/>
       </parameter>
+      <parameter name="p_avail" type="CHAR" mode="in">
+        <default><![CDATA[NULL]]></default>
+      </parameter>
+      <parameter name="p_nett" type="CHAR" mode="in">
+        <default><![CDATA[NULL]]></default>
+      </parameter>
+      <parameter name="p_overissue" type="CHAR" mode="in">
+        <default><![CDATA[NULL]]></default>
+      </parameter>
       <body><![CDATA[/*************************************************************************
 * The contents of this file are subject to the Openbravo  Public  License
 * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
@@ -67,7 +76,7 @@
 * under the License.
 * The Original Code is Openbravo ERP.
 * The Initial Developer of the Original Code is Openbravo SLU
-* All portions are Copyright (C) 2015 Openbravo SLU
+* All portions are Copyright (C) 2017 Openbravo SLU
 * All Rights Reserved.
 * Contributor(s):  ______________________________________.
 ************************************************************************/
