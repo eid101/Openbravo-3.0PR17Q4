@@ -67,6 +67,15 @@
       <parameter name="p_message" type="VARCHAR" mode="out">
         <default/>
       </parameter>
+      <parameter name="p_avail" type="CHAR" mode="in">
+        <default><![CDATA[NULL]]></default>
+      </parameter>
+      <parameter name="p_nett" type="CHAR" mode="in">
+        <default><![CDATA[NULL]]></default>
+      </parameter>
+      <parameter name="p_overissue" type="CHAR" mode="in">
+        <default><![CDATA[NULL]]></default>
+      </parameter>
       <body><![CDATA[/*************************************************************************
 * The contents of this file are subject to the Openbravo  Public  License
 * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
@@ -79,7 +88,7 @@
 * under the License.
 * The Original Code is Openbravo ERP.
 * The Initial Developer of the Original Code is Openbravo SLU
-* All portions are Copyright (C) 2015-2016 Openbravo SLU
+* All portions are Copyright (C) 2015-2017 Openbravo SLU
 * All Rights Reserved.
 * Contributor(s):  ______________________________________.
 ************************************************************************/
@@ -113,6 +122,9 @@
   v_Count NUMBER:=1;
   v_ProcessID VARCHAR2(32) ;
   v_Reservation_ID VARCHAR2(32);
+  v_avail CHAR;
+  v_nett CHAR;
+  v_overissue CHAR;
   
 BEGIN
 
@@ -145,6 +157,12 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE('  v_AttributesetinstanceID=' || coalesce(v_AttributesetinstanceID, '')) ;
   v_warehouse_rule_id:=p_warehouse_rule_id;
   DBMS_OUTPUT.PUT_LINE('  v_warehouse_rule_id=' || coalesce(v_warehouse_rule_id, '')) ;
+  v_avail:=p_avail;
+  DBMS_OUTPUT.PUT_LINE('  v_avail=' || coalesce(v_avail, '')) ;
+    v_nett:=p_nett;
+  DBMS_OUTPUT.PUT_LINE('  v_nett=' || coalesce(v_nett, '')) ;
+    v_overissue:=p_overissue;
+  DBMS_OUTPUT.PUT_LINE('  v_overissue=' || coalesce(v_overissue, '')) ;
   IF (p_TableID IS NOT NULL) THEN
     v_TableID:=p_TableID;
   END IF;
@@ -167,11 +185,15 @@ BEGIN
                                         AND sd.m_product_uom_id IS NULL
                                         AND sd.m_locator_id = rs.m_locator_id
                                         AND sd.m_attributesetinstance_id = rs.m_attributesetinstance_id
+            JOIN m_locator l ON l.m_locator_id = sd.m_locator_id
+            JOIN m_inventorystatus invs ON (invs.m_inventorystatus_id = l.m_inventorystatus_id)
         WHERE r.m_reservation_id = v_reservation_id
           AND rs.isallocated = 'Y'
           AND rs.quantity > 0
           AND rs.quantity <> COALESCE(rs.releasedqty, 0)
           AND rs.m_locator_id IS NOT NULL
+          AND COALESCE(v_avail, invs.available) = invs.available
+          AND COALESCE(v_nett, invs.nettable) = invs.nettable
     ) LOOP
       INSERT INTO m_stock_proposed (
           m_stock_proposed_id, ad_client_id, ad_org_id, isactive, 
@@ -199,6 +221,7 @@ BEGIN
           LEFT JOIN m_attributesetinstance asi ON t.m_attributesetinstance_id = asi.m_attributesetinstance_id
           LEFT JOIN m_product_uom pu ON t.m_product_uom_id = pu.m_product_uom_id
           LEFT JOIN c_uom u ON pu.c_uom_id = u.c_uom_id
+          JOIN m_inventorystatus invs ON (invs.m_inventorystatus_id = l.m_inventorystatus_id)
       WHERE t.m_product_id = v_productid
         AND ms.aux_id = v_auxid
         AND ms.ad_table_id = v_tableid
@@ -210,6 +233,8 @@ BEGIN
         AND COALESCE(w.m_warehouse_id, '-1') = COALESCE(v_warehouseid, w.m_warehouse_id, '-1')
         AND ow.ad_org_id = v_orgid
         AND COALESCE(ms.quantity, 0)>0
+        AND COALESCE(v_avail, invs.available) = invs.available
+        AND COALESCE(v_nett, invs.nettable) = invs.nettable
       ORDER BY CASE w.m_warehouse_id WHEN COALESCE(v_PriorityWarehouseID, '-1') THEN 0 ELSE 1 END, ow.priority, l.priorityno, asi.created, t.created
   ) LOOP
     INSERT INTO m_stock_proposed (
@@ -240,6 +265,7 @@ BEGIN
           LEFT JOIN c_uom u ON pu.c_uom_id = u.c_uom_id
           LEFT JOIN m_reservation r ON r.m_reservation_id = v_reservation_id AND r.m_product_id = t.m_product_id AND r.c_uom_id = t.c_uom_id
           LEFT JOIN m_reservation_stock rs ON rs.m_reservation_id = v_reservation_id AND rs.m_attributesetinstance_id = t.m_attributesetinstance_id AND rs.m_locator_id = t.m_locator_id
+          JOIN m_inventorystatus invs ON (l.m_inventorystatus_id = invs.m_inventorystatus_id)
       WHERE t.m_product_id=v_productid
         AND t.c_uom_id = COALESCE(v_uomid, t.c_uom_id)
         AND COALESCE(t.m_product_uom_id, '-1') = COALESCE(v_productuomid, t.m_product_uom_id, '-1')
@@ -252,6 +278,8 @@ BEGIN
         AND w.m_warehouse_id = COALESCE(r.m_warehouse_id, w.m_warehouse_id)
         AND l.m_locator_id = COALESCE(r.m_locator_id, l.m_locator_id)
         AND asi.m_attributesetinstance_id = COALESCE(r.m_attributesetinstance_id, asi.m_attributesetinstance_id)
+        AND COALESCE(v_avail, invs.available) = invs.available
+        AND COALESCE(v_nett, invs.nettable) = invs.nettable
       GROUP BY w.m_warehouse_id, ow.priority, l.priorityno, asi.created, t.created, t.m_storage_detail_id, t.qtyonhand, t.allocatedqty, t.reservedqty, t.qtyorderonhand, t.updated
       ORDER BY CASE w.m_warehouse_id WHEN COALESCE(v_PriorityWarehouseID, '-1') THEN 0 ELSE 1 END, ow.priority, l.priorityno, asi.created, t.created
   ) LOOP
@@ -304,6 +332,9 @@ BEGIN
 	      AD_PINSTANCE_PARA_INSERT(p_uuid, '130', 'AuxID', v_AuxID, null, null, null, null, null);
 	      AD_PINSTANCE_PARA_INSERT(p_uuid, '140', 'LineNo', null, null, v_LineNo, null, null, null);
 	      AD_PINSTANCE_PARA_INSERT(p_uuid, '150', 'M_Reservation_ID', v_reservation_id, null, null, null, null, null);
+	      AD_PINSTANCE_PARA_INSERT(p_uuid, '160', 'Available', v_avail, null, null, null, null, null);
+	      AD_PINSTANCE_PARA_INSERT(p_uuid, '170', 'Nettable', v_nett, null, null, null, null, null);
+	      AD_PINSTANCE_PARA_INSERT(p_uuid, '180', 'OverIssue', v_overissue, null, null, null, null, null);
 	      /*
 	      * ADD PROPER PROCESS ID!
 	      */
@@ -436,6 +467,9 @@ DBMS_OUTPUT.PUT_LINE( 'v_warehouse_rule_id: ' || coalesce(v_warehouse_rule_id,''
   	      AD_PINSTANCE_PARA_INSERT(p_uuid, '130', 'AuxID', v_AuxID, null, null, null, null, null);
   	      AD_PINSTANCE_PARA_INSERT(p_uuid, '140', 'LineNo', null, null, v_LineNo, null, null, null);
   	      AD_PINSTANCE_PARA_INSERT(p_uuid, '150', 'M_Reservation_ID', v_reservation_id, null, null, null, null, null);
+  	      AD_PINSTANCE_PARA_INSERT(p_uuid, '160', 'Available', v_avail, null, null, null, null, null);
+	        AD_PINSTANCE_PARA_INSERT(p_uuid, '170', 'Nettable', v_nett, null, null, null, null, null);
+	        AD_PINSTANCE_PARA_INSERT(p_uuid, '180', 'OverIssue', v_overissue, null, null, null, null, null);
   	      /*
   	      * ADD PROPER PROCESS ID!
   	      */
@@ -519,6 +553,21 @@ DBMS_OUTPUT.PUT_LINE( 'v_warehouse_rule_id: ' || coalesce(v_warehouse_rule_id,''
       ELSE
         v_parameters:= v_parameters ||', '''||v_reservation_id||'''';
       END IF;
+      IF(v_avail IS NULL) THEN
+        v_parameters:= v_parameters || ', NULL';
+      ELSE
+        v_parameters:= v_parameters ||', '''||v_avail||'''';
+      END IF;
+      IF(v_nett IS NULL) THEN
+        v_parameters:= v_parameters || ', NULL';
+      ELSE
+        v_parameters:= v_parameters ||', '''||v_nett||'''';
+      END IF;
+      IF(v_overissue IS NULL) THEN
+        v_parameters:= v_parameters || ', NULL';
+      ELSE
+        v_parameters:= v_parameters ||', '''||v_overissue||'''';
+      END IF;
       DBMS_OUTPUT.PUT_LINE( 'v_parameters: ' || coalesce(v_parameters,''));
         IF (AD_GET_RDBMS() = 'ORACLE') THEN
           v_Sql := 'CALL ' || cur_warehouse.procedurename || ' (' || v_parameters ||', v_auxresult, v_auxmessage)';
@@ -575,14 +624,15 @@ DBMS_OUTPUT.PUT_LINE( 'v_warehouse_rule_id: ' || coalesce(v_warehouse_rule_id,''
   RETURN;
 EXCEPTION
 WHEN OTHERS THEN
-  DBMS_OUTPUT.PUT_LINE(p_message) ;
+  DBMS_OUTPUT.PUT_LINE(p_message) ; --OBTG:VARCHAR2--
   IF (SQLERRM LIKE '@ERROR=%') THEN
     p_message:= SQLERRM;
   ELSE
     p_message:= '@ERROR=' || SQLERRM;
   END IF;
   p_message:= v_message;
-  DBMS_OUTPUT.PUT_LINE(p_message) ;
+  DBMS_OUTPUT.PUT_LINE(p_message) ; --OBTG:VARCHAR2--
+  DBMS_OUTPUT.PUT_LINE(SQLERRM) ; --OBTG:VARCHAR2--
   p_result:=0;
   IF (p_calledfromapp = 'Y') THEN
     RETURN;
