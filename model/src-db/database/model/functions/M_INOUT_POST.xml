@@ -22,7 +22,7 @@
   * parts created by ComPiere are Copyright (C) ComPiere, Inc.;
   * All Rights Reserved.
   * Contributor(s): Openbravo SLU
-  * Contributions are Copyright (C) 2001-2016 Openbravo, S.L.U.
+  * Contributions are Copyright (C) 2001-2017 Openbravo, S.L.U.
   *
   * Specifically, this derivative work is based upon the following Compiere
   * file and version.
@@ -510,7 +510,18 @@
           IF(Cur_InOut.Processed='N' AND Cur_InOut.DocStatus='DR' AND Cur_InOut.DocAction='CO') THEN
             -- For all active shipment lines
             v_ResultStr:='HeaderLoop-1';
-            
+
+          -- Update the C_Order_Id of M_InOut accordingly
+          UPDATE M_InOut io
+          SET C_Order_Id = (
+            SELECT CASE WHEN min(ol.c_order_id) = max(ol.c_order_id) THEN min(ol.c_order_id) ELSE NULL END
+            FROM M_InOutLine iol
+            JOIN C_OrderLine ol
+            ON iol.C_OrderLine_Id = ol.C_OrderLine_Id
+            WHERE iol.M_InOut_Id = io.M_InOut_ID
+          )
+          WHERE io.M_InOut_Id = Cur_InOut.M_InOut_ID;
+
         IF v_Aux=0 THEN
         RAISE_APPLICATION_ERROR(-20000, '@ReceiptWithoutLines@');
         END IF;
