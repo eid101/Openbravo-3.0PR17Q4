@@ -22,7 +22,7 @@
 * under the License.
 * The Original Code is Openbravo ERP.
 * The Initial Developer of the Original Code is Openbravo SLU
-* All portions are Copyright (C) 2001-2016 Openbravo SLU
+* All portions are Copyright (C) 2001-2017 Openbravo SLU
 * All Rights Reserved.
 * Contributor(s):  ______________________________________.
 ************************************************************************/
@@ -95,7 +95,6 @@
   v_c_Bpartner_ID VARCHAR2(32);
   v_c_currency_ID VARCHAR2(32);
   v_C_PROJECT_ID VARCHAR2(32);
-  v_PriceList_ID VARCHAR2(32);
   FINISH_PROCESS BOOLEAN:=FALSE;
   END_PROCESSING BOOLEAN:=FALSE;
   v_CBPartner_ID VARCHAR2(32);
@@ -108,7 +107,8 @@
   Cur_TaxDiscount RECORD;
   v_OrderLine VARCHAR2(32);
   v_Discount NUMBER;
-  v_precision NUMBER;
+  v_pricePrecision C_Currency.PricePrecision%TYPE;
+  v_stdPrecision C_Currency.StdPrecision%TYPE;
   Cur_OrderLine RECORD;
   v_DiscountExist NUMBER;
   v_gross_unit_price NUMBER;
@@ -156,13 +156,17 @@
     END IF;
     DBMS_OUTPUT.PUT_LINE('  Record_ID=' || v_Record_ID) ;
   BEGIN --BODY
-  
+
+  SELECT o.ISSOTRX, o.c_bpartner_id, o.DocAction, c.PricePrecision, c.StdPrecision, p.IsTaxIncluded
+  INTO v_IsSOTrx, v_c_Bpartner_ID, v_DocAction, v_pricePrecision, v_stdPrecision, v_isTaxIncluded
+  FROM C_ORDER o
+  JOIN C_CURRENCY c
+  ON o.C_CURRENCY_ID = c.C_CURRENCY_ID
+  JOIN M_PRICELIST p
+  ON o.M_PRICELIST_ID = p.M_PRICELIST_ID
+  WHERE o.C_ORDER_ID = v_Record_ID;
+
   /*Orderline acct dimension*/
-  SELECT C_ORDER.ISSOTRX , C_ORDER.c_bpartner_id, DocAction
-  INTO v_IsSOTrx, v_c_Bpartner_ID, v_DocAction
-  FROM C_ORDER
-  WHERE C_ORDER_ID = v_Record_ID;
-  
   IF (v_IsSOTrx = 'N') THEN
     FOR Cur_line IN
       (SELECT C_ORDERLINE.C_OrderLine_ID,
@@ -214,19 +218,14 @@
       C_DocType_ID, C_DocTypeTarget_ID, c_order.AD_Client_ID,
       c_order.AD_Org_ID, c_order.UpdatedBy, M_Warehouse_ID, TRUNC(DateOrdered),
       Issotrx, c_Bpartner_Id, c_order.c_currency_id, C_PROJECT_ID,
-      C_BPartner_ID, M_PriceList_ID, invoicerule, c_order.IsCashVat
+      C_BPartner_ID, invoicerule, c_order.IsCashVat
     INTO v_IsProcessing, v_IsProcessed, v_DocAction, v_DocStatus,
       v_DocType_ID, v_DocTypeTarget_ID, v_Client_ID,
       v_Org_ID, v_UpdatedBy, v_M_Warehouse_ID, v_Date,
       v_isSoTrx, v_c_Bpartner_Id, v_c_currency_id, v_C_PROJECT_ID,
-      v_CBPartner_ID, v_PriceList_ID, v_invoicerule, v_iscashvat
+      v_CBPartner_ID, v_invoicerule, v_iscashvat
     FROM C_ORDER
     WHERE C_Order_ID=v_Record_ID  FOR UPDATE  ;
-
-    SELECT m_pricelist.istaxincluded
-    INTO v_istaxincluded
-    FROM m_pricelist 
-    WHERE m_pricelist_id= v_PriceList_ID;
     
     -- Get current DocSubTypeSO
     SELECT DocSubTypeSO
@@ -506,6 +505,13 @@
                  AND C.C_ORDER_DISCOUNT_ID IS NOT NULL AND C.C_ORDER_ID = v_Record_ID) = 'VO'
                  AND C_ORDERLINE_ID IN (SELECT C_ORDERLINE_ID FROM C_ORDERLINE WHERE C_ORDER_DISCOUNT_ID IS NOT NULL 
                  AND C_ORDER_ID = v_Record_ID);
+	DELETE
+	FROM C_ORDERLINETAX
+	WHERE EXISTS (SELECT 1
+                     FROM C_ORDERLINE
+                     WHERE C_ORDER_DISCOUNT_ID IS NOT NULL
+		      AND C_ORDER_ID = v_Record_ID
+		      AND C_ORDERLINE.C_ORDERLINE_ID = C_ORDERLINETAX.C_ORDERLINE_ID);
         DELETE
         FROM C_ORDERLINE
         WHERE C_ORDER_DISCOUNT_ID IS NOT NULL
@@ -678,6 +684,7 @@
       DECLARE
           Cur_Inventory RECORD;
           v_QtyOrdered NUMBER;
+          v_QtyAum NUMBER;
           v_QuantityOrder NUMBER;
           v_linenetamt NUMBER;
           v_linegrossamt NUMBER;
@@ -711,6 +718,7 @@
             )
             LOOP
               v_QtyOrdered := CASE WHEN (Cur_Inventory.QtyDelivered < 0) THEN LEAST(Cur_Inventory.QtyDelivered, Cur_Inventory.QtyInvoiced) ELSE GREATEST(Cur_Inventory.QtyDelivered, Cur_Inventory.QtyInvoiced) END;
+              v_QtyAum := M_GET_CONVERTED_AUMQTY(Cur_Inventory.M_Product_ID, v_QtyOrdered, Cur_Inventory.C_AUM);
               v_linenetamt := ROUND(v_QtyOrdered * Cur_Inventory.priceactual, C_GET_CURRENCY_PRECISION(Cur_Inventory.C_Currency_ID, 'A'));
               v_linegrossamt := ROUND(v_QtyOrdered * Cur_Inventory.gross_unit_price, C_GET_CURRENCY_PRECISION(Cur_Inventory.C_Currency_ID, 'A'));
               SELECT MAX(UOM.C_UOM_ID)
@@ -729,6 +737,7 @@
               -- UPDATE C_ORDERLINE
               UPDATE C_ORDERLINE
               SET QtyOrdered=v_QtyOrdered,
+                AumQty = v_QtyAum,
                 linenetamt=v_linenetamt,
                 line_gross_amount=v_linegrossamt,
                 QuantityOrder=v_QuantityOrder,
@@ -776,6 +785,7 @@
             )
             LOOP
               v_QtyOrdered := COALESCE(CASE WHEN (Cur_Inventory.QtyDelivered < 0) THEN LEAST(Cur_Inventory.QtyDelivered, Cur_Inventory.QtyInvoiced) ELSE GREATEST(Cur_Inventory.QtyDelivered, Cur_Inventory.QtyInvoiced) END, 0);
+              v_QtyAum := M_GET_CONVERTED_AUMQTY(Cur_Inventory.M_Product_ID, v_QtyOrdered, Cur_Inventory.C_AUM);
               v_linenetamt := ROUND(COALESCE(v_QtyOrdered, 0) * Cur_Inventory.priceactual, C_GET_CURRENCY_PRECISION(Cur_Inventory.C_Currency_ID, 'A'));
               v_linegrossamt := ROUND(COALESCE(v_QtyOrdered, 0) * Cur_Inventory.gross_unit_price, C_GET_CURRENCY_PRECISION(Cur_Inventory.C_Currency_ID, 'A'));
 
@@ -794,6 +804,7 @@
               -- UPDATE C_ORDERLINE
               UPDATE C_ORDERLINE
               SET QtyOrdered=v_QtyOrdered,
+                AumQty = v_QtyAum,
                 linenetamt=v_linenetamt,
                 line_gross_amount=v_linegrossamt,
                 QuantityOrder=v_QuantityOrder,
@@ -935,14 +946,10 @@
         v_CumDiscount:=0;
         v_OldCumDiscount:=0;
         v_Line:=10;
-        v_precision:=0;
         SELECT MAX(LINE)
           INTO v_OrderLineSeqNo
         FROM C_ORDERLINE
         WHERE C_ORDER_ID=v_Record_ID;
-        SELECT PricePrecision INTO v_precision
-        FROM C_ORDER o, C_CURRENCY c
-        WHERE o.C_ORDER_ID = v_Record_ID AND  o.C_CURRENCY_ID = c.C_CURRENCY_ID;
         FOR Cur_COrderDiscount IN
            (SELECT C_ORDER_DISCOUNT.C_ORDER_DISCOUNT_ID, C_DISCOUNT.DISCOUNT, C_DISCOUNT.M_PRODUCT_ID, C_DISCOUNT.NAME,
               C_ORDER_DISCOUNT.CASCADE, C_DISCOUNT.C_DISCOUNT_ID, M_PRODUCT.C_UOM_ID
@@ -974,7 +981,7 @@
               ELSE
                 v_line_gross_amount:=(-1) * Cur_TaxDiscount.LINEGROSSAMT * Cur_COrderDiscount.Discount/100;
               END IF;
-              v_Discount:= C_GET_NET_PRICE_FROM_GROSS(Cur_TaxDiscount.C_TAX_ID, v_line_gross_amount, 0, v_precision, 1);
+              v_Discount:= C_GET_NET_AMOUNT_FROM_GROSS(Cur_TaxDiscount.C_TAX_ID, v_line_gross_amount, 0, v_stdPrecision);
               v_gross_unit_price:= v_line_gross_amount;
             ELSE
               IF (Cur_COrderDiscount.CASCADE='Y') THEN
@@ -1013,11 +1020,11 @@
                   now(), now(), now(), now(), Cur_COrderDiscount.NAME,
                   Cur_COrderDiscount.M_PRODUCT_ID, v_M_Warehouse_ID, 'N', Cur_COrderDiscount.C_UOM_ID, 1,
                   0, 0, 0, NULL, v_c_currency_id,
-                  ROUND(v_Discount,v_precision), ROUND(v_Discount,v_precision), ROUND(v_Discount,v_precision), ROUND(v_Discount,v_precision), 0, 0,
+                  ROUND(v_Discount, v_pricePrecision), ROUND(v_Discount, v_pricePrecision), ROUND(v_Discount, v_pricePrecision), ROUND(v_Discount, v_pricePrecision), 0, 0,
                   NULL, NULL, Cur_TaxDiscount.C_TAX_ID, NULL, NULL,
                   NULL, 'N', NULL, NULL, NULL, NULL,
-                  NULL, ROUND(v_Discount,v_precision), NULL,
-                  ROUND(v_gross_unit_price, v_precision), ROUND(v_Discount,v_precision),ROUND(v_line_gross_amount, v_precision)
+                  NULL, ROUND(v_Discount, v_pricePrecision), NULL,
+                  ROUND(v_gross_unit_price, v_pricePrecision), ROUND(v_Discount, v_pricePrecision),ROUND(v_line_gross_amount, v_pricePrecision)
                 );
 
               UPDATE C_ORDERLINE
@@ -1025,7 +1032,7 @@
               WHERE C_ORDERLINE_ID=v_OrderLine;
             ELSE
               UPDATE C_ORDERLINE 
-              SET pricelist = ROUND(v_Discount,v_precision), priceactual = ROUND(v_Discount,v_precision), pricelimit = ROUND(v_Discount,v_precision), linenetamt = ROUND(v_Discount,v_precision), pricestd = ROUND(v_Discount,v_precision)
+              SET pricelist = ROUND(v_Discount, v_pricePrecision), priceactual = ROUND(v_Discount, v_pricePrecision), pricelimit = ROUND(v_Discount, v_pricePrecision), linenetamt = ROUND(v_Discount, v_pricePrecision), pricestd = ROUND(v_Discount, v_pricePrecision)
               WHERE C_ORDERLINE.C_ORDER_DISCOUNT_ID = Cur_COrderDiscount.C_ORDER_DISCOUNT_ID
                 AND C_ORDERLINE.C_TAX_ID = Cur_TaxDiscount.C_TAX_ID;
             END IF;
@@ -1296,7 +1303,7 @@
                   IF (cur_orderline.qtyordered < v_releasedqty) THEN
                     RAISE_APPLICATION_ERROR(-20000, '@CannotOrderLessThanReleasedQty@');
                   END IF;
-                  IF (cur_orderline.qtyordered < v_reservedqty) THEN
+                  IF (cur_orderline.qtyordered < v_reservedqty) OR (v_releasedqty = 0 AND cur_orderline.qtyordered > 0) THEN
                     --Reservation quantity to decrease with more reserved quantity than new quantity, unreserve stock
                     v_pendingtounreserve := v_reservedqty - cur_orderline.qtyordered;
                     FOR cur_res_stock IN (
@@ -1320,11 +1327,18 @@
                     IF (v_pendingtounreserve > 0) THEN
                       RAISE_APPLICATION_ERROR(-20000, '@CouldNotUnreserveNeededQty@');
                     END IF;
-                    -- Delete reservation lines with quantity zero.
+                    -- Delete reservation lines with zero releasedqty
                     DELETE FROM m_reservation_stock
-                    WHERE quantity = 0
-                      AND COALESCE(releasedqty, 0) = 0
+                    WHERE COALESCE(releasedqty, 0) = 0
                       AND m_reservation_id = v_reservation_id;
+                  END IF;
+                  -- Order line orderedqty greater than reservation releasedqty
+                  IF (cur_orderline.qtyordered > v_releasedqty) THEN
+                    UPDATE m_reservation_stock
+                    SET quantity = releasedqty,
+                        updated = now(),
+                        updatedby = v_user
+                    WHERE m_reservation_id = v_reservation_id;
                   END IF;
                   UPDATE m_reservation
                   SET quantity = cur_orderline.qtyordered,
@@ -1833,6 +1847,11 @@
         WHERE C_Order_ID=v_Record_ID;
       END IF;
     END IF;--FINISH_PROCESS
+
+    -- Round and Adjust taxes when 'CO' and Recalculate amounts and taxes when 'RE'
+    IF (v_isTaxIncluded = 'Y' AND v_DocAction IN ('CO', 'RE')) THEN
+      C_ORDERTAX_ADJUSTMENT(v_Record_ID, v_stdPrecision, v_DocAction);
+    END IF;
 
     --C_Order_Post - Finish_Process Extension Point
     SELECT count(*) INTO v_count
