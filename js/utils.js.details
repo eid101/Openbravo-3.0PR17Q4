@@ -137,13 +137,6 @@ FUNCTION: updateMenuIcon
 FUNCTION: menuShowHide
 FUNCTION: menuShow
 FUNCTION: menuHide
-FUNCTION: menuExpand
-FUNCTION: menuCollapse
-FUNCTION: menuExpandCollapse
-FUNCTION: getMenuExpandCollapse_status
-FUNCTION: menuUserOptions
-FUNCTION: menuQuit
-FUNCTION: menuAlerts
 FUNCTION: isVisibleElement
 FUNCTION: executeWindowButton
 FUNCTION: executeMenuButton
