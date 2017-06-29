@@ -1,4 +1,0 @@
-VAR: frameDefault
-FUNCTION: displayLogic
-FUNCTION: setgWaitingCallOut
-FUNCTION: returnResponse
