@@ -228,6 +228,29 @@
              RAISE_APPLICATION_ERROR(-20000, '@Inline@ '||v_Message_Qty||' '||'@ProductNotNullAndMovementQtyZero@') ;
           END IF;
 	     End ;
+	     Declare
+       v_Message_NotAvail VARCHAR(2000) :='';
+	     BEGIN
+					FOR Cur_Lines IN (
+                             SELECT M.line
+                             FROM M_InOut I
+                             JOIN M_InOutLine M ON (M.M_InOut_ID = I.M_InOut_ID)
+                             JOIN M_Locator L ON (M.M_Locator_ID = L.M_Locator_ID)
+                             JOIN M_InventoryStatus INVS ON (INVS.M_InventoryStatus_ID = L.M_InventoryStatus_ID)
+                             WHERE I.M_INOUT_ID=v_Record_ID
+                             AND INVS.Available = 'N'
+                             -- Check only Outgoing documents (Goods Shipment and Return to Vendor Shipment)
+                             AND ((I.issotrx = 'Y' AND v_isreturndoctype = 'N')
+                                   OR
+                                  (I.issotrx = 'N' AND v_isreturndoctype = 'Y'))
+                             ORDER BY M.line
+                            ) LOOP
+          v_Message_NotAvail:=v_Message_NotAvail||Cur_Lines.line||', ';
+          END LOOP;
+          IF v_Message_NotAvail != '' THEN
+             RAISE_APPLICATION_ERROR(-20000, '@Inline@ '||v_Message_NotAvail||' '||'@LocatorWithNotAvailableStatus@') ;
+          END IF;
+	     End ;
       DECLARE
       v_Message_Inactive_Products VARCHAR(2000) :='';
       BEGIN
@@ -832,14 +855,15 @@
                -- Normal Scenario
                UPDATE C_Order o
                SET IsDelivered = 'Y'
-               WHERE o.c_order_id = Cur_Order.c_order_id
+               WHERE o.c_order_id = Cur_Order.c_order_id 
                AND o.IsDelivered = 'N'
-               AND EXISTS (SELECT 1
-                           FROM C_ORDERLINE ol
-                           WHERE ol.C_Order_ID = o.C_Order_ID
-                           AND ol.c_order_discount_id IS NULL
-                           GROUP BY ol.C_Order_ID
-                           HAVING SUM(ol.QTYORDERED) = SUM(ol.QTYDELIVERED));
+               AND o.processed = 'Y'                
+               AND NOT EXISTS (SELECT 1
+                               FROM c_orderline ol
+                               WHERE ol.C_Order_ID = o.C_Order_ID
+                               AND ol.c_order_discount_id IS NULL
+                               AND ol.QTYORDERED <> ol.QTYDELIVERED
+                              );
              ELSIF (v_IsReversedDoc = 'Y') THEN
                -- Void Scenario
                UPDATE C_Order o
