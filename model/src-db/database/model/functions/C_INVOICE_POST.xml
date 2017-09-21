@@ -174,8 +174,8 @@
   v_iscashvat C_Invoice.IsCashVat%TYPE;
   v_invoiceline_qtysum NUMBER;
   v_prepaymentamt NUMBER;
-  v_prepayment_inorders NUMBER;
   v_hasTaxes NUMBER;
+  v_calendarId C_CALENDAR.C_CALENDAR_ID%TYPE;
    
 BEGIN
   IF (p_PInstance_ID IS NOT NULL) THEN
@@ -344,6 +344,7 @@ BEGIN --BODY
     /*
      * Avoids repeating the same documentno for the same organization tree within the same fiscal year
      */
+    SELECT C_CALENDAR_ID INTO v_calendarId FROM AD_ORG WHERE AD_ORG_ID = AD_ORG_GETCALENDAROWNER(v_Org_ID);
     SELECT COUNT(*) INTO v_count
     FROM (SELECT Y.C_CALENDAR_ID, Y.C_YEAR_ID,
               MIN(P.STARTDATE) AS PERIODSTARTDATE, MAX(P.ENDDATE) AS PERIODENDDATE
@@ -351,9 +352,7 @@ BEGIN --BODY
           WHERE Y.C_YEAR_ID = P.C_YEAR_ID
             AND Y.ISACTIVE = 'Y'
             AND P.ISACTIVE = 'Y'
-            AND Y.C_CALENDAR_ID = (SELECT O.C_CALENDAR_ID 
-                                   FROM AD_ORG O
-                                   WHERE AD_ORG_ID = AD_ORG_GETCALENDAROWNER(v_Org_ID))
+            AND Y.C_CALENDAR_ID = v_calendarId
           GROUP BY Y.C_CALENDAR_ID, Y.C_YEAR_ID) A
     WHERE PERIODSTARTDATE <= v_DateInvoiced
       AND PERIODENDDATE+1 > v_DateInvoiced ;
@@ -366,9 +365,7 @@ BEGIN --BODY
             WHERE Y.C_YEAR_ID = P.C_YEAR_ID
               AND Y.ISACTIVE = 'Y'
               AND P.ISACTIVE = 'Y'
-              AND Y.C_CALENDAR_ID = (SELECT O.C_CALENDAR_ID 
-                                     FROM AD_ORG O
-                                     WHERE AD_ORG_ID = AD_ORG_GETCALENDAROWNER(v_Org_ID))
+              AND Y.C_CALENDAR_ID = v_calendarId
             GROUP BY Y.C_CALENDAR_ID, Y.C_YEAR_ID) A
       WHERE PERIODSTARTDATE <= v_DateInvoiced
         AND PERIODENDDATE+1 > v_DateInvoiced ;
@@ -1275,6 +1272,7 @@ IF (NOT FINISH_PROCESS) THEN
         END IF;        
         v_InvoiceLineSeqNo:=10 + v_InvoiceLineSeqNo;
         v_InvoiceLine:=get_uuid();
+        v_Discount := ROUND(v_Discount, v_stdPrecision);
         INSERT INTO C_INVOICELINE
           (
            C_INVOICELINE_ID, AD_CLIENT_ID, AD_ORG_ID, ISACTIVE,
@@ -1798,21 +1796,22 @@ IF (NOT FINISH_PROCESS) THEN
     END IF;
   END IF;--FINISH_PROCESS
   IF (NOT FINISH_PROCESS AND NOT END_PROCESSING) THEN
-    --Update the prepayment amount from orders related to the invoice lines.
-    SELECT COALESCE(SUM(fps.paidamt),0)
-      INTO v_prepayment_inorders
-    FROM fin_payment_schedule fps
-      JOIN c_order o ON o.c_order_id=fps.c_order_id
-      JOIN c_orderline ol ON ol.c_order_id = o.c_order_id
-      JOIN c_invoiceline il ON il.c_orderline_id = ol.c_orderline_id
-    WHERE il.c_invoice_id = v_Record_ID;
+    -- Update prepayment amount for invoice related to order
+    UPDATE C_Invoice i
+    SET prepaymentamt = (
+      SELECT COALESCE(SUM(fps.paidamt), 0)
+      FROM FIN_Payment_Schedule fps
+      WHERE fps.C_Order_ID = i.C_Order_ID
+    )
+    WHERE i.C_Invoice_ID = v_Record_ID;
+  END IF;--FINISH_PROCESS
+  IF (NOT FINISH_PROCESS AND NOT END_PROCESSING) THEN
 
     -- Finish up -------------------------------------------------------------
     UPDATE C_INVOICE
     SET DocStatus='CO',
         Processed='Y',
         DocAction='RE',
-        PrepaymentAmt=v_prepayment_inorders,
         Updated=now(),
         UpdatedBy=v_UpdatedBy
     WHERE C_Invoice_ID=v_Record_ID;
